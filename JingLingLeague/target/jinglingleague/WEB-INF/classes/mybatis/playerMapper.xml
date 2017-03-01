@@ -13,4 +13,11 @@
         select * from player_based where pName = #{pName} and pPassword = #{pPassword}
     </select>
 
+    <update id="updatePwd" parameterType="Player" >
+        update player_based set pPassword=#{pPassword} where pName=#{pName} and pId=#{pId}
+    </update>
+
+    <delete id="deleteById" parameterType="int" >
+        delete from player_based where pId=#{pId}
+    </delete>
 </mapper>

@@ -1,7 +1,9 @@
 package cn.edu.jlxy.jinglingleague.controller;
 
+import cn.edu.jlxy.jinglingleague.dto.PlayerLoginDto;
 import cn.edu.jlxy.jinglingleague.entity.Player;
 import cn.edu.jlxy.jinglingleague.service.IPlayerBasedService;
+import cn.edu.jlxy.jinglingleague.util.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -25,12 +27,12 @@ public class PlayerBasedController {
         PrintWriter out =response.getWriter();
 
         Player player=new Player();
-        player.setpName(pName);
-        player.setpPassword(pPassword);
+        player.setpName(EncodingUtils.utf8_encoding(pName));
+        player.setpPassword(MD5Util.getMD5Code(pPassword));
         if(service.register(player)){
-            out.print("register success");
+            out.print("{\"status\":\"success\"}");
         }else {
-            out.print("register failed");
+            out.print("{\"status\":\"fail\"}");
         }
 
         out.flush();
@@ -39,17 +41,54 @@ public class PlayerBasedController {
 
     @RequestMapping("/login")
     public void login(@RequestParam String pName,@RequestParam String pPassword, HttpServletResponse response) throws IOException{
+        //前台json显示问号,因为也要设置编码
+        response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out =response.getWriter();
+        String status = Constants.FAIL;
+
+        Player player=new Player();
+        PlayerLoginDto dto =new PlayerLoginDto();
+        if (!StringUtils.isEmpty(pName) && !StringUtils.isEmpty(pPassword)){
+            player=service.login(new Player(EncodingUtils.utf8_encoding(pName),MD5Util.getMD5Code(pPassword)));
+            if (player != null){
+                status = Constants.SUCCESS;
+            }
+        }
+        dto.setStatus(status);
+        dto.setPlayer(player);
+        out.print(JsonUtils.objectToJson(dto));
+
+        out.flush();
+        out.close();
+    }
+
+    @RequestMapping("/updatePwd")
+    public void updatePwd(@RequestParam Integer pId, @RequestParam String pName,@RequestParam String pPassword, HttpServletResponse response) throws IOException{
         PrintWriter out =response.getWriter();
 
         Player player=new Player();
-        player.setpName(pName);
-        player.setpPassword(pPassword);
-        if(service.login(player) != null){
-            out.print("login success");
-        }else {
-            out.print("login failed");
-        }
+        player.setpId(pId);
+        player.setpName(EncodingUtils.utf8_encoding(pName));
+        player.setpPassword(MD5Util.getMD5Code(pPassword));
 
+        if(service.updatePwd(player)){
+            out.print("{\"status\":\"success\"}");
+        }else {
+            out.print("{\"status\":\"fail\"}");
+        }
+        out.flush();
+        out.close();
+    }
+
+    @RequestMapping("/deletePlayer")
+    public void deletePlayer(@RequestParam Integer pId, HttpServletResponse response) throws IOException {
+        PrintWriter out =response.getWriter();
+
+        if (service.deletePlayer(pId)){
+            out.print("{\"status\":\"success\"}");
+        }else {
+            out.print("{\"status\":\"fail\"}");
+        }
         out.flush();
         out.close();
     }

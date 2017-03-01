@@ -20,6 +20,14 @@ public class Player {
 
     private String pTelephone;
 
+    public Player() {
+    }
+
+    public Player(String pName, String pPassword) {
+        this.pName = pName;
+        this.pPassword = pPassword;
+    }
+
     public int getpId() {
         return pId;
     }
