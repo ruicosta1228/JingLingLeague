@@ -72,8 +72,8 @@
       <file leaf-file-name="PlayerSpec.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/jlxy/jinglingleague/entity/PlayerSpec.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="78" column="5" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+            <state relative-caret-position="109">
+              <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
               <folding>
                 <element signature="e#386#387#0" expanded="true" />
                 <element signature="e#412#413#0" expanded="true" />
@@ -1131,12 +1131,12 @@
       <workItem from="1488301620813" duration="9161000" />
       <workItem from="1488372061940" duration="853000" />
       <workItem from="1488378204748" duration="2472000" />
-      <workItem from="1488548979106" duration="1467000" />
+      <workItem from="1488548979106" duration="2024000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27441000" />
+    <option name="totallyTimeSpent" value="27998000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1695,8 +1695,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/edu/jlxy/jinglingleague/entity/PlayerSpec.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="78" column="5" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+        <state relative-caret-position="109">
+          <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
           <folding>
             <element signature="e#386#387#0" expanded="true" />
             <element signature="e#412#413#0" expanded="true" />
