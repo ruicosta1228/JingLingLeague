@@ -14,16 +14,32 @@ class JLLMainViewController: UITabBarController {
         super.viewDidLoad()
         
         setupChildControllers()
+        setupComposeButton()
     }
+    
+    var composeButton = UIButton(frame:CGRect(x:0, y:0, width:100, height:30))
 
+    
 }
 
 extension JLLMainViewController{
+    //设置中间按钮
+    func setupComposeButton(){
+        composeButton.setImage(UIImage(named: "TabIcon"), for: .normal)
+        let count = CGFloat(childViewControllers.count)
+        let w = tabBar.bounds.width / count - 1 //容错点
+        
+        composeButton.frame = tabBar.bounds.insetBy(dx: 2 * w, dy: 0)
+        tabBar.addSubview(composeButton)
+
+    }
+    
     //设置子控制器
     func setupChildControllers(){
         let array = [
             ["clsName": "JLLSocietyViewController", "title": "社区", "imageName": ""],
             ["clsName": "JLLDiscoveryViewController", "title": "约球", "imageName": ""],
+            ["clsName": ""],
             ["clsName": "JLLScheduleViewController", "title": "比赛", "imageName": ""],
             ["clsName": "JLLProfileViewController", "title": "个人", "imageName": ""],
         ]
@@ -50,6 +66,11 @@ extension JLLMainViewController{
         
         let vc = cls.init()
         vc.title = title
+        
+        //设置选中高亮
+        vc.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.blue], for: .highlighted)
+        //设置字大小
+        vc.tabBarItem.setTitleTextAttributes([NSFontAttributeName: UIFont.systemFont(ofSize: 14)], for: .normal)
         
         let nv = JLLNavigationController(rootViewController: vc)
         
