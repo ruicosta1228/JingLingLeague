@@ -11,7 +11,7 @@ import UIKit
 class JLLNavigationController: UINavigationController {
 
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
-        //如果不是栈低控制器，就隐藏
+        //如果不是栈底控制器，就隐藏
         if childViewControllers.count > 0{
             viewController.hidesBottomBarWhenPushed = true
         }
