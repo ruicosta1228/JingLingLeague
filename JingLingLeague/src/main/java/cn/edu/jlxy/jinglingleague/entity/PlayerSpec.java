@@ -10,7 +10,7 @@ public class PlayerSpec {
 
     private String pWeight;
 
-    private String pStrong;
+    private String pStrength;
 
     private String pStamina;
 
@@ -46,12 +46,12 @@ public class PlayerSpec {
         this.pWeight = pWeight;
     }
 
-    public String getpStrong() {
-        return pStrong;
+    public String getpStrength() {
+        return pStrength;
     }
 
-    public void setpStrong(String pStrong) {
-        this.pStrong = pStrong;
+    public void setpStrength(String pStrength) {
+        this.pStrength = pStrength;
     }
 
     public String getpStamina() {

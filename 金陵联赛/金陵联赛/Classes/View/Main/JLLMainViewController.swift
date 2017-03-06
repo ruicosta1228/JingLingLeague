@@ -17,8 +17,11 @@ class JLLMainViewController: UITabBarController {
         setupComposeButton()
     }
     
-    var composeButton = UIButton(frame:CGRect(x:0, y:0, width:100, height:30))
-
+    func composeStatus(){
+        print("按钮监听方法")
+    }
+    
+    lazy var composeButton = UIButton(frame:CGRect(x:0, y:0, width:100, height:30))
     
 }
 
@@ -26,11 +29,14 @@ extension JLLMainViewController{
     //设置中间按钮
     func setupComposeButton(){
         composeButton.setImage(UIImage(named: "TabIcon"), for: .normal)
+        
         let count = CGFloat(childViewControllers.count)
         let w = tabBar.bounds.width / count - 1 //容错点
         
         composeButton.frame = tabBar.bounds.insetBy(dx: 2 * w, dy: 0)
         tabBar.addSubview(composeButton)
+        
+        composeButton.addTarget(self, action: #selector(composeStatus), for: .touchUpInside)
 
     }
     
@@ -39,7 +45,7 @@ extension JLLMainViewController{
         let array = [
             ["clsName": "JLLSocietyViewController", "title": "社区", "imageName": ""],
             ["clsName": "JLLDiscoveryViewController", "title": "约球", "imageName": ""],
-            ["clsName": ""],
+            ["clsName": "UIViewController"],
             ["clsName": "JLLScheduleViewController", "title": "比赛", "imageName": ""],
             ["clsName": "JLLProfileViewController", "title": "个人", "imageName": ""],
         ]

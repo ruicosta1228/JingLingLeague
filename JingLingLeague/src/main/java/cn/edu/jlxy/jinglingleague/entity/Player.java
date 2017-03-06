@@ -20,12 +20,22 @@ public class Player {
 
     private String pTelephone;
 
+    private String pNum;
+
     public Player() {
     }
 
     public Player(String pName, String pPassword) {
         this.pName = pName;
         this.pPassword = pPassword;
+    }
+
+    public String getpNum() {
+        return pNum;
+    }
+
+    public void setpNum(String pNum) {
+        this.pNum = pNum;
     }
 
     public int getpId() {
