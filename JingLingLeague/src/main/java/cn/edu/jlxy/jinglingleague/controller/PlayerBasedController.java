@@ -27,7 +27,7 @@ public class PlayerBasedController {
         PrintWriter out =response.getWriter();
 
         Player player=new Player();
-        player.setpName(EncodingUtils.utf8_encoding(pName));
+        player.setpName(pName);
         player.setpPassword(MD5Util.getMD5Code(pPassword));
         if(service.register(player)){
             out.print("{\"status\":\"success\"}");
@@ -41,15 +41,13 @@ public class PlayerBasedController {
 
     @RequestMapping("/login")
     public void login(@RequestParam String pName,@RequestParam String pPassword, HttpServletResponse response) throws IOException{
-        //前台json显示问号,因为也要设置编码
-        response.setContentType("text/html;charset=UTF-8");
         PrintWriter out =response.getWriter();
         String status = Constants.FAIL;
 
         Player player=new Player();
         PlayerLoginDto dto =new PlayerLoginDto();
         if (!StringUtils.isEmpty(pName) && !StringUtils.isEmpty(pPassword)){
-            player=service.login(new Player(EncodingUtils.utf8_encoding(pName),MD5Util.getMD5Code(pPassword)));
+            player=service.login(new Player(pName,MD5Util.getMD5Code(pPassword)));
             if (player != null){
                 status = Constants.SUCCESS;
             }
@@ -68,7 +66,7 @@ public class PlayerBasedController {
 
         Player player=new Player();
         player.setpId(pId);
-        player.setpName(EncodingUtils.utf8_encoding(pName));
+        player.setpName(pName);
         player.setpPassword(MD5Util.getMD5Code(pPassword));
 
         if(service.updatePwd(player)){

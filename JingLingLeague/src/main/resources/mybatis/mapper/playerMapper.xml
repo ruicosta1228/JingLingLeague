@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace必须指向Dao接口 -->
+<mapper namespace="cn.edu.jlxy.jinglingleague.dao.IPlayerDao">
+
+    <cache eviction="FIFO" flushInterval="60000" size="500" readOnly="true"></cache>
+
+    <insert id="register" parameterType="Player" useGeneratedKeys="true" keyProperty="pId" flushCache="true">
+        insert into player_based(pName, pPassword) values(#{pName}, #{pPassword})
+    </insert>
+
+    <select id="login" parameterType="Player" resultType="Player" useCache="false">
+        select * from player_based where pName = #{pName} and pPassword = #{pPassword}
+    </select>
+
+    <update id="updatePwd" parameterType="Player" >
+        update player_based set pPassword=#{pPassword} where pName=#{pName} and pId=#{pId}
+    </update>
+
+    <delete id="deleteById" parameterType="int" >
+        delete from player_based where pId=#{pId}
+    </delete>
+</mapper>
