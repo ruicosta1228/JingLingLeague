@@ -28,7 +28,7 @@ public class SysUserController {
         service.saveWithMybatis(uName,uAge);
         System.out.println("save success");
         PrintWriter out = response.getWriter();
-        out.print("save success");
+        out.print("{\"status\":\"success\"}");
         out.flush();
         out.close();
     }

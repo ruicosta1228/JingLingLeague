@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace必须指向Dao接口 -->
+<mapper namespace="cn.edu.jlxy.jinglingleague.dao.IPlayerSpecificDao">
+
+    <cache eviction="FIFO" flushInterval="60000" size="500" readOnly="true"></cache>
+
+    <select id="getAll" parameterType="int" resultType="PlayerSpec" useCache="false">
+        select * from player_specific where pId = #{pId}
+    </select>
+
+    <update id="updateSpec" parameterType="PlayerSpec">
+        update player_specific set pHeight = #{pHeight}, pWeight = #{pWeight}, pStrength = #{pStrength}, pStamina = #{pStamina}, pSpeed = #{pSpeed}, pShoot = #{pShoot}, pSkill = #{pSkill}, pDefence = #{pDefence}
+          where pId = #{pId}
+    </update>
+
+    <insert id="insertEmptyInfo" parameterType="int" useGeneratedKeys="false" keyProperty="pId" flushCache="true">
+        insert into player_specific(pId) values(#{pId})
+    </insert>
+</mapper>

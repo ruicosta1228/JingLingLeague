@@ -1,5 +1,7 @@
 package cn.edu.jlxy.jinglingleague.filter;
 
+import cn.edu.jlxy.jinglingleague.util.EncodingUtils;
+import cn.edu.jlxy.jinglingleague.util.MD5Util;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import javax.servlet.FilterChain;
@@ -31,7 +33,7 @@ public class RequestFilter extends OncePerRequestFilter {
         //该处可以实现各种业务的自定义的过滤机制
         if (method.equalsIgnoreCase("get")) {
             try {
-                ret = new String(input.getBytes("ISO8859-1"), "utf-8");
+                ret = EncodingUtils.utf8_encoding(input);
             } catch (UnsupportedEncodingException e) {
                 e.printStackTrace();
             }

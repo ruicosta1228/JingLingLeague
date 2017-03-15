@@ -20,6 +20,7 @@ public class Player {
 
     private String pTelephone;
 
+    //运动员号码
     private String pNum;
 
     public Player() {

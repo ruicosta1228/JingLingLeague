@@ -20,7 +20,22 @@ public class PlayerSpec {
 
     private String pSkill;
 
-    private String pdefence;
+    private String pDefence;
+
+    public PlayerSpec() {
+    }
+
+    public PlayerSpec(int pId, String pHeight, String pWeight, String pStrength, String pStamina, String pSpeed, String pShoot, String pSkill, String pDefence) {
+        this.pId = pId;
+        this.pHeight = pHeight;
+        this.pWeight = pWeight;
+        this.pStrength = pStrength;
+        this.pStamina = pStamina;
+        this.pSpeed = pSpeed;
+        this.pShoot = pShoot;
+        this.pSkill = pSkill;
+        this.pDefence = pDefence;
+    }
 
     public int getpId() {
         return pId;
@@ -86,11 +101,11 @@ public class PlayerSpec {
         this.pSkill = pSkill;
     }
 
-    public String getPdefence() {
-        return pdefence;
+    public String getpDefence() {
+        return pDefence;
     }
 
-    public void setPdefence(String pdefence) {
-        this.pdefence = pdefence;
+    public void setpDefence(String pDefence) {
+        this.pDefence = pDefence;
     }
 }

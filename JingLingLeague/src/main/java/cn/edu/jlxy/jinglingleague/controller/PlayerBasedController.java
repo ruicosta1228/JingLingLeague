@@ -3,6 +3,7 @@ package cn.edu.jlxy.jinglingleague.controller;
 import cn.edu.jlxy.jinglingleague.dto.PlayerLoginDto;
 import cn.edu.jlxy.jinglingleague.entity.Player;
 import cn.edu.jlxy.jinglingleague.service.IPlayerBasedService;
+import cn.edu.jlxy.jinglingleague.service.IPlayerSpecificService;
 import cn.edu.jlxy.jinglingleague.util.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +21,9 @@ import java.io.PrintWriter;
 @RequestMapping("/playerBased")
 public class PlayerBasedController {
     @Resource
-    IPlayerBasedService service;
+    IPlayerBasedService basedService;
+    @Resource
+    IPlayerSpecificService specService;
 
     @RequestMapping("/register")
     public void register(@RequestParam String pName,@RequestParam String pPassword, HttpServletResponse response) throws IOException {
@@ -29,7 +32,7 @@ public class PlayerBasedController {
         Player player=new Player();
         player.setpName(pName);
         player.setpPassword(MD5Util.getMD5Code(pPassword));
-        if(service.register(player)){
+        if(basedService.register(player) && specService.createEmptyInfo(player.getpId())){
             out.print("{\"status\":\"success\"}");
         }else {
             out.print("{\"status\":\"fail\"}");
@@ -47,7 +50,7 @@ public class PlayerBasedController {
         Player player=new Player();
         PlayerLoginDto dto =new PlayerLoginDto();
         if (!StringUtils.isEmpty(pName) && !StringUtils.isEmpty(pPassword)){
-            player=service.login(new Player(pName,MD5Util.getMD5Code(pPassword)));
+            player= basedService.login(new Player(pName,MD5Util.getMD5Code(pPassword)));
             if (player != null){
                 status = Constants.SUCCESS;
             }
@@ -69,7 +72,7 @@ public class PlayerBasedController {
         player.setpName(pName);
         player.setpPassword(MD5Util.getMD5Code(pPassword));
 
-        if(service.updatePwd(player)){
+        if(basedService.updatePwd(player)){
             out.print("{\"status\":\"success\"}");
         }else {
             out.print("{\"status\":\"fail\"}");
@@ -82,7 +85,7 @@ public class PlayerBasedController {
     public void deletePlayer(@RequestParam Integer pId, HttpServletResponse response) throws IOException {
         PrintWriter out =response.getWriter();
 
-        if (service.deletePlayer(pId)){
+        if (basedService.deletePlayer(pId)){
             out.print("{\"status\":\"success\"}");
         }else {
             out.print("{\"status\":\"fail\"}");

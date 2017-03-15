@@ -1,6 +1,6 @@
 package cn.edu.jlxy.jinglingleague.service.impl;
 
-import cn.edu.jlxy.jinglingleague.dao.IPlayerDao;
+import cn.edu.jlxy.jinglingleague.dao.IPlayerBasedDao;
 import cn.edu.jlxy.jinglingleague.entity.Player;
 import cn.edu.jlxy.jinglingleague.service.IPlayerBasedService;
 import org.springframework.stereotype.Service;
@@ -13,7 +13,7 @@ import javax.annotation.Resource;
 @Service
 public class IPlayerBasedServiceImpl implements IPlayerBasedService {
     @Resource
-    IPlayerDao dao;
+    IPlayerBasedDao dao;
 
     public Player login(Player player) {
         Player p = dao.login(player);
