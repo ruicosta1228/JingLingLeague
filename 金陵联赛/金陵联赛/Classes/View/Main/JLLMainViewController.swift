@@ -79,6 +79,8 @@ extension JLLMainViewController{
         vc.tabBarItem.setTitleTextAttributes([NSFontAttributeName: UIFont.systemFont(ofSize: 14)], for: .normal)
         
         let nv = JLLNavigationController(rootViewController: vc)
+        //设置标题颜色
+        nv.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.darkGray]
         
         return nv
     }

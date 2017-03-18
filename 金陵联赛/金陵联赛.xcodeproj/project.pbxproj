@@ -12,6 +12,9 @@
 		B586E30B1E6B1C400040F9F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B586E30A1E6B1C400040F9F3 /* Assets.xcassets */; };
 		B586E3191E6B1C400040F9F3 /* ____Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B586E3181E6B1C400040F9F3 /* ____Tests.swift */; };
 		B586E3241E6B1C400040F9F3 /* ____UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B586E3231E6B1C400040F9F3 /* ____UITests.swift */; };
+		B5AE10FC1E7D9E1800609CD6 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE10FB1E7D9E1800609CD6 /* JoinViewController.swift */; };
+		B5AE10FE1E7D9E2300609CD6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE10FD1E7D9E2300609CD6 /* MapViewController.swift */; };
+		B5AE11001E7D9E5500609CD6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE10FF1E7D9E5500609CD6 /* DetailViewController.swift */; };
 		B5DFDA991E6BC506007BD6AB /* JLLMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFDA981E6BC506007BD6AB /* JLLMainViewController.swift */; };
 		B5DFDA9B1E6BC772007BD6AB /* JLLNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFDA9A1E6BC772007BD6AB /* JLLNavigationController.swift */; };
 		B5DFDA9D1E6BC7BC007BD6AB /* JLLBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFDA9C1E6BC7BC007BD6AB /* JLLBaseViewController.swift */; };
@@ -51,6 +54,9 @@
 		B586E31F1E6B1C400040F9F3 /* 金陵联赛UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "金陵联赛UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B586E3231E6B1C400040F9F3 /* ____UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____UITests.swift"; sourceTree = "<group>"; };
 		B586E3251E6B1C400040F9F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5AE10FB1E7D9E1800609CD6 /* JoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
+		B5AE10FD1E7D9E2300609CD6 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		B5AE10FF1E7D9E5500609CD6 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B5DFDA981E6BC506007BD6AB /* JLLMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLMainViewController.swift; sourceTree = "<group>"; };
 		B5DFDA9A1E6BC772007BD6AB /* JLLNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLNavigationController.swift; sourceTree = "<group>"; };
 		B5DFDA9C1E6BC7BC007BD6AB /* JLLBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLBaseViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				B5DFDAA41E6BC899007BD6AB /* JLLDiscoveryViewController.swift */,
+				B5AE10FB1E7D9E1800609CD6 /* JoinViewController.swift */,
+				B5AE10FD1E7D9E2300609CD6 /* MapViewController.swift */,
 			);
 			path = "Discovery(约球)";
 			sourceTree = "<group>";
@@ -210,6 +218,7 @@
 		B5DFDA961E6BC484007BD6AB /* Society(社区) */ = {
 			isa = PBXGroup;
 			children = (
+				B5AE10FF1E7D9E5500609CD6 /* DetailViewController.swift */,
 				B5DFDA9E1E6BC830007BD6AB /* JLLSocietyViewController.swift */,
 			);
 			path = "Society(社区)";
@@ -366,12 +375,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5AE11001E7D9E5500609CD6 /* DetailViewController.swift in Sources */,
 				B5DFDAA51E6BC899007BD6AB /* JLLDiscoveryViewController.swift in Sources */,
 				B5DFDA9B1E6BC772007BD6AB /* JLLNavigationController.swift in Sources */,
+				B5AE10FC1E7D9E1800609CD6 /* JoinViewController.swift in Sources */,
 				B5DFDAA81E6C2B90007BD6AB /* BundleExtension.swift in Sources */,
 				B5DFDA991E6BC506007BD6AB /* JLLMainViewController.swift in Sources */,
 				B5DFDAA11E6BC874007BD6AB /* JLLScheduleViewController.swift in Sources */,
 				B5DFDAA31E6BC889007BD6AB /* JLLProfileViewController.swift in Sources */,
+				B5AE10FE1E7D9E2300609CD6 /* MapViewController.swift in Sources */,
 				B526202B1E6DC14B004D21C0 /* UIBarButtonItem.swift in Sources */,
 				B5DFDA9D1E6BC7BC007BD6AB /* JLLBaseViewController.swift in Sources */,
 				B5DFDA9F1E6BC830007BD6AB /* JLLSocietyViewController.swift in Sources */,
