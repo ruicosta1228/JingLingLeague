@@ -14,6 +14,7 @@ class JLLMainViewController: UITabBarController {
         super.viewDidLoad()
         
         setupChildControllers()
+        
         setupComposeButton()
     }
     
@@ -80,8 +81,7 @@ extension JLLMainViewController{
         
         let nv = JLLNavigationController(rootViewController: vc)
         //设置标题颜色
-        nv.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.darkGray]
-        
+        //nv.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.darkGray]
         return nv
     }
 }

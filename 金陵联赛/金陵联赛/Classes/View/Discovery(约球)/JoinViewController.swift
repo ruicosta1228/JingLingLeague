@@ -11,7 +11,6 @@ import UIKit
 class JoinViewController: JLLBaseViewController {
 
     override func viewDidLoad() {
-        self.view.backgroundColor = UIColor.white
         super.viewDidLoad()
         self.title = "加入比赛"
         

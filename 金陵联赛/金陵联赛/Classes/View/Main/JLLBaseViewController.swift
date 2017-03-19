@@ -9,11 +9,21 @@
 import UIKit
 
 class JLLBaseViewController: UIViewController {
+    
+    lazy var navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 64))
+    
+    lazy var navItem = UINavigationItem()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupUI()
+    }
+    
+    override var title: String?{
+        didSet {
+            navItem.title = title
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,6 +46,18 @@ class JLLBaseViewController: UIViewController {
 
 extension JLLBaseViewController{
     func setupUI(){
+        
+        self.view.backgroundColor = UIColor.white
+        
+        view.addSubview(navigationBar)
+        
+        navigationBar.items = [navItem]
+        
+        //设置navigationBar背景色
+        navigationBar.barTintColor = UIColor.lightGray
+        
+        //设置title颜色
+        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.darkGray]
         
     }
 }

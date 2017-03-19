@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B526202B1E6DC14B004D21C0 /* UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B526202A1E6DC14B004D21C0 /* UIBarButtonItem.swift */; };
+		B581EFD71E7EACA500A2ECDA /* JLLDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581EFD61E7EACA500A2ECDA /* JLLDemoViewController.swift */; };
 		B586E3041E6B1C400040F9F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B586E3031E6B1C400040F9F3 /* AppDelegate.swift */; };
 		B586E30B1E6B1C400040F9F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B586E30A1E6B1C400040F9F3 /* Assets.xcassets */; };
 		B586E3191E6B1C400040F9F3 /* ____Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B586E3181E6B1C400040F9F3 /* ____Tests.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		B526202A1E6DC14B004D21C0 /* UIBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItem.swift; sourceTree = "<group>"; };
+		B581EFD61E7EACA500A2ECDA /* JLLDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLDemoViewController.swift; sourceTree = "<group>"; };
 		B586E3001E6B1C400040F9F3 /* 金陵联赛.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "金陵联赛.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B586E3031E6B1C400040F9F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B586E30A1E6B1C400040F9F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B581EFD51E7EAC8400A2ECDA /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				B581EFD61E7EACA500A2ECDA /* JLLDemoViewController.swift */,
+			);
+			name = Test;
+			sourceTree = "<group>";
+		};
 		B586E2F71E6B1C400040F9F3 = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +202,7 @@
 		B5DFDA931E6BC484007BD6AB /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				B581EFD51E7EAC8400A2ECDA /* Test */,
 				B5DFDA981E6BC506007BD6AB /* JLLMainViewController.swift */,
 				B5DFDA9A1E6BC772007BD6AB /* JLLNavigationController.swift */,
 				B5DFDA9C1E6BC7BC007BD6AB /* JLLBaseViewController.swift */,
@@ -387,6 +398,7 @@
 				B526202B1E6DC14B004D21C0 /* UIBarButtonItem.swift in Sources */,
 				B5DFDA9D1E6BC7BC007BD6AB /* JLLBaseViewController.swift in Sources */,
 				B5DFDA9F1E6BC830007BD6AB /* JLLSocietyViewController.swift in Sources */,
+				B581EFD71E7EACA500A2ECDA /* JLLDemoViewController.swift in Sources */,
 				B586E3041E6B1C400040F9F3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
