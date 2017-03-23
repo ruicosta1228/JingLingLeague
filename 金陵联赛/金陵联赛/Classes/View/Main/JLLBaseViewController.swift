@@ -28,6 +28,10 @@ class JLLBaseViewController: UIViewController {
             navItem.title = title
         }
     }
+    
+    func loadData(){
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
