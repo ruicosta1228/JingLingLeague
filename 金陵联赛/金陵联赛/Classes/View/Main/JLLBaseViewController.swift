@@ -19,8 +19,11 @@ class JLLBaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupUI()
+        
+        //加载数据
+        loadData()
     }
     
     override var title: String?{
