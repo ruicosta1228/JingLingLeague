@@ -28,3 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+//设置方向支持
+extension AppDelegate {
+    @objc(application:supportedInterfaceOrientationsForWindow:) func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        return .portrait
+    }
+}

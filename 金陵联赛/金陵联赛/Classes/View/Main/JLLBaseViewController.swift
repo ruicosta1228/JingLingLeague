@@ -8,7 +8,10 @@
 
 import UIKit
 
+//OC中不支持多继承，使用协议替代
 class JLLBaseViewController: UIViewController {
+    //如果用户没有登录就不创建
+    var tableView: UITableView?
     
     lazy var navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 64))
     
@@ -49,6 +52,14 @@ extension JLLBaseViewController{
         
         self.view.backgroundColor = UIColor.white
         
+        setupNavigationBar()
+        
+        setupTableView()
+        
+    }
+    
+    private func setupNavigationBar(){
+        
         view.addSubview(navigationBar)
         
         navigationBar.items = [navItem]
@@ -59,5 +70,29 @@ extension JLLBaseViewController{
         //设置title颜色
         navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.darkGray]
         
+
+    }
+    
+    private func setupTableView(){
+        tableView = UITableView(frame: view.bounds, style: .plain)
+        
+        view.insertSubview(tableView!, belowSubview: navigationBar)
+        
+        //设置数据源与代理，让子类直接实现数据源方法
+        tableView?.dataSource = self
+        tableView?.delegate = self
+    }
+}
+
+extension JLLBaseViewController: UITableViewDataSource, UITableViewDelegate{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    //基类准备方法
+    //子类不需要super
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
     }
 }
