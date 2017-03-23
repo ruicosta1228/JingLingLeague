@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace必须指向Dao接口 -->
+<mapper namespace="cn.edu.jlxy.jinglingleague.dao.ITeamDao">
+
+    <cache eviction="FIFO" flushInterval="60000" size="500" readOnly="true"></cache>
+
+    <insert id="insertTeam" parameterType="Team" useGeneratedKeys="true" keyProperty="tId" flushCache="true">
+        insert into team(tName) values(#{tName})
+    </insert>
+
+    <update id="updateTeamInfo" parameterType="Team" >
+        update team set tPicture=#{tPicture} , tDescription=#{tDescription} where tName=#{tName} and tId=#{tId}
+    </update>
+
+    <select id="selectAll" resultType="Team">
+        select * from team
+    </select>
+</mapper>

@@ -4,6 +4,7 @@ import cn.edu.jlxy.jinglingleague.dao.IPlayerBasedDao;
 import cn.edu.jlxy.jinglingleague.entity.Player;
 import cn.edu.jlxy.jinglingleague.service.IPlayerBasedService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 
