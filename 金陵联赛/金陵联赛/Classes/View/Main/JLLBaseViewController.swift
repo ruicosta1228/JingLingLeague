@@ -10,6 +10,9 @@ import UIKit
 
 //OC中不支持多继承，使用协议替代
 class JLLBaseViewController: UIViewController {
+    //用户登录标记
+    var userLogon = false
+    
     //如果用户没有登录就不创建
     var tableView: UITableView?
     //刷新控件
@@ -69,7 +72,7 @@ extension JLLBaseViewController{
         
         setupNavigationBar()
         
-        setupTableView()
+        userLogon ? setupTableView() : setupVisitorView()
         
     }
     
@@ -107,6 +110,14 @@ extension JLLBaseViewController{
         
         //添加监听方法
         refreshControl?.addTarget(self, action: #selector(loadData), for: .valueChanged)
+    }
+    
+    private func setupVisitorView(){
+        let visitorView = UIView(frame: view.bounds)
+        
+        visitorView.backgroundColor = UIColor.white
+        
+        view.insertSubview(visitorView, belowSubview: navigationBar)
     }
 }
 
