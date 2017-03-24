@@ -14,6 +14,8 @@ class JLLBaseViewController: UIViewController {
     var tableView: UITableView?
     //刷新控件
     var refreshControl: UIRefreshControl?
+    //上拉刷新标记
+    var isPullup = false
     
     lazy var navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 64))
     
@@ -35,7 +37,8 @@ class JLLBaseViewController: UIViewController {
     }
     
     func loadData(){
-        
+        //子类不实现方法，默认关闭刷新控件
+        refreshControl?.endRefreshing()
     }
 
     override func didReceiveMemoryWarning() {
@@ -117,5 +120,27 @@ extension JLLBaseViewController: UITableViewDataSource, UITableViewDelegate{
     //子类不需要super
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return UITableViewCell()
+    }
+    
+    //显示最后一行时候上拉刷新
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        //判断是否是最后一行
+        let row = indexPath.row
+        
+        let section = tableView.numberOfSections - 1
+        
+        if row < 0 || section < 0 {
+            return
+        }
+        
+        let count = tableView.numberOfRows(inSection: section)
+        
+        //如果是最后一行，同时没有上拉刷新
+        if(row == (count - 1) && !isPullup){
+            print("上拉刷新")
+            isPullup = true
+            
+            loadData()
+        }
     }
 }
