@@ -15,8 +15,19 @@ class JLLSocietyViewController: JLLBaseViewController {
     lazy var statusList = [String]()
     
     override func loadData() {
-        for i in 0..<10{
-            statusList.insert(i.description, at: 0)
+        print("加载数据")
+        //模拟延迟加载
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
+            for i in 0..<15{
+                self.statusList.insert(i.description, at: 0)
+            }
+            
+            //结束刷新控件
+            self.refreshControl?.endRefreshing()
+            
+            //刷新表
+            print("刷新表格")
+            self.tableView?.reloadData()
         }
     }
 
@@ -28,17 +39,6 @@ class JLLSocietyViewController: JLLBaseViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    //刷新数据
-//    func refreshData(){
-//        //删除旧数据
-//        self._dataArray?.removeAll()
-//        
-//        for _ in 1...5{
-//            _dataArray?.append("\(Int(arc4random()%1000))")
-//        }
-//        self._tableView?.reloadData()
-//        self.refreshControl.endRefreshing()
-//    }
     
 }
 
