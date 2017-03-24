@@ -20,11 +20,17 @@ extension UIBarButtonItem {
     ///   - action: 监听函数
     convenience init(title: String, fontSize: CGFloat = 16, target: AnyObject?, action: Selector){
         let btn = UIButton(type: .custom)
+        
         btn.titleLabel?.font = UIFont.systemFont(ofSize: fontSize)
+        
         btn.setTitle(title, for: .normal)
+        
         btn.setTitleColor(UIColor.darkGray, for: .normal)
+        
         btn.setTitleColor(UIColor.blue, for: .highlighted)
+        
         btn.sizeToFit()
+        
         btn.addTarget(target, action: action, for: .touchUpInside)
         
         self.init(customView: btn)

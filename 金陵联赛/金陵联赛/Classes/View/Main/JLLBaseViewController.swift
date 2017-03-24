@@ -113,10 +113,8 @@ extension JLLBaseViewController{
     }
     
     private func setupVisitorView(){
-        let visitorView = UIView(frame: view.bounds)
-        
-        visitorView.backgroundColor = UIColor.white
-        
+        let visitorView = JLLVisitorView(frame: view.bounds)
+                
         view.insertSubview(visitorView, belowSubview: navigationBar)
     }
 }
