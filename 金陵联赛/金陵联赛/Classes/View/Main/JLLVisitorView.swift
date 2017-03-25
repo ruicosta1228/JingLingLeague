@@ -83,6 +83,9 @@ extension JLLVisitorView{
         
 //        addSubview(maskIconView)
         
+        // 文本居中
+        tipLabel.textAlignment = .center
+        
         //取消autoresizing
         for v in subviews{
             v.translatesAutoresizingMaskIntoConstraints = false

@@ -80,7 +80,10 @@ extension JLLMainViewController{
         guard let clsName = dict["clsName"] as? String,
         let title = dict["title"] as? String,
         //let imageName = dict["imageName"],
-        let cls = NSClassFromString(Bundle.main.namespace + "." + clsName) as? UIViewController.Type else {
+        let cls = NSClassFromString(Bundle.main.namespace + "." + clsName) as? JLLBaseViewController.Type,
+        let visitorDict = dict["visitorInfo"] as? [String: String]
+        
+            else {
             
                 return UIViewController()
             
@@ -88,6 +91,9 @@ extension JLLMainViewController{
         
         let vc = cls.init()
         vc.title = title
+        
+        //设置控制器的访客信息字典
+        vc.visitorInfoDictionary = visitorDict
         
         //设置选中高亮
         vc.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.blue], for: .highlighted)
