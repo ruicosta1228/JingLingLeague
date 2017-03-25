@@ -20,25 +20,25 @@ class JLLVisitorView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    lazy var iconView: UIImageView = UIImageView(image: UIImage(named: "TabIcon"))
+    lazy var iconView: UIImageView = UIImageView(image: UIImage(named: "visitor_first_image"))
     
     //private lazy var iconView = UIImageView(image: UIImage(named: "TabIcon"))
     
-    lazy var tipLabel: UILabel = UILabel(withText: "关注一些人，回这里看看有什么惊喜关注一些人", fontSize: 14, color: UIColor.black)
+    lazy var tipLabel: UILabel = UILabel(withText: "关注一些人，回这里看看有什么惊喜", fontSize: 14, color: UIColor.black)
 
     lazy var registerButton: UIButton = UIButton(
         title: "注册",
         fontSize: 16,
-        normalColor: UIColor.blue,
+        normalColor: UIColor.gray,
         highlightedColor: UIColor.black,
-        bgImageName: "")
+        bgImageName: "common_button_white_disable")
     
     lazy var loginButton: UIButton = UIButton(
         title: "登录",
         fontSize: 16,
-        normalColor: UIColor.blue,
+        normalColor: UIColor.gray,
         highlightedColor: UIColor.black,
-        bgImageName: "")
+        bgImageName: "common_button_white_disable")
 }
 
 extension JLLVisitorView{
@@ -80,7 +80,7 @@ extension JLLVisitorView{
         addConstraint(NSLayoutConstraint(item: tipLabel,
                                          attribute: .centerX,
                                          relatedBy: .equal,
-                                         toItem: self,
+                                         toItem: iconView,
                                          attribute: .centerX,
                                          multiplier: 1.0,
                                          constant: 0))
@@ -95,36 +95,53 @@ extension JLLVisitorView{
         //按钮布局
         //注册
         addConstraint(NSLayoutConstraint(item: registerButton,
-                                         attribute: .centerX,
+                                         attribute: .left,
                                          relatedBy: .equal,
-                                         toItem: self,
-                                         attribute: .centerX,
+                                         toItem: tipLabel,
+                                         attribute: .left,
                                          multiplier: 1.0,
-                                         constant: -20))
+                                         constant: 0))
         
         addConstraint(NSLayoutConstraint(item: registerButton,
-                                         attribute: .centerY,
+                                         attribute: .top,
                                          relatedBy: .equal,
-                                         toItem: self,
-                                         attribute: .centerY,
+                                         toItem: tipLabel,
+                                         attribute: .bottom,
                                          multiplier: 1.0,
                                          constant: +40))
+        
+        addConstraint(NSLayoutConstraint(item: registerButton,
+                                         attribute: .width,
+                                         relatedBy: .equal,
+                                         toItem: nil,
+                                         attribute: .notAnAttribute,
+                                         multiplier: 1.0,
+                                         constant: 100))
         //登录
         addConstraint(NSLayoutConstraint(item: loginButton,
-                                         attribute: .centerX,
+                                         attribute: .right,
                                          relatedBy: .equal,
-                                         toItem: self,
-                                         attribute: .centerX,
+                                         toItem: tipLabel,
+                                         attribute: .right,
                                          multiplier: 1.0,
-                                         constant: +20))
+                                         constant: 0))
         
         addConstraint(NSLayoutConstraint(item: loginButton,
-                                         attribute: .centerY,
+                                         attribute: .top,
                                          relatedBy: .equal,
-                                         toItem: self,
-                                         attribute: .centerY,
+                                         toItem: tipLabel,
+                                         attribute: .bottom,
                                          multiplier: 1.0,
                                          constant: +40))
+        
+        addConstraint(NSLayoutConstraint(item: loginButton,
+                                         attribute: .width,
+                                         relatedBy: .equal,
+                                         toItem: registerButton,
+                                         attribute: .width,
+                                         multiplier: 1.0,
+                                         constant: 0))
+
 
     }
 }
