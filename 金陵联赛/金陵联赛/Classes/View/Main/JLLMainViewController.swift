@@ -49,17 +49,17 @@ extension JLLMainViewController{
             ],
             
             ["clsName": "JLLDiscoveryViewController", "title": "约球", "imageName": "",
-             "visitorInfo": ["imageName": "visitordiscover_image_message", "message": "登录后，约人踢一场比赛吧"]
+             "visitorInfo": ["imageName": "visitordiscover_image_message", "message": "登录后，约人踢一场比赛吧哈哈哈哈哈哈哈哈"]
             ],
             
             ["clsName": "UIViewController"],
             
             ["clsName": "JLLScheduleViewController", "title": "比赛", "imageName": "",
-             "visitorInfo": ["imageName": "visitordiscover_image_message", "message": "登陆后，看看球队的最近表现"]
+             "visitorInfo": ["imageName": "visitordiscover_image_message", "message": "登陆后，看看球队的最近表现哈哈哈哈哈哈哈哈"]
             ],
             
             ["clsName": "JLLProfileViewController", "title": "个人", "imageName": "",
-             "visitorInfo": ["imageName": "visitordiscover_image_profile", "message": "登陆后，将你自己展示给别人"]
+             "visitorInfo": ["imageName": "visitordiscover_image_profile", "message": "登陆后，将你自己展示给别人哈哈哈哈哈哈哈哈"]
             ],
         ]
         
