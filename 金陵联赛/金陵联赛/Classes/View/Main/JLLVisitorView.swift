@@ -20,19 +20,46 @@ class JLLVisitorView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //使用字典设置访客视图信息
+    //首页 imageName == ""
+    func setupInfo(dict: [String: String]) {
+        //取字典信息
+        guard let imageName = dict["imageName"],
+            let message = dict["message"] else {
+                return
+        }
+        
+        //设置消息
+        tipLabel.text = message
+        
+        //设置图像
+        if imageName == "" {
+            return
+        }
+        iconView.image = UIImage(named: imageName)
+    }
+    
+    
     lazy var iconView: UIImageView = UIImageView(image: UIImage(named: "visitor_first_image"))
     
     //private lazy var iconView = UIImageView(image: UIImage(named: "TabIcon"))
     
-    lazy var tipLabel: UILabel = UILabel(withText: "关注一些人，回这里看看有什么惊喜", fontSize: 14, color: UIColor.black)
-
+    //遮罩图像
+//    lazy var maskIconView: UIImageView = UIImageView(image: UIImage(named: "visitordiscover_feed_mask_smallicon"))
+    
+    lazy var tipLabel: UILabel = UILabel(withText: "关注一些人，回这里看看有什么惊喜",
+                                         fontSize: 14,
+                                         color: UIColor.black)
+    
+    //注册
     lazy var registerButton: UIButton = UIButton(
         title: "注册",
         fontSize: 16,
-        normalColor: UIColor.gray,
+        normalColor: UIColor.orange,
         highlightedColor: UIColor.black,
         bgImageName: "common_button_white_disable")
     
+    //登录
     lazy var loginButton: UIButton = UIButton(
         title: "登录",
         fontSize: 16,
@@ -52,6 +79,8 @@ extension JLLVisitorView{
         addSubview(registerButton)
         
         addSubview(loginButton)
+        
+//        addSubview(maskIconView)
         
         //取消autoresizing
         for v in subviews{
@@ -142,6 +171,18 @@ extension JLLVisitorView{
                                          multiplier: 1.0,
                                          constant: 0))
 
-
+//        //遮罩图像
+//        let viewDict = ["maskIconView": maskIconView, "registerButton": registerButton] as [String : Any]
+//        addConstraints(NSLayoutConstraint.constraints(
+//            withVisualFormat: "H:|-0-[maskIconView]-0-|",
+//            options: [],
+//            metrics: nil,
+//            views: viewDict))
+//        addConstraints(NSLayoutConstraint.constraints(
+//            withVisualFormat: "V:|-0-[maskIconView]-(-35)-[registerButton]",
+//            options: [],
+//            metrics: nil,
+//            views: viewDict))
+        
     }
 }
