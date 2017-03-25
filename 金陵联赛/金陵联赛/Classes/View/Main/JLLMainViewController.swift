@@ -45,13 +45,26 @@ extension JLLMainViewController{
     func setupChildControllers(){
         let  array: [[String: Any]] = [
             ["clsName": "JLLSocietyViewController", "title": "社区", "imageName": "",
-              "visitorInfo": ["imageName": "", "message": "哈哈"]
+              "visitorInfo": ["imageName": "", "message": "关注一些人，回这里看看有什么惊喜"]
             ],
-            ["clsName": "JLLDiscoveryViewController", "title": "约球", "imageName": ""],
+            
+            ["clsName": "JLLDiscoveryViewController", "title": "约球", "imageName": "",
+             "visitorInfo": ["imageName": "visitordiscover_image_message", "message": "登录后，约人踢一场比赛吧"]
+            ],
+            
             ["clsName": "UIViewController"],
-            ["clsName": "JLLScheduleViewController", "title": "比赛", "imageName": ""],
-            ["clsName": "JLLProfileViewController", "title": "个人", "imageName": ""],
+            
+            ["clsName": "JLLScheduleViewController", "title": "比赛", "imageName": "",
+             "visitorInfo": ["imageName": "visitordiscover_image_message", "message": "登陆后，看看球队的最近表现"]
+            ],
+            
+            ["clsName": "JLLProfileViewController", "title": "个人", "imageName": "",
+             "visitorInfo": ["imageName": "visitordiscover_image_profile", "message": "登陆后，将你自己展示给别人"]
+            ],
         ]
+        
+        //测试数据格式是否正确
+//        (array as NSArray).write(toFile: "/Users/salasoul/Desktop/demo.plist", atomically: true)
         
         var arrayM = [UIViewController]()
         
