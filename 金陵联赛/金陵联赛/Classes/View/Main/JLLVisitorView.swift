@@ -10,6 +10,27 @@ import UIKit
 
 class JLLVisitorView: UIView {
 
+    //访客视图的信息字典
+    //首页 imageName == ""
+    var visitorInfo: [String: String]? {
+        didSet {
+            //取字典信息
+            guard let imageName = visitorInfo?["imageName"],
+                let message = visitorInfo?["message"] else {
+                    return
+            }
+            
+            //设置消息
+            tipLabel.text = message
+            
+            //设置图像
+            if imageName == "" {
+                return
+            }
+            iconView.image = UIImage(named: imageName)
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -19,26 +40,6 @@ class JLLVisitorView: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    //使用字典设置访客视图信息
-    //首页 imageName == ""
-    func setupInfo(dict: [String: String]) {
-        //取字典信息
-        guard let imageName = dict["imageName"],
-            let message = dict["message"] else {
-                return
-        }
-        
-        //设置消息
-        tipLabel.text = message
-        
-        //设置图像
-        if imageName == "" {
-            return
-        }
-        iconView.image = UIImage(named: imageName)
-    }
-    
     
     lazy var iconView: UIImageView = UIImageView(image: UIImage(named: "visitor_first_image"))
     

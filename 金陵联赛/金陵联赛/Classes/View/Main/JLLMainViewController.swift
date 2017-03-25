@@ -43,8 +43,10 @@ extension JLLMainViewController{
     
     //设置子控制器
     func setupChildControllers(){
-        let array = [
-            ["clsName": "JLLSocietyViewController", "title": "社区", "imageName": ""],
+        let  array: [[String: Any]] = [
+            ["clsName": "JLLSocietyViewController", "title": "社区", "imageName": "",
+              "visitorInfo": ["imageName": "", "message": "哈哈"]
+            ],
             ["clsName": "JLLDiscoveryViewController", "title": "约球", "imageName": ""],
             ["clsName": "UIViewController"],
             ["clsName": "JLLScheduleViewController", "title": "比赛", "imageName": ""],
@@ -61,9 +63,9 @@ extension JLLMainViewController{
     }
     
     
-    private func controller(dict: [String: String]) -> UIViewController{
-        guard let clsName = dict["clsName"],
-        let title = dict["title"],
+    private func controller(dict: [String: Any]) -> UIViewController{
+        guard let clsName = dict["clsName"] as? String,
+        let title = dict["title"] as? String,
         //let imageName = dict["imageName"],
         let cls = NSClassFromString(Bundle.main.namespace + "." + clsName) as? UIViewController.Type else {
             
