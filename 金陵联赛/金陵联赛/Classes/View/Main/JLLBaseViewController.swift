@@ -105,7 +105,7 @@ extension JLLBaseViewController{
         
     }
     
-    private func setupTableView(){
+    func setupTableView(){
         tableView = UITableView(frame: view.bounds, style: .plain)
         
         view.insertSubview(tableView!, belowSubview: navigationBar)
@@ -138,6 +138,10 @@ extension JLLBaseViewController{
         //添加访客视图按钮监听方法
         visitorView.loginButton.addTarget(self, action: #selector(login), for: .touchUpInside)
         visitorView.registerButton.addTarget(self, action: #selector(register), for: .touchUpInside)
+        
+        //设置导航条按钮
+        navItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: .plain, target: self, action: #selector(register))
+        navItem.rightBarButtonItem = UIBarButtonItem(title: "登录", style: .plain, target: self, action: #selector(login))
     }
 }
 

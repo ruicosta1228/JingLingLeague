@@ -49,8 +49,9 @@ class JLLSocietyViewController: JLLBaseViewController {
 }
 
 extension JLLSocietyViewController{
-    override func setupUI() {
-        super.setupUI()
+    
+    override func setupTableView() {
+        super.setupTableView()
         
         //创建navigationBar左侧按钮控件
         navItem.leftBarButtonItem = UIBarButtonItem(title: "我的消息", fontSize: 14.0, target: self, action: #selector(showLeftButton))

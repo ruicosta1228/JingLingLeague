@@ -23,8 +23,9 @@ class JLLDemoViewController: JLLBaseViewController {
 }
 
 extension JLLDemoViewController {
-    override func setupUI() {
-        super.setupUI()
+    
+    override func setupTableView() {
+        super.setupTableView()
         //设置右侧控制器
         navItem.rightBarButtonItem = UIBarButtonItem(title: "下一个",  target: self, action: #selector(showNext))
     }
