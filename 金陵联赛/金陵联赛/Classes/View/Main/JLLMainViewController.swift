@@ -44,10 +44,23 @@ extension JLLMainViewController{
     //设置子控制器
     func setupChildControllers(){
         
+        //获取沙盒json路径
+        let docDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        let jsonPath = (docDir as NSString).appendingPathComponent("main.json")
+        
+        //加载data
+        var data = NSData(contentsOfFile: jsonPath)
+        
+        //判断data是否有内容
+        if data == nil {
+            //从bundle加载data
+            let path = Bundle.main.path(forResource: "main.json", ofType: nil)
+            data = NSData(contentsOfFile: path!)
+        }
+        
+        
         //从bundle加载配置的json
-        guard let path = Bundle.main.path(forResource: "main.json", ofType: nil),
-            let data = NSData(contentsOfFile: path),
-            let array = try? JSONSerialization.jsonObject(with: data as Data, options: []) as? [[String: Any]]
+        guard let array = try? JSONSerialization.jsonObject(with: data! as Data, options: []) as? [[String: Any]]
         else{
             return
         }

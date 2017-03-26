@@ -48,6 +48,7 @@ extension AppDelegate {
             //写入磁盘
             let docDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
             let jsonPath = (docDir as NSString).appendingPathComponent("main.json")
+            //直接保存在沙盒，等待程序下一次启动使用
             data?.write(toFile: jsonPath, atomically: true)
             
             print("应用程序加载完毕 路径：\(jsonPath)")
