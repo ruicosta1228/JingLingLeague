@@ -11,7 +11,7 @@ import UIKit
 //OC中不支持多继承，使用协议替代
 class JLLBaseViewController: UIViewController {
     //用户登录标记
-    var userLogon = false
+    var userLogon = true
     
     //访客视图信息字典
     var visitorInfoDictionary: [String: String]?
