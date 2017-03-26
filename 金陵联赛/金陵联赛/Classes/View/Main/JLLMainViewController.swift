@@ -43,39 +43,23 @@ extension JLLMainViewController{
     
     //设置子控制器
     func setupChildControllers(){
-        let  array: [[String: Any]] = [
-            ["clsName": "JLLSocietyViewController", "title": "社区", "imageName": "",
-              "visitorInfo": ["imageName": "", "message": "关注一些人，回这里看看有什么惊喜"]
-            ],
-            
-            ["clsName": "JLLDiscoveryViewController", "title": "约球", "imageName": "",
-             "visitorInfo": ["imageName": "visitordiscover_image_message", "message": "登录后，约人踢一场比赛吧哈哈哈哈哈哈哈哈"]
-            ],
-            
-            ["clsName": "UIViewController"],
-            
-            ["clsName": "JLLScheduleViewController", "title": "比赛", "imageName": "",
-             "visitorInfo": ["imageName": "visitordiscover_image_message", "message": "登陆后，看看球队的最近表现哈哈哈哈哈哈哈哈"]
-            ],
-            
-            ["clsName": "JLLProfileViewController", "title": "个人", "imageName": "",
-             "visitorInfo": ["imageName": "visitordiscover_image_profile", "message": "登陆后，将你自己展示给别人哈哈哈哈哈哈哈哈"]
-            ],
-        ]
         
-        //测试数据格式是否正确
-//        (array as NSArray).write(toFile: "/Users/salasoul/Desktop/demo.plist", atomically: true)
+        //从bundle加载配置的json
+        guard let path = Bundle.main.path(forResource: "main.json", ofType: nil),
+            let data = NSData(contentsOfFile: path),
+            let array = try? JSONSerialization.jsonObject(with: data as Data, options: []) as? [[String: Any]]
+        else{
+            return
+        }
         
-        //数组 -> json 序列化
-        let data = try! JSONSerialization.data(withJSONObject: array, options: [.prettyPrinted])
-        (data as NSData).write(toFile: "/Users/salasoul/Desktop/demo.json", atomically: true)
-        
+        //遍历数组，循环创建控制器数组
         var arrayM = [UIViewController]()
         
-        for dict in array{
+        for dict in array!{
             arrayM.append(controller(dict: dict))
         }
         
+        //设置tabBar的子控制器
         viewControllers = arrayM
     }
     
