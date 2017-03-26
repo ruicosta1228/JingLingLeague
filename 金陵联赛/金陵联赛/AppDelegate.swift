@@ -23,6 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.rootViewController = JLLMainViewController()
         window?.makeKeyAndVisible()
+        
+        loadAppInfo()
+        
         return true
     }
 
@@ -32,5 +35,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     @objc(application:supportedInterfaceOrientationsForWindow:) func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
         return .portrait
+    }
+}
+
+//从服务器加载应用程序信息
+extension AppDelegate {
+    func loadAppInfo(){
+        //模拟异步
+        DispatchQueue.global().async {
+            let url = Bundle.main.url(forResource: "main.json", withExtension: nil)
+            let data = NSData(contentsOf: url!)
+            //写入磁盘
+            let docDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+            let jsonPath = (docDir as NSString).appendingPathComponent("main.json")
+            data?.write(toFile: jsonPath, atomically: true)
+            
+            print("应用程序加载完毕 路径：\(jsonPath)")
+        }
+        
+        
     }
 }
