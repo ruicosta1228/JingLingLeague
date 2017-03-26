@@ -65,6 +65,18 @@ class JLLBaseViewController: UIViewController {
 
 }
 
+//访客视图监听方法
+extension JLLBaseViewController {
+    
+    @objc func login() {
+        print("登录")
+    }
+    
+    @objc func register() {
+        print("注册")
+    }
+}
+
 extension JLLBaseViewController{
     func setupUI(){
         
@@ -122,6 +134,10 @@ extension JLLBaseViewController{
         
         //设置访客视图信息
         visitorView.visitorInfo = visitorInfoDictionary
+        
+        //添加访客视图按钮监听方法
+        visitorView.loginButton.addTarget(self, action: #selector(login), for: .touchUpInside)
+        visitorView.registerButton.addTarget(self, action: #selector(register), for: .touchUpInside)
     }
 }
 
