@@ -10,6 +10,9 @@
 		5E0E09281E87AFA100234106 /* main.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E0E09271E87AFA100234106 /* main.json */; };
 		5E18DADA1E890977000C2659 /* JLLStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E18DAD81E890977000C2659 /* JLLStatusCell.swift */; };
 		5E18DADB1E890977000C2659 /* JLLStatusNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E18DAD91E890977000C2659 /* JLLStatusNormalCell.xib */; };
+		5E18DADE1E895912000C2659 /* JLLUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E18DADD1E895912000C2659 /* JLLUser.swift */; };
+		5E18DAE11E895DCE000C2659 /* JLLScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E18DAE01E895DCE000C2659 /* JLLScheduleCell.swift */; };
+		5E18DAE31E895DE7000C2659 /* JLLScheduleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E18DAE21E895DE7000C2659 /* JLLScheduleCell.xib */; };
 		B526202B1E6DC14B004D21C0 /* UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B526202A1E6DC14B004D21C0 /* UIBarButtonItem.swift */; };
 		B53ABAA91E854E2200828FBD /* JLLVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53ABAA81E854E2200828FBD /* JLLVisitorView.swift */; };
 		B581EFD71E7EACA500A2ECDA /* JLLDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581EFD61E7EACA500A2ECDA /* JLLDemoViewController.swift */; };
@@ -53,6 +56,9 @@
 		5E0E09271E87AFA100234106 /* main.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = main.json; sourceTree = "<group>"; };
 		5E18DAD81E890977000C2659 /* JLLStatusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLStatusCell.swift; sourceTree = "<group>"; };
 		5E18DAD91E890977000C2659 /* JLLStatusNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLLStatusNormalCell.xib; sourceTree = "<group>"; };
+		5E18DADD1E895912000C2659 /* JLLUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLLUser.swift; path = "金陵联赛/Classes/View/Society(社区)/StatusCell/JLLUser.swift"; sourceTree = SOURCE_ROOT; };
+		5E18DAE01E895DCE000C2659 /* JLLScheduleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLScheduleCell.swift; sourceTree = "<group>"; };
+		5E18DAE21E895DE7000C2659 /* JLLScheduleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLLScheduleCell.xib; sourceTree = "<group>"; };
 		B526202A1E6DC14B004D21C0 /* UIBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItem.swift; sourceTree = "<group>"; };
 		B53ABAA81E854E2200828FBD /* JLLVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLVisitorView.swift; sourceTree = "<group>"; };
 		B581EFD61E7EACA500A2ECDA /* JLLDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLDemoViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +119,22 @@
 				5E18DAD91E890977000C2659 /* JLLStatusNormalCell.xib */,
 			);
 			path = StatusCell;
+			sourceTree = "<group>";
+		};
+		5E18DADC1E895862000C2659 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		5E18DADF1E895D92000C2659 /* ScheduleCell */ = {
+			isa = PBXGroup;
+			children = (
+				5E18DAE01E895DCE000C2659 /* JLLScheduleCell.swift */,
+				5E18DAE21E895DE7000C2659 /* JLLScheduleCell.xib */,
+			);
+			path = ScheduleCell;
 			sourceTree = "<group>";
 		};
 		B53ABAA71E854DEC00828FBD /* VisitorView */ = {
@@ -183,6 +205,7 @@
 		B5DFDA8E1E6BC484007BD6AB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5E18DADC1E895862000C2659 /* model */,
 				B5DFDA8F1E6BC484007BD6AB /* Model */,
 				B5DFDA901E6BC484007BD6AB /* Util */,
 				B5DFDA911E6BC484007BD6AB /* View */,
@@ -194,6 +217,7 @@
 		B5DFDA8F1E6BC484007BD6AB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5E18DADD1E895912000C2659 /* JLLUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -252,6 +276,7 @@
 		B5DFDA951E6BC484007BD6AB /* Schedule(比赛日程) */ = {
 			isa = PBXGroup;
 			children = (
+				5E18DADF1E895D92000C2659 /* ScheduleCell */,
 				B5DFDAA01E6BC874007BD6AB /* JLLScheduleViewController.swift */,
 			);
 			path = "Schedule(比赛日程)";
@@ -398,6 +423,7 @@
 				5E18DADB1E890977000C2659 /* JLLStatusNormalCell.xib in Resources */,
 				5E0E09281E87AFA100234106 /* main.json in Resources */,
 				B586E30B1E6B1C400040F9F3 /* Assets.xcassets in Resources */,
+				5E18DAE31E895DE7000C2659 /* JLLScheduleCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +451,7 @@
 				B59B0F071E8565C7005B52B2 /* UIButton.swift in Sources */,
 				B5AE11001E7D9E5500609CD6 /* DetailViewController.swift in Sources */,
 				B5DFDAA51E6BC899007BD6AB /* JLLDiscoveryViewController.swift in Sources */,
+				5E18DAE11E895DCE000C2659 /* JLLScheduleCell.swift in Sources */,
 				B5DFDA9B1E6BC772007BD6AB /* JLLNavigationController.swift in Sources */,
 				5E18DADA1E890977000C2659 /* JLLStatusCell.swift in Sources */,
 				B5AE10FC1E7D9E1800609CD6 /* JoinViewController.swift in Sources */,
@@ -440,6 +467,7 @@
 				B5DFDA9F1E6BC830007BD6AB /* JLLSocietyViewController.swift in Sources */,
 				B581EFD71E7EACA500A2ECDA /* JLLDemoViewController.swift in Sources */,
 				B586E3041E6B1C400040F9F3 /* AppDelegate.swift in Sources */,
+				5E18DADE1E895912000C2659 /* JLLUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

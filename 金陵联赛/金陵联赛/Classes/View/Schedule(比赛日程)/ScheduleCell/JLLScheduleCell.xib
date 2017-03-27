@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="116" id="L8a-kZ-G7r">
+            <rect key="frame" x="0.0" y="0.0" width="446" height="116"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L8a-kZ-G7r" id="fcg-vN-2au">
+                <rect key="frame" x="0.0" y="0.0" width="446" height="115.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x4D-Xd-6NE" userLabel="队伍1">
+                        <rect key="frame" x="0.0" y="0.0" width="140" height="116"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R8l-JG-NrY" userLabel="队伍2">
+                        <rect key="frame" x="306" y="0.0" width="140" height="116"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9b-mU-HTU" userLabel="VS">
+                        <rect key="frame" x="202" y="47" width="42" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="R8l-JG-NrY" secondAttribute="bottom" id="3wB-Ew-skS"/>
+                    <constraint firstAttribute="trailing" secondItem="R8l-JG-NrY" secondAttribute="trailing" id="G5f-ay-RpX"/>
+                    <constraint firstAttribute="bottom" secondItem="R8l-JG-NrY" secondAttribute="bottom" id="Kfv-a1-iDu"/>
+                    <constraint firstItem="x4D-Xd-6NE" firstAttribute="leading" secondItem="fcg-vN-2au" secondAttribute="leading" id="QQf-Df-WhZ"/>
+                    <constraint firstItem="R8l-JG-NrY" firstAttribute="top" secondItem="fcg-vN-2au" secondAttribute="top" id="XkY-YP-TUl"/>
+                    <constraint firstItem="x4D-Xd-6NE" firstAttribute="top" secondItem="fcg-vN-2au" secondAttribute="top" id="fxa-dB-GDZ"/>
+                    <constraint firstAttribute="bottom" secondItem="x4D-Xd-6NE" secondAttribute="bottom" id="nDv-yp-ryx"/>
+                    <constraint firstAttribute="bottom" secondItem="x4D-Xd-6NE" secondAttribute="bottom" id="tv9-zR-JUU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="18" y="-15"/>
+        </tableViewCell>
+    </objects>
+</document>
