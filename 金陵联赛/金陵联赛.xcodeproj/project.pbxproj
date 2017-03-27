@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		593C882B1A0DFFC9DE624EB8 /* Pods_____UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63915D7026117ACCCBDA03D4 /* Pods_____UITests.framework */; };
 		5E0E09281E87AFA100234106 /* main.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E0E09271E87AFA100234106 /* main.json */; };
 		5E18DADA1E890977000C2659 /* JLLStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E18DAD81E890977000C2659 /* JLLStatusCell.swift */; };
 		5E18DADB1E890977000C2659 /* JLLStatusNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E18DAD91E890977000C2659 /* JLLStatusNormalCell.xib */; };
 		5E18DADE1E895912000C2659 /* JLLUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E18DADD1E895912000C2659 /* JLLUser.swift */; };
 		5E18DAE11E895DCE000C2659 /* JLLScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E18DAE01E895DCE000C2659 /* JLLScheduleCell.swift */; };
 		5E18DAE31E895DE7000C2659 /* JLLScheduleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E18DAE21E895DE7000C2659 /* JLLScheduleCell.xib */; };
+		A23F16FDEB7ACC895FD3D099 /* Pods_____Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB61EE922C1B2842A216B836 /* Pods_____Tests.framework */; };
 		B526202B1E6DC14B004D21C0 /* UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B526202A1E6DC14B004D21C0 /* UIBarButtonItem.swift */; };
 		B53ABAA91E854E2200828FBD /* JLLVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53ABAA81E854E2200828FBD /* JLLVisitorView.swift */; };
 		B581EFD71E7EACA500A2ECDA /* JLLDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581EFD61E7EACA500A2ECDA /* JLLDemoViewController.swift */; };
@@ -33,6 +35,7 @@
 		B5DFDAA31E6BC889007BD6AB /* JLLProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFDAA21E6BC889007BD6AB /* JLLProfileViewController.swift */; };
 		B5DFDAA51E6BC899007BD6AB /* JLLDiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFDAA41E6BC899007BD6AB /* JLLDiscoveryViewController.swift */; };
 		B5DFDAA81E6C2B90007BD6AB /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DFDAA71E6C2B90007BD6AB /* BundleExtension.swift */; };
+		B7FF353BE25B3F31AC89BBD3 /* Pods_____.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1270F659BDB5C20CFD32FCEC /* Pods_____.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,12 +56,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1270F659BDB5C20CFD32FCEC /* Pods_____.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_____.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A767672105BCEC2F2803BAF /* Pods-金陵联赛UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-金陵联赛UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-金陵联赛UITests/Pods-金陵联赛UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2C9C28EB9C54E4D9705DF031 /* Pods-金陵联赛Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-金陵联赛Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-金陵联赛Tests/Pods-金陵联赛Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		52F18749227124813B6507A4 /* Pods-金陵联赛.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-金陵联赛.release.xcconfig"; path = "Pods/Target Support Files/Pods-金陵联赛/Pods-金陵联赛.release.xcconfig"; sourceTree = "<group>"; };
+		58226750F540A5197117A5F6 /* Pods-金陵联赛UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-金陵联赛UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-金陵联赛UITests/Pods-金陵联赛UITests.release.xcconfig"; sourceTree = "<group>"; };
 		5E0E09271E87AFA100234106 /* main.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = main.json; sourceTree = "<group>"; };
 		5E18DAD81E890977000C2659 /* JLLStatusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLStatusCell.swift; sourceTree = "<group>"; };
 		5E18DAD91E890977000C2659 /* JLLStatusNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLLStatusNormalCell.xib; sourceTree = "<group>"; };
 		5E18DADD1E895912000C2659 /* JLLUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLLUser.swift; path = "金陵联赛/Classes/View/Society(社区)/StatusCell/JLLUser.swift"; sourceTree = SOURCE_ROOT; };
 		5E18DAE01E895DCE000C2659 /* JLLScheduleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLScheduleCell.swift; sourceTree = "<group>"; };
 		5E18DAE21E895DE7000C2659 /* JLLScheduleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLLScheduleCell.xib; sourceTree = "<group>"; };
+		60E1DFC953258FE08A4ED43E /* Pods-金陵联赛Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-金陵联赛Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-金陵联赛Tests/Pods-金陵联赛Tests.release.xcconfig"; sourceTree = "<group>"; };
+		63915D7026117ACCCBDA03D4 /* Pods_____UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_____UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB61EE922C1B2842A216B836 /* Pods_____Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_____Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B526202A1E6DC14B004D21C0 /* UIBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItem.swift; sourceTree = "<group>"; };
 		B53ABAA81E854E2200828FBD /* JLLVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLVisitorView.swift; sourceTree = "<group>"; };
 		B581EFD61E7EACA500A2ECDA /* JLLDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLDemoViewController.swift; sourceTree = "<group>"; };
@@ -67,10 +78,10 @@
 		B586E30A1E6B1C400040F9F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B586E30F1E6B1C400040F9F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B586E3141E6B1C400040F9F3 /* 金陵联赛Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "金陵联赛Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B586E3181E6B1C400040F9F3 /* ____Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____Tests.swift"; sourceTree = "<group>"; };
+		B586E3181E6B1C400040F9F3 /* ____Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ____Tests.swift; sourceTree = "<group>"; };
 		B586E31A1E6B1C400040F9F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B586E31F1E6B1C400040F9F3 /* 金陵联赛UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "金陵联赛UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B586E3231E6B1C400040F9F3 /* ____UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____UITests.swift"; sourceTree = "<group>"; };
+		B586E3231E6B1C400040F9F3 /* ____UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ____UITests.swift; sourceTree = "<group>"; };
 		B586E3251E6B1C400040F9F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B59B0F041E855443005B52B2 /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		B59B0F061E8565C7005B52B2 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
@@ -85,6 +96,7 @@
 		B5DFDAA21E6BC889007BD6AB /* JLLProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLProfileViewController.swift; sourceTree = "<group>"; };
 		B5DFDAA41E6BC899007BD6AB /* JLLDiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLDiscoveryViewController.swift; sourceTree = "<group>"; };
 		B5DFDAA71E6C2B90007BD6AB /* BundleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
+		D551EA95ED3387B74F2E34E1 /* Pods-金陵联赛.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-金陵联赛.debug.xcconfig"; path = "Pods/Target Support Files/Pods-金陵联赛/Pods-金陵联赛.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7FF353BE25B3F31AC89BBD3 /* Pods_____.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A23F16FDEB7ACC895FD3D099 /* Pods_____Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				593C882B1A0DFFC9DE624EB8 /* Pods_____UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +152,16 @@
 			path = ScheduleCell;
 			sourceTree = "<group>";
 		};
+		8EF2E00C0AEF4826E18821C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1270F659BDB5C20CFD32FCEC /* Pods_____.framework */,
+				AB61EE922C1B2842A216B836 /* Pods_____Tests.framework */,
+				63915D7026117ACCCBDA03D4 /* Pods_____UITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B53ABAA71E854DEC00828FBD /* VisitorView */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +185,8 @@
 				B586E3171E6B1C400040F9F3 /* 金陵联赛Tests */,
 				B586E3221E6B1C400040F9F3 /* 金陵联赛UITests */,
 				B586E3011E6B1C400040F9F3 /* Products */,
+				C2AB0118C86318422A9CF557 /* Pods */,
+				8EF2E00C0AEF4826E18821C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -310,6 +337,19 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		C2AB0118C86318422A9CF557 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D551EA95ED3387B74F2E34E1 /* Pods-金陵联赛.debug.xcconfig */,
+				52F18749227124813B6507A4 /* Pods-金陵联赛.release.xcconfig */,
+				2C9C28EB9C54E4D9705DF031 /* Pods-金陵联赛Tests.debug.xcconfig */,
+				60E1DFC953258FE08A4ED43E /* Pods-金陵联赛Tests.release.xcconfig */,
+				2A767672105BCEC2F2803BAF /* Pods-金陵联赛UITests.debug.xcconfig */,
+				58226750F540A5197117A5F6 /* Pods-金陵联赛UITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -317,9 +357,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B586E3281E6B1C400040F9F3 /* Build configuration list for PBXNativeTarget "金陵联赛" */;
 			buildPhases = (
+				88E27D7C1DABABDFD363C87E /* [CP] Check Pods Manifest.lock */,
 				B586E2FC1E6B1C400040F9F3 /* Sources */,
 				B586E2FD1E6B1C400040F9F3 /* Frameworks */,
 				B586E2FE1E6B1C400040F9F3 /* Resources */,
+				465894BF043557E1DF5AB5B0 /* [CP] Embed Pods Frameworks */,
+				52EC17E0D7D28028251D5612 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -334,9 +377,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B586E32B1E6B1C400040F9F3 /* Build configuration list for PBXNativeTarget "金陵联赛Tests" */;
 			buildPhases = (
+				9C05EF17CAE9237BD379952B /* [CP] Check Pods Manifest.lock */,
 				B586E3101E6B1C400040F9F3 /* Sources */,
 				B586E3111E6B1C400040F9F3 /* Frameworks */,
 				B586E3121E6B1C400040F9F3 /* Resources */,
+				7FB35AFA664EC7E5A135B51E /* [CP] Embed Pods Frameworks */,
+				6C9F53980B330FAC105EB5FC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -352,9 +398,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B586E32E1E6B1C400040F9F3 /* Build configuration list for PBXNativeTarget "金陵联赛UITests" */;
 			buildPhases = (
+				91C8AF65BCB89166FDB23077 /* [CP] Check Pods Manifest.lock */,
 				B586E31B1E6B1C400040F9F3 /* Sources */,
 				B586E31C1E6B1C400040F9F3 /* Frameworks */,
 				B586E31D1E6B1C400040F9F3 /* Resources */,
+				54BF333B494D95D67C5922CA /* [CP] Embed Pods Frameworks */,
+				0984D3C21F54D488C961E6C1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -442,6 +491,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0984D3C21F54D488C961E6C1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-金陵联赛UITests/Pods-金陵联赛UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		465894BF043557E1DF5AB5B0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-金陵联赛/Pods-金陵联赛-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52EC17E0D7D28028251D5612 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-金陵联赛/Pods-金陵联赛-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54BF333B494D95D67C5922CA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-金陵联赛UITests/Pods-金陵联赛UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C9F53980B330FAC105EB5FC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-金陵联赛Tests/Pods-金陵联赛Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7FB35AFA664EC7E5A135B51E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-金陵联赛Tests/Pods-金陵联赛Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88E27D7C1DABABDFD363C87E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		91C8AF65BCB89166FDB23077 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9C05EF17CAE9237BD379952B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B586E2FC1E6B1C400040F9F3 /* Sources */ = {
@@ -598,6 +785,7 @@
 		};
 		B586E3291E6B1C400040F9F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D551EA95ED3387B74F2E34E1 /* Pods-金陵联赛.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -612,6 +800,7 @@
 		};
 		B586E32A1E6B1C400040F9F3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52F18749227124813B6507A4 /* Pods-金陵联赛.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -626,6 +815,7 @@
 		};
 		B586E32C1E6B1C400040F9F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C9C28EB9C54E4D9705DF031 /* Pods-金陵联赛Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -641,6 +831,7 @@
 		};
 		B586E32D1E6B1C400040F9F3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60E1DFC953258FE08A4ED43E /* Pods-金陵联赛Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -656,6 +847,7 @@
 		};
 		B586E32F1E6B1C400040F9F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A767672105BCEC2F2803BAF /* Pods-金陵联赛UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 6ZF55757T3;
@@ -670,6 +862,7 @@
 		};
 		B586E3301E6B1C400040F9F3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58226750F540A5197117A5F6 /* Pods-金陵联赛UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 6ZF55757T3;

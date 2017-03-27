@@ -1,0 +1,23 @@
+# platform :ios, '8.0'
+
+target '金陵联赛' do
+use_frameworks!
+
+pod "AFNetworking"
+pod "SDWebImage"
+pod "YYModel"
+pod "FMDB"
+pod "SVProgressHUD"
+pod "pop"
+
+  target '金陵联赛Tests' do
+    inherit! :search_paths
+
+  end
+
+  target '金陵联赛UITests' do
+    inherit! :search_paths
+
+  end
+
+end
