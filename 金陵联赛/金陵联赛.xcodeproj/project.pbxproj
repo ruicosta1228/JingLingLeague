@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5E0E09281E87AFA100234106 /* main.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E0E09271E87AFA100234106 /* main.json */; };
+		5E18DADA1E890977000C2659 /* JLLStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E18DAD81E890977000C2659 /* JLLStatusCell.swift */; };
+		5E18DADB1E890977000C2659 /* JLLStatusNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E18DAD91E890977000C2659 /* JLLStatusNormalCell.xib */; };
 		B526202B1E6DC14B004D21C0 /* UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B526202A1E6DC14B004D21C0 /* UIBarButtonItem.swift */; };
 		B53ABAA91E854E2200828FBD /* JLLVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53ABAA81E854E2200828FBD /* JLLVisitorView.swift */; };
 		B581EFD71E7EACA500A2ECDA /* JLLDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581EFD61E7EACA500A2ECDA /* JLLDemoViewController.swift */; };
@@ -49,6 +51,8 @@
 
 /* Begin PBXFileReference section */
 		5E0E09271E87AFA100234106 /* main.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = main.json; sourceTree = "<group>"; };
+		5E18DAD81E890977000C2659 /* JLLStatusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLStatusCell.swift; sourceTree = "<group>"; };
+		5E18DAD91E890977000C2659 /* JLLStatusNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLLStatusNormalCell.xib; sourceTree = "<group>"; };
 		B526202A1E6DC14B004D21C0 /* UIBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItem.swift; sourceTree = "<group>"; };
 		B53ABAA81E854E2200828FBD /* JLLVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLVisitorView.swift; sourceTree = "<group>"; };
 		B581EFD61E7EACA500A2ECDA /* JLLDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLDemoViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +106,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E18DAD71E890977000C2659 /* StatusCell */ = {
+			isa = PBXGroup;
+			children = (
+				5E18DAD81E890977000C2659 /* JLLStatusCell.swift */,
+				5E18DAD91E890977000C2659 /* JLLStatusNormalCell.xib */,
+			);
+			path = StatusCell;
+			sourceTree = "<group>";
+		};
 		B53ABAA71E854DEC00828FBD /* VisitorView */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +260,7 @@
 		B5DFDA961E6BC484007BD6AB /* Society(社区) */ = {
 			isa = PBXGroup;
 			children = (
+				5E18DAD71E890977000C2659 /* StatusCell */,
 				B5AE10FF1E7D9E5500609CD6 /* DetailViewController.swift */,
 				B5DFDA9E1E6BC830007BD6AB /* JLLSocietyViewController.swift */,
 			);
@@ -381,6 +395,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E18DADB1E890977000C2659 /* JLLStatusNormalCell.xib in Resources */,
 				5E0E09281E87AFA100234106 /* main.json in Resources */,
 				B586E30B1E6B1C400040F9F3 /* Assets.xcassets in Resources */,
 			);
@@ -411,6 +426,7 @@
 				B5AE11001E7D9E5500609CD6 /* DetailViewController.swift in Sources */,
 				B5DFDAA51E6BC899007BD6AB /* JLLDiscoveryViewController.swift in Sources */,
 				B5DFDA9B1E6BC772007BD6AB /* JLLNavigationController.swift in Sources */,
+				5E18DADA1E890977000C2659 /* JLLStatusCell.swift in Sources */,
 				B5AE10FC1E7D9E1800609CD6 /* JoinViewController.swift in Sources */,
 				B5DFDAA81E6C2B90007BD6AB /* BundleExtension.swift in Sources */,
 				B5DFDA991E6BC506007BD6AB /* JLLMainViewController.swift in Sources */,
