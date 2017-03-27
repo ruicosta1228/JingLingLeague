@@ -10,6 +10,18 @@ import UIKit
 
 class JLLStatusCell: UITableViewCell {
 
+    //头像
+    @IBOutlet weak var iconView: UIImageView!
+    //姓名
+    @IBOutlet weak var nameLabel: UILabel!
+    //时间
+    @IBOutlet weak var timeLabel: UILabel!
+    //来源
+    @IBOutlet weak var sourceLabel: UILabel!
+    //正文
+    @IBOutlet weak var statusLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
