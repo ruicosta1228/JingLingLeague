@@ -58,6 +58,13 @@ extension JLLSocietyViewController{
         
         //注册原型cell
         tableView?.register(UINib(nibName: "JLLStatusNormalCell", bundle: nil), forCellReuseIdentifier: cellId)
+        
+        //设置行高
+        tableView?.rowHeight = UITableViewAutomaticDimension
+        tableView?.estimatedRowHeight = 300
+        
+        //取消分割线
+        tableView?.separatorStyle = .none
     }
 }
 
@@ -68,7 +75,7 @@ extension JLLSocietyViewController{
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! JLLStatusCell
 
         cell.textLabel?.text = statusList[indexPath.row]
         
