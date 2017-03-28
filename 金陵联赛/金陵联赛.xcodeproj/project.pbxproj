@@ -17,6 +17,9 @@
 		A23F16FDEB7ACC895FD3D099 /* Pods_____Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB61EE922C1B2842A216B836 /* Pods_____Tests.framework */; };
 		B526202B1E6DC14B004D21C0 /* UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B526202A1E6DC14B004D21C0 /* UIBarButtonItem.swift */; };
 		B53ABAA91E854E2200828FBD /* JLLVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53ABAA81E854E2200828FBD /* JLLVisitorView.swift */; };
+		B5465D4E1E8A569C00B65AD1 /* JLLProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5465D4C1E8A569C00B65AD1 /* JLLProfileCell.swift */; };
+		B5465D4F1E8A569C00B65AD1 /* JLLProfileTopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5465D4D1E8A569C00B65AD1 /* JLLProfileTopCell.xib */; };
+		B5465D531E8AAEDA00B65AD1 /* JLLNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5465D521E8AAEDA00B65AD1 /* JLLNetworkingManager.swift */; };
 		B581EFD71E7EACA500A2ECDA /* JLLDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581EFD61E7EACA500A2ECDA /* JLLDemoViewController.swift */; };
 		B586E3041E6B1C400040F9F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B586E3031E6B1C400040F9F3 /* AppDelegate.swift */; };
 		B586E30B1E6B1C400040F9F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B586E30A1E6B1C400040F9F3 /* Assets.xcassets */; };
@@ -56,7 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1270F659BDB5C20CFD32FCEC /* Pods_____.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_____.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1270F659BDB5C20CFD32FCEC /* Pods_____.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A767672105BCEC2F2803BAF /* Pods-金陵联赛UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-金陵联赛UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-金陵联赛UITests/Pods-金陵联赛UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2C9C28EB9C54E4D9705DF031 /* Pods-金陵联赛Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-金陵联赛Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-金陵联赛Tests/Pods-金陵联赛Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		52F18749227124813B6507A4 /* Pods-金陵联赛.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-金陵联赛.release.xcconfig"; path = "Pods/Target Support Files/Pods-金陵联赛/Pods-金陵联赛.release.xcconfig"; sourceTree = "<group>"; };
@@ -68,20 +71,23 @@
 		5E18DAE01E895DCE000C2659 /* JLLScheduleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLScheduleCell.swift; sourceTree = "<group>"; };
 		5E18DAE21E895DE7000C2659 /* JLLScheduleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLLScheduleCell.xib; sourceTree = "<group>"; };
 		60E1DFC953258FE08A4ED43E /* Pods-金陵联赛Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-金陵联赛Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-金陵联赛Tests/Pods-金陵联赛Tests.release.xcconfig"; sourceTree = "<group>"; };
-		63915D7026117ACCCBDA03D4 /* Pods_____UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_____UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB61EE922C1B2842A216B836 /* Pods_____Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_____Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63915D7026117ACCCBDA03D4 /* Pods_____UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB61EE922C1B2842A216B836 /* Pods_____Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B526202A1E6DC14B004D21C0 /* UIBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItem.swift; sourceTree = "<group>"; };
 		B53ABAA81E854E2200828FBD /* JLLVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLVisitorView.swift; sourceTree = "<group>"; };
+		B5465D4C1E8A569C00B65AD1 /* JLLProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLProfileCell.swift; sourceTree = "<group>"; };
+		B5465D4D1E8A569C00B65AD1 /* JLLProfileTopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLLProfileTopCell.xib; sourceTree = "<group>"; };
+		B5465D521E8AAEDA00B65AD1 /* JLLNetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLNetworkingManager.swift; sourceTree = "<group>"; };
 		B581EFD61E7EACA500A2ECDA /* JLLDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLDemoViewController.swift; sourceTree = "<group>"; };
 		B586E3001E6B1C400040F9F3 /* 金陵联赛.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "金陵联赛.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B586E3031E6B1C400040F9F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B586E30A1E6B1C400040F9F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B586E30F1E6B1C400040F9F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B586E3141E6B1C400040F9F3 /* 金陵联赛Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "金陵联赛Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B586E3181E6B1C400040F9F3 /* ____Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ____Tests.swift; sourceTree = "<group>"; };
+		B586E3181E6B1C400040F9F3 /* ____Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____Tests.swift"; sourceTree = "<group>"; };
 		B586E31A1E6B1C400040F9F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B586E31F1E6B1C400040F9F3 /* 金陵联赛UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "金陵联赛UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B586E3231E6B1C400040F9F3 /* ____UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ____UITests.swift; sourceTree = "<group>"; };
+		B586E3231E6B1C400040F9F3 /* ____UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____UITests.swift"; sourceTree = "<group>"; };
 		B586E3251E6B1C400040F9F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B59B0F041E855443005B52B2 /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		B59B0F061E8565C7005B52B2 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
@@ -170,6 +176,23 @@
 			name = VisitorView;
 			sourceTree = "<group>";
 		};
+		B5465D4B1E8A569C00B65AD1 /* ProfileCell */ = {
+			isa = PBXGroup;
+			children = (
+				B5465D4C1E8A569C00B65AD1 /* JLLProfileCell.swift */,
+				B5465D4D1E8A569C00B65AD1 /* JLLProfileTopCell.xib */,
+			);
+			path = ProfileCell;
+			sourceTree = "<group>";
+		};
+		B5465D511E8AAE0A00B65AD1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B5465D521E8AAEDA00B65AD1 /* JLLNetworkingManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		B581EFD51E7EAC8400A2ECDA /* Test */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +275,7 @@
 		B5DFDA901E6BC484007BD6AB /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				B5465D511E8AAE0A00B65AD1 /* Network */,
 				B5DFDAA61E6C2B63007BD6AB /* Extension */,
 			);
 			path = Util;
@@ -296,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				B5DFDAA21E6BC889007BD6AB /* JLLProfileViewController.swift */,
+				B5465D4B1E8A569C00B65AD1 /* ProfileCell */,
 			);
 			path = "Profile(个人)";
 			sourceTree = "<group>";
@@ -469,6 +494,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5465D4F1E8A569C00B65AD1 /* JLLProfileTopCell.xib in Resources */,
 				5E18DADB1E890977000C2659 /* JLLStatusNormalCell.xib in Resources */,
 				5E0E09281E87AFA100234106 /* main.json in Resources */,
 				B586E30B1E6B1C400040F9F3 /* Assets.xcassets in Resources */,
@@ -637,11 +663,13 @@
 			files = (
 				B59B0F071E8565C7005B52B2 /* UIButton.swift in Sources */,
 				B5AE11001E7D9E5500609CD6 /* DetailViewController.swift in Sources */,
+				B5465D531E8AAEDA00B65AD1 /* JLLNetworkingManager.swift in Sources */,
 				B5DFDAA51E6BC899007BD6AB /* JLLDiscoveryViewController.swift in Sources */,
 				5E18DAE11E895DCE000C2659 /* JLLScheduleCell.swift in Sources */,
 				B5DFDA9B1E6BC772007BD6AB /* JLLNavigationController.swift in Sources */,
 				5E18DADA1E890977000C2659 /* JLLStatusCell.swift in Sources */,
 				B5AE10FC1E7D9E1800609CD6 /* JoinViewController.swift in Sources */,
+				B5465D4E1E8A569C00B65AD1 /* JLLProfileCell.swift in Sources */,
 				B5DFDAA81E6C2B90007BD6AB /* BundleExtension.swift in Sources */,
 				B5DFDA991E6BC506007BD6AB /* JLLMainViewController.swift in Sources */,
 				B59B0F051E855443005B52B2 /* UILabel.swift in Sources */,
