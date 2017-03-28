@@ -17,8 +17,6 @@
 		A23F16FDEB7ACC895FD3D099 /* Pods_____Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB61EE922C1B2842A216B836 /* Pods_____Tests.framework */; };
 		B526202B1E6DC14B004D21C0 /* UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B526202A1E6DC14B004D21C0 /* UIBarButtonItem.swift */; };
 		B53ABAA91E854E2200828FBD /* JLLVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53ABAA81E854E2200828FBD /* JLLVisitorView.swift */; };
-		B5465D4E1E8A569C00B65AD1 /* JLLProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5465D4C1E8A569C00B65AD1 /* JLLProfileCell.swift */; };
-		B5465D4F1E8A569C00B65AD1 /* JLLProfileTopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5465D4D1E8A569C00B65AD1 /* JLLProfileTopCell.xib */; };
 		B5465D531E8AAEDA00B65AD1 /* JLLNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5465D521E8AAEDA00B65AD1 /* JLLNetworkingManager.swift */; };
 		B581EFD71E7EACA500A2ECDA /* JLLDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581EFD61E7EACA500A2ECDA /* JLLDemoViewController.swift */; };
 		B586E3041E6B1C400040F9F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B586E3031E6B1C400040F9F3 /* AppDelegate.swift */; };
@@ -75,8 +73,6 @@
 		AB61EE922C1B2842A216B836 /* Pods_____Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B526202A1E6DC14B004D21C0 /* UIBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItem.swift; sourceTree = "<group>"; };
 		B53ABAA81E854E2200828FBD /* JLLVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLVisitorView.swift; sourceTree = "<group>"; };
-		B5465D4C1E8A569C00B65AD1 /* JLLProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLProfileCell.swift; sourceTree = "<group>"; };
-		B5465D4D1E8A569C00B65AD1 /* JLLProfileTopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLLProfileTopCell.xib; sourceTree = "<group>"; };
 		B5465D521E8AAEDA00B65AD1 /* JLLNetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLNetworkingManager.swift; sourceTree = "<group>"; };
 		B581EFD61E7EACA500A2ECDA /* JLLDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLDemoViewController.swift; sourceTree = "<group>"; };
 		B586E3001E6B1C400040F9F3 /* 金陵联赛.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "金陵联赛.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,8 +175,6 @@
 		B5465D4B1E8A569C00B65AD1 /* ProfileCell */ = {
 			isa = PBXGroup;
 			children = (
-				B5465D4C1E8A569C00B65AD1 /* JLLProfileCell.swift */,
-				B5465D4D1E8A569C00B65AD1 /* JLLProfileTopCell.xib */,
 			);
 			path = ProfileCell;
 			sourceTree = "<group>";
@@ -494,7 +488,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5465D4F1E8A569C00B65AD1 /* JLLProfileTopCell.xib in Resources */,
 				5E18DADB1E890977000C2659 /* JLLStatusNormalCell.xib in Resources */,
 				5E0E09281E87AFA100234106 /* main.json in Resources */,
 				B586E30B1E6B1C400040F9F3 /* Assets.xcassets in Resources */,
@@ -669,7 +662,6 @@
 				B5DFDA9B1E6BC772007BD6AB /* JLLNavigationController.swift in Sources */,
 				5E18DADA1E890977000C2659 /* JLLStatusCell.swift in Sources */,
 				B5AE10FC1E7D9E1800609CD6 /* JoinViewController.swift in Sources */,
-				B5465D4E1E8A569C00B65AD1 /* JLLProfileCell.swift in Sources */,
 				B5DFDAA81E6C2B90007BD6AB /* BundleExtension.swift in Sources */,
 				B5DFDA991E6BC506007BD6AB /* JLLMainViewController.swift in Sources */,
 				B59B0F051E855443005B52B2 /* UILabel.swift in Sources */,

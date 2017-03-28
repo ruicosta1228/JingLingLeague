@@ -19,16 +19,11 @@ class JLLSocietyViewController: JLLBaseViewController {
         //利用网络工具 获取服务器数据
 //        let url = "http://localhost:8080/JingLingLeague/playerBased/login.html"
 //        let url = "https://api.weibo.com/2/statuses/public_timeline.json"
-//        let param = ["pName": "test", "pPassword": "test"]
+//        let param = ["pName": "test", "pPassword": "test"] 
 //        let param = ["access_token": "2.00WdkIoC4orJzC303599f2c40_29ge"]
 
 //        JLLNetworkingManager.shared.responseSerializer = AFHTTPResponseSerializer()
-//        JLLNetworkingManager.shared.get(url, parameters: param, progress: nil, success: {(_, json) in
-//            let data = json as! Data
-//            let str = NSString.init(data: data, encoding: String.Encoding.utf8.rawValue)
-//            print(str!)},
-//                                        failure: {(_,error) in print("网络请求失败 \(error)")})
-        
+//        JLLNetworkingManager.shared.request(method: .GET, URLString: url, parameters: param as [String : AnyObject])
         print("加载数据")
         //模拟延迟加载
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
