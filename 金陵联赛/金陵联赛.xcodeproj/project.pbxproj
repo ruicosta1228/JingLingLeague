@@ -14,11 +14,11 @@
 		5E18DADE1E895912000C2659 /* JLLUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E18DADD1E895912000C2659 /* JLLUser.swift */; };
 		5E18DAE11E895DCE000C2659 /* JLLScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E18DAE01E895DCE000C2659 /* JLLScheduleCell.swift */; };
 		5E18DAE31E895DE7000C2659 /* JLLScheduleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E18DAE21E895DE7000C2659 /* JLLScheduleCell.xib */; };
+		5EBA74B21E8AD8CF00BFE194 /* DiscoveryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EBA74B01E8AD8CF00BFE194 /* DiscoveryCell.xib */; };
+		5EC946E71E8AE87400715279 /* DiscoveryStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC946E61E8AE87400715279 /* DiscoveryStatusCell.swift */; };
 		A23F16FDEB7ACC895FD3D099 /* Pods_____Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB61EE922C1B2842A216B836 /* Pods_____Tests.framework */; };
 		B526202B1E6DC14B004D21C0 /* UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B526202A1E6DC14B004D21C0 /* UIBarButtonItem.swift */; };
 		B53ABAA91E854E2200828FBD /* JLLVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53ABAA81E854E2200828FBD /* JLLVisitorView.swift */; };
-		B5465D4E1E8A569C00B65AD1 /* JLLProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5465D4C1E8A569C00B65AD1 /* JLLProfileCell.swift */; };
-		B5465D4F1E8A569C00B65AD1 /* JLLProfileTopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5465D4D1E8A569C00B65AD1 /* JLLProfileTopCell.xib */; };
 		B5465D531E8AAEDA00B65AD1 /* JLLNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5465D521E8AAEDA00B65AD1 /* JLLNetworkingManager.swift */; };
 		B581EFD71E7EACA500A2ECDA /* JLLDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581EFD61E7EACA500A2ECDA /* JLLDemoViewController.swift */; };
 		B586E3041E6B1C400040F9F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B586E3031E6B1C400040F9F3 /* AppDelegate.swift */; };
@@ -70,13 +70,13 @@
 		5E18DADD1E895912000C2659 /* JLLUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLLUser.swift; path = "金陵联赛/Classes/View/Society(社区)/StatusCell/JLLUser.swift"; sourceTree = SOURCE_ROOT; };
 		5E18DAE01E895DCE000C2659 /* JLLScheduleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLScheduleCell.swift; sourceTree = "<group>"; };
 		5E18DAE21E895DE7000C2659 /* JLLScheduleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLLScheduleCell.xib; sourceTree = "<group>"; };
+		5EBA74B01E8AD8CF00BFE194 /* DiscoveryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscoveryCell.xib; sourceTree = "<group>"; };
+		5EC946E61E8AE87400715279 /* DiscoveryStatusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryStatusCell.swift; sourceTree = "<group>"; };
 		60E1DFC953258FE08A4ED43E /* Pods-金陵联赛Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-金陵联赛Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-金陵联赛Tests/Pods-金陵联赛Tests.release.xcconfig"; sourceTree = "<group>"; };
 		63915D7026117ACCCBDA03D4 /* Pods_____UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB61EE922C1B2842A216B836 /* Pods_____Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B526202A1E6DC14B004D21C0 /* UIBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItem.swift; sourceTree = "<group>"; };
 		B53ABAA81E854E2200828FBD /* JLLVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLVisitorView.swift; sourceTree = "<group>"; };
-		B5465D4C1E8A569C00B65AD1 /* JLLProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLProfileCell.swift; sourceTree = "<group>"; };
-		B5465D4D1E8A569C00B65AD1 /* JLLProfileTopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLLProfileTopCell.xib; sourceTree = "<group>"; };
 		B5465D521E8AAEDA00B65AD1 /* JLLNetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLNetworkingManager.swift; sourceTree = "<group>"; };
 		B581EFD61E7EACA500A2ECDA /* JLLDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLLDemoViewController.swift; sourceTree = "<group>"; };
 		B586E3001E6B1C400040F9F3 /* 金陵联赛.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "金陵联赛.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +158,15 @@
 			path = ScheduleCell;
 			sourceTree = "<group>";
 		};
+		5EBA74AE1E8AD8CF00BFE194 /* DiscoveryCell */ = {
+			isa = PBXGroup;
+			children = (
+				5EBA74B01E8AD8CF00BFE194 /* DiscoveryCell.xib */,
+				5EC946E61E8AE87400715279 /* DiscoveryStatusCell.swift */,
+			);
+			path = DiscoveryCell;
+			sourceTree = "<group>";
+		};
 		8EF2E00C0AEF4826E18821C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,8 +188,6 @@
 		B5465D4B1E8A569C00B65AD1 /* ProfileCell */ = {
 			isa = PBXGroup;
 			children = (
-				B5465D4C1E8A569C00B65AD1 /* JLLProfileCell.swift */,
-				B5465D4D1E8A569C00B65AD1 /* JLLProfileTopCell.xib */,
 			);
 			path = ProfileCell;
 			sourceTree = "<group>";
@@ -296,6 +303,7 @@
 		B5DFDA921E6BC484007BD6AB /* Discovery(约球) */ = {
 			isa = PBXGroup;
 			children = (
+				5EBA74AE1E8AD8CF00BFE194 /* DiscoveryCell */,
 				B5DFDAA41E6BC899007BD6AB /* JLLDiscoveryViewController.swift */,
 				B5AE10FB1E7D9E1800609CD6 /* JoinViewController.swift */,
 				B5AE10FD1E7D9E2300609CD6 /* MapViewController.swift */,
@@ -494,7 +502,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5465D4F1E8A569C00B65AD1 /* JLLProfileTopCell.xib in Resources */,
+				5EBA74B21E8AD8CF00BFE194 /* DiscoveryCell.xib in Resources */,
 				5E18DADB1E890977000C2659 /* JLLStatusNormalCell.xib in Resources */,
 				5E0E09281E87AFA100234106 /* main.json in Resources */,
 				B586E30B1E6B1C400040F9F3 /* Assets.xcassets in Resources */,
@@ -665,11 +673,11 @@
 				B5AE11001E7D9E5500609CD6 /* DetailViewController.swift in Sources */,
 				B5465D531E8AAEDA00B65AD1 /* JLLNetworkingManager.swift in Sources */,
 				B5DFDAA51E6BC899007BD6AB /* JLLDiscoveryViewController.swift in Sources */,
+				5EC946E71E8AE87400715279 /* DiscoveryStatusCell.swift in Sources */,
 				5E18DAE11E895DCE000C2659 /* JLLScheduleCell.swift in Sources */,
 				B5DFDA9B1E6BC772007BD6AB /* JLLNavigationController.swift in Sources */,
 				5E18DADA1E890977000C2659 /* JLLStatusCell.swift in Sources */,
 				B5AE10FC1E7D9E1800609CD6 /* JoinViewController.swift in Sources */,
-				B5465D4E1E8A569C00B65AD1 /* JLLProfileCell.swift in Sources */,
 				B5DFDAA81E6C2B90007BD6AB /* BundleExtension.swift in Sources */,
 				B5DFDA991E6BC506007BD6AB /* JLLMainViewController.swift in Sources */,
 				B59B0F051E855443005B52B2 /* UILabel.swift in Sources */,
@@ -823,6 +831,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.edu.jlxy.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				VALID_ARCHS = "arm64 armv7";
 			};
 			name = Debug;
 		};
@@ -838,6 +847,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.edu.jlxy.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				VALID_ARCHS = "arm64 armv7";
 			};
 			name = Release;
 		};

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="ajC-cS-X5I" customClass="DiscoveryStatusCell" customModule="金陵联赛" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="ajC-cS-X5I" id="z31-PA-zIb">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HjW-gh-hjC" userLabel="顶部分割线">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="8"/>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="8" id="4Rb-v8-kUD"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bew-XH-CGo" userLabel="用户头像">
+                        <rect key="frame" x="11" y="23" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="Exb-Zy-KJ7"/>
+                            <constraint firstAttribute="height" constant="70" id="n1e-H7-6Vb"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="发起了一场比赛！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAH-n3-kdW">
+                        <rect key="frame" x="89" y="48" width="174" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rua-Sx-AC9">
+                        <rect key="frame" x="296" y="43" width="71" height="30"/>
+                        <state key="normal" title="现在加入"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="rua-Sx-AC9" secondAttribute="trailing" constant="11" id="B9I-g0-lsf"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="rua-Sx-AC9" secondAttribute="trailing" constant="11" id="Jgs-hR-1kg"/>
+                    <constraint firstItem="AAH-n3-kdW" firstAttribute="centerY" secondItem="bew-XH-CGo" secondAttribute="centerY" id="Ow8-G4-dfE"/>
+                    <constraint firstItem="bew-XH-CGo" firstAttribute="top" secondItem="HjW-gh-hjC" secondAttribute="bottom" constant="15" id="RAv-c5-wUJ"/>
+                    <constraint firstItem="AAH-n3-kdW" firstAttribute="leading" secondItem="bew-XH-CGo" secondAttribute="trailing" constant="15" id="XhR-dy-KVT"/>
+                    <constraint firstItem="HjW-gh-hjC" firstAttribute="leading" secondItem="z31-PA-zIb" secondAttribute="leading" id="ZR9-V5-YP2"/>
+                    <constraint firstAttribute="trailing" secondItem="HjW-gh-hjC" secondAttribute="trailing" id="b4A-vO-G7a"/>
+                    <constraint firstAttribute="bottom" secondItem="bew-XH-CGo" secondAttribute="bottom" constant="15" id="bUY-mE-RcP"/>
+                    <constraint firstItem="bew-XH-CGo" firstAttribute="leading" secondItem="z31-PA-zIb" secondAttribute="leading" constant="11" id="cX9-zY-3M5"/>
+                    <constraint firstItem="rua-Sx-AC9" firstAttribute="leading" secondItem="AAH-n3-kdW" secondAttribute="trailing" constant="22" id="dEG-no-JLu"/>
+                    <constraint firstItem="HjW-gh-hjC" firstAttribute="top" secondItem="z31-PA-zIb" secondAttribute="top" id="gL0-KG-XLU"/>
+                    <constraint firstItem="rua-Sx-AC9" firstAttribute="leading" secondItem="bew-XH-CGo" secondAttribute="trailing" constant="204" id="hfl-YE-fZt"/>
+                    <constraint firstItem="rua-Sx-AC9" firstAttribute="centerY" secondItem="AAH-n3-kdW" secondAttribute="centerY" id="pZY-8c-VHG"/>
+                    <constraint firstItem="rua-Sx-AC9" firstAttribute="centerY" secondItem="bew-XH-CGo" secondAttribute="centerY" id="qvX-8L-HWP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="joinBtn" destination="rua-Sx-AC9" id="BYY-UQ-1Oa"/>
+                <outlet property="userImage" destination="bew-XH-CGo" id="Utb-dT-xsA"/>
+            </connections>
+            <point key="canvasLocation" x="-14.5" y="11"/>
+        </tableViewCell>
+    </objects>
+</document>
