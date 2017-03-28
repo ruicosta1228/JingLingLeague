@@ -16,6 +16,9 @@ class DiscoveryStatusCell: UITableViewCell {
     // 加入比赛 按钮
     @IBOutlet weak var joinBtn: UIButton!
     
+    //比赛发起时间
+    @IBOutlet weak var timeLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -43,9 +43,16 @@
                         <rect key="frame" x="296" y="43" width="71" height="30"/>
                         <state key="normal" title="现在加入"/>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bN-pk-NHW">
+                        <rect key="frame" x="89" y="72" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailingMargin" secondItem="rua-Sx-AC9" secondAttribute="trailing" constant="11" id="B9I-g0-lsf"/>
+                    <constraint firstItem="5bN-pk-NHW" firstAttribute="leading" secondItem="bew-XH-CGo" secondAttribute="trailing" constant="8" id="FQX-jj-8qm"/>
                     <constraint firstAttribute="trailingMargin" secondItem="rua-Sx-AC9" secondAttribute="trailing" constant="11" id="Jgs-hR-1kg"/>
                     <constraint firstItem="AAH-n3-kdW" firstAttribute="centerY" secondItem="bew-XH-CGo" secondAttribute="centerY" id="Ow8-G4-dfE"/>
                     <constraint firstItem="bew-XH-CGo" firstAttribute="top" secondItem="HjW-gh-hjC" secondAttribute="bottom" constant="15" id="RAv-c5-wUJ"/>
@@ -59,10 +66,12 @@
                     <constraint firstItem="rua-Sx-AC9" firstAttribute="leading" secondItem="bew-XH-CGo" secondAttribute="trailing" constant="204" id="hfl-YE-fZt"/>
                     <constraint firstItem="rua-Sx-AC9" firstAttribute="centerY" secondItem="AAH-n3-kdW" secondAttribute="centerY" id="pZY-8c-VHG"/>
                     <constraint firstItem="rua-Sx-AC9" firstAttribute="centerY" secondItem="bew-XH-CGo" secondAttribute="centerY" id="qvX-8L-HWP"/>
+                    <constraint firstItem="5bN-pk-NHW" firstAttribute="bottom" secondItem="bew-XH-CGo" secondAttribute="bottom" id="tvi-ko-Z3H"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="joinBtn" destination="rua-Sx-AC9" id="BYY-UQ-1Oa"/>
+                <outlet property="timeLabel" destination="5bN-pk-NHW" id="jj0-ip-JMW"/>
                 <outlet property="userImage" destination="bew-XH-CGo" id="Utb-dT-xsA"/>
             </connections>
             <point key="canvasLocation" x="-14.5" y="11"/>
