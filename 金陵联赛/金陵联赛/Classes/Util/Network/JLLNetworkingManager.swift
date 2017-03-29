@@ -18,6 +18,9 @@ class JLLNetworkingManager: AFHTTPSessionManager {
     //单例模式
     static let shared = JLLNetworkingManager()
     
+    //是否成功
+    private var isSuccesss = false
+    
     //封装get和post请求
     ///
     /// - Parameters:
@@ -30,8 +33,12 @@ class JLLNetworkingManager: AFHTTPSessionManager {
                             let data = json as! Data
                             let str = NSString.init(data: data, encoding: String.Encoding.utf8.rawValue)
                             print(str!)
+                            self.isSuccesss = true
+                            print(self.isSuccesss)
             }, failure: {(_,error) in
                             print("网络请求失败 \(error)")
+                            self.isSuccesss = false
+                            print(self.isSuccesss)
             })
             
         }else{
@@ -39,8 +46,12 @@ class JLLNetworkingManager: AFHTTPSessionManager {
                 let data = json as! Data
                 let str = NSString.init(data: data, encoding: String.Encoding.utf8.rawValue)
                 print(str!)
+                self.isSuccesss = true
+                print(self.isSuccesss)
             }, failure: {(_,error) in
                 print("网络请求失败 \(error)")
+                self.isSuccesss = false
+                print(self.isSuccesss)
             })
         }
     }
