@@ -18,41 +18,31 @@ class JLLNetworkingManager: AFHTTPSessionManager {
     //单例模式
     static let shared = JLLNetworkingManager()
     
-    //是否成功
-    private var isSuccesss = false
-    
-    //封装get和post请求
+    /// 封装GET\POST方法
     ///
     /// - Parameters:
     ///   - method: 枚举类型 GET / POST
     ///   - URLString: URL
     ///   - parameters: 参数字典
-    func request(method: JLLHTTPMethod = .GET, URLString: String, parameters: [String: AnyObject]){
+    ///   - completion: 完成回调[json(字典数组),是否成功]
+    func request(method: JLLHTTPMethod = .GET, URLString: String, parameters: [String: AnyObject], completion:@escaping (_ json: Any?, _ isSuccess: Bool)->Void){
+        let success = {(task:URLSessionDataTask, json: Any?)->Void in
+            
+            completion(json, true)
+        }
+        
+        let failure = {(task:URLSessionDataTask?, error: Error)->Void in
+            
+            print("网络请求错误\(error)")
+            
+            completion(error, false)
+        }
+        
         if method == .GET {
-            get(URLString, parameters: parameters, progress: nil, success: {(_, json) in
-                            let data = json as! Data
-                            let str = NSString.init(data: data, encoding: String.Encoding.utf8.rawValue)
-                            print(str!)
-                            self.isSuccesss = true
-                            print(self.isSuccesss)
-            }, failure: {(_,error) in
-                            print("网络请求失败 \(error)")
-                            self.isSuccesss = false
-                            print(self.isSuccesss)
-            })
+            get(URLString, parameters: parameters, progress: nil, success: success, failure: failure)
             
         }else{
-            post(URLString, parameters: parameters, progress: nil, success: {(_, json) in
-                let data = json as! Data
-                let str = NSString.init(data: data, encoding: String.Encoding.utf8.rawValue)
-                print(str!)
-                self.isSuccesss = true
-                print(self.isSuccesss)
-            }, failure: {(_,error) in
-                print("网络请求失败 \(error)")
-                self.isSuccesss = false
-                print(self.isSuccesss)
-            })
+            post(URLString, parameters: parameters, progress: nil, success: success, failure: failure)
         }
     }
     
