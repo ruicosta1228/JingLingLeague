@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import pop
 
 class JLLComposeView: UIView {
 
@@ -37,6 +38,9 @@ class JLLComposeView: UIView {
         
         //添加视图
         vc.view.addSubview(self)
+        
+        //开始动画
+        showCurrentView()
     }
 
     override func awakeFromNib() {
@@ -52,6 +56,24 @@ class JLLComposeView: UIView {
         removeFromSuperview()
     }
     
+}
+
+//动画方法扩展
+extension JLLComposeView {
+    
+    //动画显示当前视图
+    func showCurrentView() {
+        
+        //创建动画
+        let anim: POPBasicAnimation = POPBasicAnimation(propertyNamed: kPOPViewAlpha)
+        
+        anim.fromValue = 0
+        anim.toValue = 1
+        anim.duration = 0.5
+        
+        //添加到视图
+        pop_add(anim, forKey: nil)
+    }
 }
 
 extension JLLComposeView {
@@ -95,6 +117,9 @@ extension JLLComposeView {
             
             //将btn添加到视图
             v.addSubview(btn)
+            
+            //添加监听方法
+            
         }
         
         //布局按钮
