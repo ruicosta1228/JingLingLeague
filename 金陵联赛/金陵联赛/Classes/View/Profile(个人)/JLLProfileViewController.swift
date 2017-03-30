@@ -21,15 +21,37 @@ class JLLProfileViewController: JLLBaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func showRightButton(){
+        
+        let vc = JLLDemoViewController()
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
-    */
+}
 
+extension JLLProfileViewController{
+    
+    override func setupTableView() {
+        
+        
+        //创建navigationBar右侧按钮控件
+        navItem.rightBarButtonItem = UIBarButtonItem(title: "设置", fontSize: 14.0, target: self, action: #selector(showRightButton))
+        
+        //添加子视图
+        let underview = UITableView(frame: CGRect(x: 0, y: 200, width: view.bounds.width, height: 800))
+        underview.separatorStyle = UITableViewCellSeparatorStyle.none
+        
+        let u = ProfileBottomView.profileBottomView()
+        let v = ProfileTopView.profileTopView()
+        
+        
+        self.view.addSubview(underview)
+        underview.addSubview(u)
+        self.view.insertSubview(v, belowSubview: underview)
+        
+        
+        
+
+    }
 }
