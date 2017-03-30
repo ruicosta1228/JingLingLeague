@@ -96,5 +96,18 @@ extension JLLComposeView {
             //将btn添加到视图
             v.addSubview(btn)
         }
+        
+        //布局按钮
+        let btnSize = CGSize(width: 100, height: 100)
+        let margin = (v.bounds.width - 3 * btnSize.width) / 4
+        
+        for (i, btn) in v.subviews.enumerated() {
+            
+            let y = 6
+            let x = CGFloat(i + 1) * margin + CGFloat(i) * btnSize.width
+            
+            btn.frame = CGRect(x: x, y: CGFloat(y), width: btnSize.width, height: btnSize.height)
+            
+        }
     }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -12,23 +12,23 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="JLLComposeView" customModule="金陵联赛" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A8M-cX-mbQ">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Vcp-yW-FJS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="visitor_first_image" translatesAutoresizingMaskIntoConstraints="NO" id="pKo-ZX-mtn">
-                                <rect key="frame" x="105" y="100" width="204" height="70"/>
+                                <rect key="frame" x="85.5" y="100" width="204" height="70"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NO0-m2-TPG">
-                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqM-5q-uh7">
-                                        <rect key="frame" x="189.66666666666666" y="5" width="35" height="35"/>
+                                        <rect key="frame" x="170" y="5" width="35" height="35"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" image="close"/>
                                         <connections>
@@ -44,10 +44,10 @@
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fra-hr-QvP">
-                                <rect key="frame" x="0.0" y="392" width="414" height="224"/>
+                                <rect key="frame" x="0.0" y="411" width="375" height="112"/>
                                 <color key="backgroundColor" red="0.98823529409999999" green="0.24313725489999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="224" id="uMN-2N-RgG"/>
+                                    <constraint firstAttribute="height" constant="112" id="uMN-2N-RgG"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -57,7 +57,7 @@
                             <constraint firstItem="fra-hr-QvP" firstAttribute="leading" secondItem="Vcp-yW-FJS" secondAttribute="leading" id="94q-Ct-M7d"/>
                             <constraint firstItem="pKo-ZX-mtn" firstAttribute="centerX" secondItem="Vcp-yW-FJS" secondAttribute="centerX" id="LVe-fP-NC4"/>
                             <constraint firstAttribute="trailing" secondItem="fra-hr-QvP" secondAttribute="trailing" id="Luv-rS-umu"/>
-                            <constraint firstItem="NO0-m2-TPG" firstAttribute="top" secondItem="fra-hr-QvP" secondAttribute="bottom" constant="76" id="NJb-AS-9v0"/>
+                            <constraint firstItem="NO0-m2-TPG" firstAttribute="top" secondItem="fra-hr-QvP" secondAttribute="bottom" constant="100" id="NJb-AS-9v0"/>
                             <constraint firstAttribute="bottom" secondItem="NO0-m2-TPG" secondAttribute="bottom" id="hy9-2r-uN2"/>
                             <constraint firstItem="NO0-m2-TPG" firstAttribute="leading" secondItem="Vcp-yW-FJS" secondAttribute="leading" id="lYp-y5-pJi"/>
                         </constraints>
