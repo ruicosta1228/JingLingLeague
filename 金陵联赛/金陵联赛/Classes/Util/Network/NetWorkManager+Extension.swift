@@ -24,6 +24,11 @@ extension JLLNetworkingManager{
         responseSerializer = AFHTTPResponseSerializer()
         request(URLString: url, parameters: param as [String : AnyObject], completion: {(json, isSuccess) in
 //            let str = NSString.init(data: json as! Data, encoding: String.Encoding.utf8.rawValue)
+            if !isSuccess{
+                completion([:], false)
+                
+                return
+            }
             
             let dict = try! JSONSerialization.jsonObject(with: json as! Data, options:.mutableContainers) as! NSDictionary
             
