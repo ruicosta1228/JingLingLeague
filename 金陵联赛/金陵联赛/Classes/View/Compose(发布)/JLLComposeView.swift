@@ -13,9 +13,9 @@ class JLLComposeView: UIView {
     @IBOutlet weak var scrollView: UIScrollView!
     
     //按钮数据数组
-    private let buttonInfo = [["imageName": "","title": "文字"],
-                              ["imageName": "","title": "照片/视频"],
-                              ["imageName": "","title": "拍摄"]
+    let buttonInfo = [["imageName": "btn_1","title": "文字"],
+                              ["imageName": "btn_2","title": "照片/视频"],
+                              ["imageName": "btn_3","title": "拍摄"]
     ]
     
     class func composeView() -> JLLComposeView {
@@ -56,13 +56,45 @@ class JLLComposeView: UIView {
 
 extension JLLComposeView {
     func setupUI() {
+
+        //强行更新布局
+        layoutIfNeeded()
         
-//        let btn = JLLComposeButton.composeButton(imageName: "TabIcon", title: "sbf")
-//        
-//        btn.center = center
-//        
-//        addSubview(btn)
-//        
-//        btn.addTarget(self, action: #selector(clickButton), for: .touchUpInside)
+        //向scrollView添加视图
+        let rect = scrollView.bounds
+        
+        let v = UIView(frame: rect)
+        
+        //向视图添加按钮
+        addButtons(v: v, idx: 0)
+        
+        //将视图添加到scrollView
+        scrollView.addSubview(v)
+    }
+    
+    //向v中添加按钮,按钮的数组索引从idx开始
+    func addButtons(v: UIView,idx: Int) {
+        
+        let count = 3
+        
+        for i in idx..<(idx + count){
+            
+            if idx >= buttonInfo.count {
+                break
+            }
+            
+            //从数组字典中获取图像名称和title
+            let dict = buttonInfo[i]
+            guard let imageName = dict["imageName"],
+                let title = dict["title"] else {
+                    continue
+            }
+            
+            //创建按钮
+            let btn = JLLComposeButton.composeButton(imageName: imageName, title: title)
+            
+            //将btn添加到视图
+            v.addSubview(btn)
+        }
     }
 }
