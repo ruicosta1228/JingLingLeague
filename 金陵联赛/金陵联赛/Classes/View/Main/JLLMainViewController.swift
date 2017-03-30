@@ -19,7 +19,15 @@ class JLLMainViewController: UITabBarController {
     }
     
     func composeStatus(){
-        print("按钮监听方法")
+        print("发布")
+        
+        //判断是否登录
+        
+        //实例化视图
+        let v = JLLComposeView.composeView()
+        
+        //显示视图
+        v.show()
     }
     
     lazy var composeButton = UIButton(frame:CGRect(x:0, y:0, width:100, height:30))
@@ -27,6 +35,7 @@ class JLLMainViewController: UITabBarController {
 }
 
 extension JLLMainViewController{
+    
     //设置中间按钮
     func setupComposeButton(){
         composeButton.setImage(UIImage(named: "TabIcon"), for: .normal)
@@ -38,7 +47,7 @@ extension JLLMainViewController{
         tabBar.addSubview(composeButton)
         
         composeButton.addTarget(self, action: #selector(composeStatus), for: .touchUpInside)
-
+        
     }
     
     //设置子控制器
