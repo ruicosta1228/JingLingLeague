@@ -13,6 +13,12 @@ class JLLComposeView: UIView {
 
     @IBOutlet weak var scrollView: UIScrollView!
     
+    //时间
+    @IBOutlet weak var timeLabel: UILabel!
+    
+    //日期
+    @IBOutlet weak var dateLabel: UILabel!
+    
     //按钮数据数组
     let buttonInfo = [["imageName": "btn_1","title": "文字"],
                               ["imageName": "btn_2","title": "照片/视频"],
@@ -36,12 +42,22 @@ class JLLComposeView: UIView {
             return
         }
         
+        //时间
+        let date = NSDate()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyy-MM-dd 'at' HH:mm"
+        let strNowTime = formatter.string(from: date as Date) as String
+        let timeArray = strNowTime.components(separatedBy: "at")
+        timeLabel.text = timeArray[1]
+        dateLabel.text = timeArray[0]
+        
         //添加视图
         vc.view.addSubview(self)
         
         //开始动画
         showCurrentView()
-    }
+        
+}
 
     override func awakeFromNib() {
         setupUI()

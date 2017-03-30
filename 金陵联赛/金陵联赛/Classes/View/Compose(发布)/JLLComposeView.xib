@@ -21,9 +21,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="visitor_first_image" translatesAutoresizingMaskIntoConstraints="NO" id="pKo-ZX-mtn">
-                                <rect key="frame" x="85.5" y="100" width="204" height="70"/>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NO0-m2-TPG">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <subviews>
@@ -45,19 +42,41 @@
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fra-hr-QvP">
                                 <rect key="frame" x="0.0" y="411" width="375" height="112"/>
-                                <color key="backgroundColor" red="0.98823529409999999" green="0.24313725489999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="112" id="uMN-2N-RgG"/>
                                 </constraints>
                             </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aks-Jr-Swe">
+                                <rect key="frame" x="25" y="69" width="108" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="108" id="YkA-cN-pnm"/>
+                                    <constraint firstAttribute="height" constant="37" id="yOZ-hj-ZMi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qJ-T4-nbb">
+                                <rect key="frame" x="25" y="114" width="92" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="9hb-8G-vKL"/>
+                                    <constraint firstAttribute="height" constant="22" id="ibz-Uq-dyh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="pKo-ZX-mtn" firstAttribute="top" secondItem="Vcp-yW-FJS" secondAttribute="top" constant="100" id="3P2-bp-09f"/>
                             <constraint firstAttribute="trailing" secondItem="NO0-m2-TPG" secondAttribute="trailing" id="3i3-g8-yNW"/>
                             <constraint firstItem="fra-hr-QvP" firstAttribute="leading" secondItem="Vcp-yW-FJS" secondAttribute="leading" id="94q-Ct-M7d"/>
-                            <constraint firstItem="pKo-ZX-mtn" firstAttribute="centerX" secondItem="Vcp-yW-FJS" secondAttribute="centerX" id="LVe-fP-NC4"/>
+                            <constraint firstItem="0qJ-T4-nbb" firstAttribute="top" secondItem="aks-Jr-Swe" secondAttribute="bottom" constant="8" id="GOY-rl-jpj"/>
+                            <constraint firstItem="aks-Jr-Swe" firstAttribute="leading" secondItem="Vcp-yW-FJS" secondAttribute="leading" constant="25" id="L9y-in-1Ht"/>
                             <constraint firstAttribute="trailing" secondItem="fra-hr-QvP" secondAttribute="trailing" id="Luv-rS-umu"/>
                             <constraint firstItem="NO0-m2-TPG" firstAttribute="top" secondItem="fra-hr-QvP" secondAttribute="bottom" constant="100" id="NJb-AS-9v0"/>
+                            <constraint firstItem="aks-Jr-Swe" firstAttribute="top" secondItem="Vcp-yW-FJS" secondAttribute="top" constant="69" id="Oxh-Gy-51a"/>
+                            <constraint firstItem="0qJ-T4-nbb" firstAttribute="leading" secondItem="aks-Jr-Swe" secondAttribute="leading" id="Vqa-kV-g5u"/>
                             <constraint firstAttribute="bottom" secondItem="NO0-m2-TPG" secondAttribute="bottom" id="hy9-2r-uN2"/>
                             <constraint firstItem="NO0-m2-TPG" firstAttribute="leading" secondItem="Vcp-yW-FJS" secondAttribute="leading" id="lYp-y5-pJi"/>
                         </constraints>
@@ -73,13 +92,14 @@
                 <constraint firstAttribute="trailing" secondItem="A8M-cX-mbQ" secondAttribute="trailing" id="nhJ-Gs-M9n"/>
             </constraints>
             <connections>
+                <outlet property="dateLabel" destination="0qJ-T4-nbb" id="xxB-tO-s3o"/>
                 <outlet property="scrollView" destination="fra-hr-QvP" id="cAq-bB-chY"/>
+                <outlet property="timeLabel" destination="aks-Jr-Swe" id="dyt-K9-QxV"/>
             </connections>
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
     <resources>
         <image name="close" width="35" height="35"/>
-        <image name="visitor_first_image" width="204" height="70"/>
     </resources>
 </document>
