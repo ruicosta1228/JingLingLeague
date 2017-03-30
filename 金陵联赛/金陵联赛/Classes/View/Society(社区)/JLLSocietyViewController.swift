@@ -14,11 +14,13 @@ class JLLSocietyViewController: JLLBaseViewController {
     
     lazy var statusList = [String]()
     
+    lazy var model = JLLPlayerViewModel()
+    
     override func loadData() {
 
-//        JLLNetworkingManager.shared.playerLoginList(completion: { (list, isSuccess) in
-//            print(list)
-//        })
+        model.login(completion: { (isSuccess) in
+            print(isSuccess)
+        })
         
         print("加载数据")
         //模拟延迟加载

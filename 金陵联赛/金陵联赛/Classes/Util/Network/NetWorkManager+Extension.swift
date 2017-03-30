@@ -28,6 +28,8 @@ extension JLLNetworkingManager{
             let dict = try! JSONSerialization.jsonObject(with: json as! Data, options:.mutableContainers) as! NSDictionary
             
             guard let result = dict["player"] else{
+                completion([:], false)
+                
                 return
             }
             
