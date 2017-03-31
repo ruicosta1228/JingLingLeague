@@ -39,7 +39,7 @@ class JLLMainViewController: UITabBarController {
 
 extension JLLMainViewController: UITabBarControllerDelegate {
     
-    /// 将要选择TabBarItem
+    /// 将要选择TabBarItem 点击tabBar加载数据跳转到顶部
     ///
     /// - Parameters:
     ///   - tabBarController: tabBarController
@@ -48,6 +48,27 @@ extension JLLMainViewController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         
         print("将要切换到 \(viewController)")
+        
+        //获取控制器在数组中的索引
+        let index = childViewControllers.index(of: viewController)
+        
+        //获取当前索引
+        if selectedIndex == 0 && index == selectedIndex {
+            print("点击首页")
+            
+            //滚动到顶部
+            //获取控制器
+            let nav = childViewControllers[0] as! UINavigationController
+            
+            let vc = nav.childViewControllers[0] as! JLLSocietyViewController
+            
+            vc.tableView?.setContentOffset(CGPoint(x: 0, y: -64), animated: true)
+            
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5, execute: {
+                vc.loadData()
+
+            })
+        }
         
         //通过判断是不是UIViewController，来屏蔽如果点歪composeButton到一个空的UIViewController的bug
         //这个方法判断是不是该类，且不包含其子类

@@ -18,13 +18,13 @@ class JLLSocietyViewController: JLLBaseViewController {
     
     override func loadData() {
 
-        model.login(completion: { (isSuccess) in
-            print(isSuccess)
-        })
+//        model.login(completion: { (isSuccess) in
+//            print(isSuccess)
+//        })
         
         print("加载数据")
         //模拟延迟加载
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()){
             for i in 0..<15{
                 if self.isPullup{
                     //追加
