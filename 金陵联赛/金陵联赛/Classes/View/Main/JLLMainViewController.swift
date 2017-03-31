@@ -16,6 +16,9 @@ class JLLMainViewController: UITabBarController {
         setupChildControllers()
         
         setupComposeButton()
+        
+        //设置代理
+        delegate = self
     }
     
     func composeStatus(){
@@ -34,6 +37,24 @@ class JLLMainViewController: UITabBarController {
     
 }
 
+extension JLLMainViewController: UITabBarControllerDelegate {
+    
+    /// 将要选择TabBarItem
+    ///
+    /// - Parameters:
+    ///   - tabBarController: tabBarController
+    ///   - viewController: 目标控制器
+    /// - Returns: 是否切换到目标控制器
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        
+        print("将要切换到 \(viewController)")
+        
+        //通过判断是不是UIViewController，来屏蔽如果点歪composeButton到一个空的UIViewController的bug
+        //这个方法判断是不是该类，且不包含其子类
+        return !viewController.isMember(of: UIViewController.self)
+    }
+}
+
 extension JLLMainViewController{
     
     //设置中间按钮
@@ -41,7 +62,7 @@ extension JLLMainViewController{
         composeButton.setImage(UIImage(named: "TabIcon"), for: .normal)
         
         let count = CGFloat(childViewControllers.count)
-        let w = tabBar.bounds.width / count - 1 //容错点
+        let w = tabBar.bounds.width / count 
         
         composeButton.frame = tabBar.bounds.insetBy(dx: 2 * w, dy: 0)
         tabBar.addSubview(composeButton)
