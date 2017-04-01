@@ -14,7 +14,8 @@ class DiscoveryStatusCell: UITableViewCell {
     @IBOutlet weak var userImage: UIImageView!
     
     // 加入比赛 按钮
-    @IBOutlet weak var joinBtn: UIButton!
+    @IBOutlet var joinBtn: UIButton!
+    
     
     //比赛发起时间
     @IBOutlet weak var timeLabel: UILabel!
