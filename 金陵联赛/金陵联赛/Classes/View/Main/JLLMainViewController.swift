@@ -35,6 +35,10 @@ class JLLMainViewController: UITabBarController {
     //登录监听方法
     @objc private func playerLogin(n: Notification){
         print("用户登录通知\(n)")
+        
+        let nav = UINavigationController(rootViewController: JLLLoginViewController())
+        
+        present(nav, animated: true, completion: nil)
     }
     
     func composeStatus(){
