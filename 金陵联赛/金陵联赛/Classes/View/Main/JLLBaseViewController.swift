@@ -10,8 +10,6 @@ import UIKit
 
 //OC中不支持多继承，使用协议替代
 class JLLBaseViewController: UIViewController {
-    //用户登录标记
-    var userLogon = true
     
     //访客视图信息字典
     var visitorInfoDictionary: [String: String]?
@@ -33,7 +31,7 @@ class JLLBaseViewController: UIViewController {
         setupUI()
         
         //加载数据
-        loadData()
+        JLLNetworkingManager.shared.userLogon ? loadData() : ()
     }
     
     override var title: String?{
@@ -87,7 +85,7 @@ extension JLLBaseViewController{
         
         setupNavigationBar()
         
-        userLogon ? setupTableView() : setupVisitorView()
+        JLLNetworkingManager.shared.userLogon ? setupTableView() : setupVisitorView()
         
     }
     

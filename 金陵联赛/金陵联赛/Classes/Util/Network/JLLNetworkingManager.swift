@@ -18,6 +18,14 @@ class JLLNetworkingManager: AFHTTPSessionManager {
     //单例模式
     static let shared = JLLNetworkingManager()
     
+    //应用程序用户pId
+    var pId: String?
+    
+    //用户登录标记
+    var userLogon: Bool{
+        return pId != nil
+    }
+    
     /// 封装GET\POST方法
     ///
     /// - Parameters:
