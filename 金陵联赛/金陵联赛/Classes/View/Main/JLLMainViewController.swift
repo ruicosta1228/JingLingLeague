@@ -19,6 +19,19 @@ class JLLMainViewController: UITabBarController {
         
         //设置代理
         delegate = self
+        
+        //注册通知
+        NotificationCenter.default.addObserver(self, selector: #selector(playerLogin), name: NSNotification.Name(rawValue: JLLPlayerShouldLoginNotification), object: nil)
+    }
+    
+    deinit{
+        //注销通知
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    //登录监听方法
+    @objc private func playerLogin(n: Notification){
+        print("用户登录通知\(n)")
     }
     
     func composeStatus(){

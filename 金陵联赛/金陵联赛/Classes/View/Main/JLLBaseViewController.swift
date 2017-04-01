@@ -67,7 +67,9 @@ class JLLBaseViewController: UIViewController {
 extension JLLBaseViewController {
     
     @objc func login() {
-        print("登录")
+
+        //发送通知
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: JLLPlayerShouldLoginNotification), object: nil)
     }
     
     @objc func register() {
