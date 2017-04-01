@@ -42,6 +42,9 @@
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rua-Sx-AC9">
                         <rect key="frame" x="285" y="43" width="71" height="30"/>
                         <state key="normal" title="现在加入"/>
+                        <connections>
+                            <action selector="joinBtn:" destination="ajC-cS-X5I" eventType="touchUpInside" id="wRw-PB-vS4"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bN-pk-NHW">
                         <rect key="frame" x="89" y="72" width="42" height="21"/>
@@ -74,7 +77,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="joinBtn" destination="rua-Sx-AC9" id="BYY-UQ-1Oa"/>
+                <outlet property="joinBtn" destination="rua-Sx-AC9" id="SD5-bl-CO4"/>
                 <outlet property="timeLabel" destination="5bN-pk-NHW" id="jj0-ip-JMW"/>
                 <outlet property="userImage" destination="bew-XH-CGo" id="Utb-dT-xsA"/>
             </connections>

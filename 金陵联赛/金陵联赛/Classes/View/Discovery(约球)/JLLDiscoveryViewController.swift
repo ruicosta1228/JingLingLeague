@@ -12,53 +12,46 @@ class JLLDiscoveryViewController: JLLBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    func showRightButton() {
+        let jv = JoinViewController()
+        navigationController?.pushViewController(jv, animated: true)
+    }
+    
+    func click() {
         
-//        let joinBtn = UIBarButtonItem(title: "加入", style: UIBarButtonItemStyle.plain, target: self, action: #selector(JLLDiscoveryViewController.joinAction))
-//        self.navigationItem.rightBarButtonItem = joinBtn
+//        UIView.beginAnimations(nil, context: nil)
+//        UIView.setAnimationDuration(3.0)
+//        UIView.setAnimationTransition(.curlUp, for: self.view, cache: true)
+//        self.view.exchangeSubview(at: 1, withSubviewAt: 0)
+//        UIView.commitAnimations()
 //        
-//        //        let yue:UIButton = UIButton(type:.system)       //约球按钮
-//        //        yue.frame = CGRect(x:180, y:300, width:100, height:30)
-//        //        yue.setTitle("约", for: .normal)
-//        //
-//        //        self.view.addSubview(yue)
-//        
-//        let btn = UIButton.init(type: UIButtonType.custom) as UIButton
-//        let img = UIImage(named: "TabIcon")
-//        btn.setImage(img, for: UIControlState.normal)
-//        btn.frame = CGRect(x:150, y:300, width:100, height:100)
-//        btn.backgroundColor = UIColor.white
-//        
-//        btn.addTarget(self, action: #selector(JLLDiscoveryViewController.click), for: UIControlEvents.touchUpInside)
-//        
-//        self.view.addSubview(btn)
+        let mv = MapViewController()
+        navigationController?.pushViewController(mv, animated: true)
     }
     
-//    func click() {
-//        let map = MapViewController()
-//        self.navigationController?.pushViewController(map, animated: true)
-//    }
-//    
-//    func joinAction() {
-//        let join = JoinViewController()
-//        //        join.modalTransitionStyle = .flipHorizontal
-//        //        self.presentingViewController(join, animated: true, completion: nil)
-//        self.navigationController?.pushViewController(join, animated: true)
-//    }
+}
+
+extension JLLDiscoveryViewController {
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func setupTableView() {
+        
+        //右侧按钮
+        navItem.rightBarButtonItem = UIBarButtonItem(title: "加入", target: self, action: #selector(showRightButton))
+        
+        //约球按钮
+        let btn = UIButton.init(type: UIButtonType.custom) as UIButton
+        let img = UIImage(named: "btn_1")
+        btn.setImage(img, for: UIControlState.normal)
+        
+        let x = self.view.bounds.width / 2 - 50
+        let y = self.view.bounds.height / 2 - 50
+        btn.frame = CGRect(x:x, y:y, width:100, height:100)
+        
+        btn.addTarget(self, action: #selector(click), for: .touchUpInside)
+        
+        self.view.addSubview(btn)
+
     }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }

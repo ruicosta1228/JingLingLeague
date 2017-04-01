@@ -10,11 +10,10 @@ import UIKit
 
 class JLLWelcomeView: UIView {
 
-    //显示文字
-    @IBOutlet weak var textLabel: UILabel!
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        backgroundColor = UIColor.blue
     }
     
     required init?(coder aDecoder: NSCoder) {

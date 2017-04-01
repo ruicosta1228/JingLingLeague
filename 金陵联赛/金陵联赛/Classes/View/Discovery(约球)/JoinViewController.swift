@@ -52,12 +52,12 @@ extension JoinViewController{
         
         //注册原型cell
         tableView?.register(UINib(nibName: "DiscoveryCell", bundle: nil), forCellReuseIdentifier: cellId)
-        
+
         //设置行高
         tableView?.rowHeight = UITableViewAutomaticDimension
         tableView?.estimatedRowHeight = 100
         tableView?.rowHeight = 100
-        
+
         //取消分割线
         tableView?.separatorStyle = .none
     }
