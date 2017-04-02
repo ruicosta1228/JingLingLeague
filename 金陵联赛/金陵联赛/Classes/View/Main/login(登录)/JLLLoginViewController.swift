@@ -26,6 +26,8 @@ class JLLLoginViewController: UIViewController {
         super.viewDidLoad()
         
         NotificationCenter.default.addObserver(self, selector: #selector(loginByWeibo), name: NSNotification.Name(rawValue: JLLPlayerShouldLoginByWeiboNotification), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(loginByTencentQQ), name: NSNotification.Name(rawValue: JLLPlayerShouldLoginByTencentQQNotification), object: nil)
     }
     
     deinit{
@@ -43,10 +45,14 @@ class JLLLoginViewController: UIViewController {
 //第三方登录事件
 extension JLLLoginViewController {
     @objc func loginByWeibo(){
-        print("微博login")
         
         let vc = WBLoginViewController()
         
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func loginByTencentQQ(){
+        
+        print("qq login")
     }
 }
