@@ -9,3 +9,6 @@
 import Foundation
 
 let JLLPlayerShouldLoginNotification = "JLLPlayerShouldLoginNotification"
+
+let JLLPlayerShouldLoginByWeiboNotification = "JLLPlayerShouldLoginByWeiboNotification"
+
