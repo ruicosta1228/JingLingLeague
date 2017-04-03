@@ -18,7 +18,7 @@ class JLLMainViewController: UITabBarController {
         setupComposeButton()
         
         //设置新特性
-        //        setupNewFeatureView()
+//        setupNewFeatureView()
         
         //设置代理
         delegate = self
@@ -101,7 +101,7 @@ extension JLLMainViewController: UITabBarControllerDelegate {
 //
 //    func setupNewFeatureView() {
 //
-//        let v = isNew ? JLLNewFeatureView.newFeatureView() : JLLWelcomeView()
+//        let v = isNew ? JLLNewFeatureView().newFeature() : JLLWelcomeView()
 //        v.frame = view.bounds
 //
 //        view.addSubview(v)
@@ -109,7 +109,7 @@ extension JLLMainViewController: UITabBarControllerDelegate {
 //    }
 //
 //    var isNew: Bool {
-//        return false
+//        return true
 //    }
 //}
 

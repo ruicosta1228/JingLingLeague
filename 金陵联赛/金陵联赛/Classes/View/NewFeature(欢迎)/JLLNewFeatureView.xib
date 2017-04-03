@@ -15,29 +15,46 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lv6-do-ai1" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
-                    <rect key="frame" x="78" y="321.5" width="219" height="24"/>
-                    <attributedString key="attributedText">
-                        <fragment content="好不容易找到小伙伴">
-                            <attributes>
-                                <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <font key="NSFont" size="24" name=".PingFangSC-Regular"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="truncatingHead" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                            </attributes>
-                        </fragment>
-                    </attributedString>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZH4-YW-Epg">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="changeText:" destination="iN0-l3-epB" eventType="touchUpInside" id="veB-kf-N0D"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="好不容易找到小伙伴" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxp-5F-z7C" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                    <rect key="frame" x="0.0" y="318.5" width="375" height="31.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="click anywhere" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84d-6A-pgT">
+                    <rect key="frame" x="131" y="551" width="113.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="Lv6-do-ai1" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="9CU-yp-BCo"/>
-                <constraint firstItem="Lv6-do-ai1" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gJT-Vc-AUM"/>
+                <constraint firstItem="fxp-5F-z7C" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5I6-Nj-j5R"/>
+                <constraint firstAttribute="bottom" secondItem="84d-6A-pgT" secondAttribute="bottom" constant="95" id="8Ep-qu-XP4"/>
+                <constraint firstAttribute="bottom" secondItem="ZH4-YW-Epg" secondAttribute="bottom" id="9e6-ps-ZXL"/>
+                <constraint firstAttribute="trailing" secondItem="ZH4-YW-Epg" secondAttribute="trailing" id="HtJ-R9-KEl"/>
+                <constraint firstItem="ZH4-YW-Epg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Qtk-X6-hqa"/>
+                <constraint firstItem="fxp-5F-z7C" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="UZJ-6t-sZN"/>
+                <constraint firstItem="84d-6A-pgT" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Uee-Nj-Ivj"/>
+                <constraint firstItem="ZH4-YW-Epg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dPZ-f7-NEE"/>
+                <constraint firstItem="fxp-5F-z7C" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="hhq-wP-V6x"/>
+                <constraint firstAttribute="trailing" secondItem="fxp-5F-z7C" secondAttribute="trailing" id="nbw-0c-lfk"/>
+                <constraint firstItem="fxp-5F-z7C" firstAttribute="centerY" secondItem="ZH4-YW-Epg" secondAttribute="centerY" id="zko-Jn-vzq"/>
             </constraints>
             <connections>
-                <outlet property="textLabel" destination="Lv6-do-ai1" id="AYc-WT-0R6"/>
+                <outlet property="label" destination="fxp-5F-z7C" id="ugt-Ty-lkm"/>
             </connections>
-            <point key="canvasLocation" x="33.5" y="53.5"/>
+            <point key="canvasLocation" x="98.5" y="53.5"/>
         </view>
     </objects>
 </document>

@@ -2,34 +2,42 @@
 //  JLLNewFeatureView.swift
 //  金陵联赛
 //
-//  Created by Salasoul on 2017/3/30.
+//  Created by Salasoul on 2017/4/3.
 //  Copyright © 2017年 neo. All rights reserved.
 //
 
 import UIKit
 import LTMorphingLabel
 
-class JLLNewFeatureView: UIView {
+class JLLNewFeatureView: UIView, LTMorphingLabelDelegate {
 
-    let text: String = "哈哈哈哈"
+    var i = -1
+    var textArray = ["好不容易找到小伙伴",
+                                 "却发现四处高楼林立?",
+                                 "或许你想来场酣畅淋漓的友谊赛",
+                                 "却发现无人响应?",
+                                 "或许你对某场比赛有独到的见解",
+                                 "却发现无人聆?",
+                                 "使用金陵联赛",
+                                 "加入我们吧!"]
     
-    @IBOutlet var textLabel: LTMorphingLabel!
+    @IBOutlet var label: LTMorphingLabel!
     
-    @IBAction func changeText(sender: AnyObject) {
-        textLabel.text = text
+    var text: String {
+        i = i >= textArray.count - 1 ? 0 : i + 1
+        return textArray[i]
     }
     
-    @IBAction func segmentChanged(sender: AnyObject) {
-        self.textLabel.morphingEffect = .anvil
+    @IBAction func changeText(_ sender: Any) {
+        label.text = text
+        self.label.morphingEffect = .evaporate
     }
     
-    class func newFeatureView() -> JLLNewFeatureView {
+    func newFeature() -> JLLNewFeatureView {
         
         let nib = UINib(nibName: "JLLNewFeatureView", bundle: nil)
-        
         let v = nib.instantiate(withOwner: nil, options: nil)[0] as! JLLNewFeatureView
-        
         return v
+        
     }
-
 }

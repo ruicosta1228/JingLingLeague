@@ -26,7 +26,7 @@ class JLLDiscoveryViewController: JLLBaseViewController {
 //        UIView.setAnimationTransition(.curlUp, for: self.view, cache: true)
 //        self.view.exchangeSubview(at: 1, withSubviewAt: 0)
 //        UIView.commitAnimations()
-//        
+        
         let mv = MapViewController()
         navigationController?.pushViewController(mv, animated: true)
     }
