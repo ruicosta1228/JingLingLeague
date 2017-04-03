@@ -21,7 +21,8 @@ extension JLLNetworkingManager{
         let param = ["pName": "test", "pPassword": "test"]
         //        let param = ["access_token": "2.00WdkIoC4orJzC303599f2c40_29ge"]
         
-        responseSerializer = AFHTTPResponseSerializer()
+        //这一步反序列化 用来处理自己服务器的json
+//        responseSerializer = AFHTTPResponseSerializer()
         request(URLString: url, parameters: param as [String : AnyObject], completion: {(json, isSuccess) in
 //            let str = NSString.init(data: json as! Data, encoding: String.Encoding.utf8.rawValue)
             if !isSuccess{
@@ -30,7 +31,8 @@ extension JLLNetworkingManager{
                 return
             }
             
-            let dict = try! JSONSerialization.jsonObject(with: json as! Data, options:.mutableContainers) as! NSDictionary
+//            let dict = try! JSONSerialization.jsonObject(with: json , options:.mutableContainers) as! NSDictionary
+            let dict = json as! NSDictionary
             
             guard let result = dict["player"] else{
                 completion([:], false)
@@ -41,5 +43,22 @@ extension JLLNetworkingManager{
             completion(result as! NSDictionary, isSuccess)
         })
 
+    }
+}
+
+//第三方登录相关方法
+extension JLLNetworkingManager{
+    func loadWBAccessToken(code: String){
+        let urlString = "https://api.weibo.com/oauth2/access_token"
+        
+        let params = ["client_id": WBAppKey,
+                      "client_secret": WBAppSecret,
+                      "grant_type": "authorization_code",
+                      "code": code,
+                      "redirect_uri": WBRedirectURI]
+        
+        request(method: .POST, URLString: urlString, parameters: params as [String : AnyObject], completion: { (json, isSuccess) in
+            print(json!)
+        })
     }
 }

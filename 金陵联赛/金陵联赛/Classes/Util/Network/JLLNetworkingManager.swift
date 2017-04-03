@@ -16,10 +16,22 @@ enum JLLHTTPMethod {
 
 class JLLNetworkingManager: AFHTTPSessionManager {
     //单例模式
-    static let shared = JLLNetworkingManager()
+    static let shared: JLLNetworkingManager = {
+        // 实例化对象
+        let instance = JLLNetworkingManager()
+        
+        // 设置响应反序列化支持的数据类型
+//        instance.responseSerializer = AFHTTPResponseSerializer()
+
+        instance.responseSerializer.acceptableContentTypes?.insert("text/plain")
+        instance.responseSerializer.acceptableContentTypes?.insert("text/html")
+
+        // 返回对象
+        return instance
+    }()
     
     //应用程序用户pId
-    var pId: String? = "10"
+    var pId: String? //= "10"
     
     //用户登录标记
     var userLogon: Bool{

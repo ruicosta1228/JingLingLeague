@@ -26,6 +26,7 @@ class WBLoginViewController: UIViewController {
         title = "登录新浪微博"
         // 导航栏按钮
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "返回", target: self, action: #selector(close))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "自动填充", target: self, action: #selector(autoFill))
     }
 
     override func viewDidLoad() {
@@ -50,6 +51,14 @@ class WBLoginViewController: UIViewController {
         SVProgressHUD.dismiss()
         //弹出新浪微博登录界面
         _ = navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func autoFill(){
+        let js = "document.getElementById('userId').value = '549252496@qq.com'; " +
+        "document.getElementById('passwd').value = 'ilovetreen3n4';"
+        
+        // 让 webview 执行 js
+        webView.stringByEvaluatingJavaScript(from: js)
     }
 }
 
@@ -83,6 +92,8 @@ extension WBLoginViewController: UIWebViewDelegate{
         let code = request.url?.query?.substring(from: "code=".endIndex) ?? ""
         
         print("授权码 - \(code)")
+        
+        JLLNetworkingManager.shared.loadWBAccessToken(code: code)
         
         return true
     }
