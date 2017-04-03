@@ -12,11 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="121" id="gNH-uk-GOS" customClass="DiscoveryStatusCell" customModule="金陵联赛" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="121"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="130" id="gNH-uk-GOS" customClass="DiscoveryStatusCell" customModule="金陵联赛" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gNH-uk-GOS" id="YNG-HI-leT">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="121"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JHU-Sq-HbG">
@@ -82,7 +82,7 @@
                 <outlet property="timeLabel" destination="nqI-m1-ynh" id="Vwf-Aq-sF9"/>
                 <outlet property="userImage" destination="iOB-Ez-S4z" id="fia-FP-W8t"/>
             </connections>
-            <point key="canvasLocation" x="56.5" y="3.5"/>
+            <point key="canvasLocation" x="56.5" y="8"/>
         </tableViewCell>
     </objects>
 </document>
