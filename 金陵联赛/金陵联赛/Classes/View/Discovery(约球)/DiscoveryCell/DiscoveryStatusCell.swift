@@ -16,18 +16,20 @@ class DiscoveryStatusCell: UITableViewCell {
     // 加入比赛 按钮
     @IBAction func joinBtn(_ sender: Any) {
         print("现在加入")
-        let alert = UIAlertController(title: "系统提示",
-                                      message: "联系该用户？",
-                                      preferredStyle: .alert)
-        let cancel = UIAlertAction(title: "取消",
-                                   style: .cancel,
-                                   handler: nil)
-        let call = UIAlertAction(title: "呼叫",
-                                 style: .default,
-                                 handler: {action in print("用户点了呼叫")})
-        alert.addAction(call)
-        alert.addAction(cancel)
-//        JoinViewController().presentedViewController(alert)
+//        let alert = UIAlertController(title: "系统提示",
+//                                      message: "联系发起人",
+//                                      preferredStyle: .alert)
+//        let cancel = UIAlertAction(title: "取消",
+//                                   style: .cancel,
+//                                   handler: nil)
+//        let call = UIAlertAction(title: "呼叫",
+//                                 style: .default,
+//                                 handler: {action in print("用户点了呼叫")})
+//        alert.addAction(call)
+//        alert.addAction(cancel)
+//        JoinViewController().present(alert, animated: true, completion: nil)
+        let alert = UIAlertView(title: "系统提示", message: "联系发起人", delegate: self, cancelButtonTitle: "取消")
+        alert.show()
     }
     
     //比赛地点
