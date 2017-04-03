@@ -19,7 +19,7 @@ class JLLNetworkingManager: AFHTTPSessionManager {
     static let shared = JLLNetworkingManager()
     
     //应用程序用户pId
-    var pId: String?
+    var pId: String? = "10"
     
     //用户登录标记
     var userLogon: Bool{
