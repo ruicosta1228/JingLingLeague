@@ -17,7 +17,7 @@ class JLLNewFeatureView: UIView, LTMorphingLabelDelegate {
                                  "或许你想来场酣畅淋漓的友谊赛",
                                  "却发现无人响应?",
                                  "或许你对某场比赛有独到的见解",
-                                 "却发现无人聆?",
+                                 "却发现无人聆听?",
                                  "使用金陵联赛",
                                  "加入我们吧!"]
     
