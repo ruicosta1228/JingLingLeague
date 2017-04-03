@@ -10,6 +10,7 @@ pod "FMDB"
 pod "SVProgressHUD"
 pod "pop"
 pod "LTMorphingLabel"
+pod "Charts"
 
   target '金陵联赛Tests' do
     inherit! :search_paths

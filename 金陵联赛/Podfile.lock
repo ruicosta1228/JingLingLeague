@@ -14,6 +14,9 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - Charts (3.0.1):
+    - Charts/Core (= 3.0.1)
+  - Charts/Core (3.0.1)
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
@@ -27,6 +30,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - Charts
   - FMDB
   - LTMorphingLabel
   - pop
@@ -36,6 +40,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   LTMorphingLabel: d9a85f16ac306f0e07321d6819964deb2dc69638
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
@@ -43,6 +48,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 9a66e6456f27d3c74f9758c8c170184d7e26783c
+PODFILE CHECKSUM: b9d08007826f35ea8cd2d6c27a9d774d563587a9
 
 COCOAPODS: 1.2.0
