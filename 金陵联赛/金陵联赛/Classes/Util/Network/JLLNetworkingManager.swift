@@ -30,12 +30,12 @@ class JLLNetworkingManager: AFHTTPSessionManager {
         return instance
     }()
     
-    //应用程序用户pId
-    var pId: String? //= "10"
+    //用户登录模型
+    lazy var userAccount = WBUserAccount()
     
     //用户登录标记
     var userLogon: Bool{
-        return pId != nil
+        return userAccount.pId != nil
     }
     
     /// 封装GET\POST方法

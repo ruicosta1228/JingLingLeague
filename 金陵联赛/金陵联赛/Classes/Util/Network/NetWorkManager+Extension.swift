@@ -21,8 +21,6 @@ extension JLLNetworkingManager{
         let param = ["pName": "test", "pPassword": "test"]
         //        let param = ["access_token": "2.00WdkIoC4orJzC303599f2c40_29ge"]
         
-        //这一步反序列化 用来处理自己服务器的json
-//        responseSerializer = AFHTTPResponseSerializer()
         request(URLString: url, parameters: param as [String : AnyObject], completion: {(json, isSuccess) in
 //            let str = NSString.init(data: json as! Data, encoding: String.Encoding.utf8.rawValue)
             if !isSuccess{
@@ -58,7 +56,9 @@ extension JLLNetworkingManager{
                       "redirect_uri": WBRedirectURI]
         
         request(method: .POST, URLString: urlString, parameters: params as [String : AnyObject], completion: { (json, isSuccess) in
-            print(json!)
+            self.userAccount.yy_modelSet(with: (json as? [String: Any]) ?? [:])
+            
+            print(self.userAccount)
         })
     }
 }
