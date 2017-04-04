@@ -46,7 +46,7 @@ extension JLLNetworkingManager{
 
 //第三方登录相关方法
 extension JLLNetworkingManager{
-    func loadWBAccessToken(code: String){
+    func loadWBAccessToken(code: String, completion: @escaping (_ isSuccess:Bool)->Void){
         let urlString = "https://api.weibo.com/oauth2/access_token"
         
         let params = ["client_id": WBAppKey,
@@ -59,6 +59,10 @@ extension JLLNetworkingManager{
             self.userAccount.yy_modelSet(with: (json as? [String: Any]) ?? [:])
             
             print(self.userAccount)
+            
+            self.userAccount.saveAccount()
+            
+            completion(isSuccess)
         })
     }
 }

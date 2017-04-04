@@ -93,7 +93,13 @@ extension WBLoginViewController: UIWebViewDelegate{
         
         print("授权码 - \(code)")
         
-        JLLNetworkingManager.shared.loadWBAccessToken(code: code)
+        JLLNetworkingManager.shared.loadWBAccessToken(code: code){ (isSuccess) in
+            if !isSuccess {
+                SVProgressHUD.showInfo(withStatus: "网络请求失败")
+            } else {
+                SVProgressHUD.showInfo(withStatus: "登录成功")
+            }
+        }
         
         return true
     }
