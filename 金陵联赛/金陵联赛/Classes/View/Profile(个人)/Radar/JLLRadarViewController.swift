@@ -61,7 +61,7 @@ class JLLRadarViewController: JLLBaseViewController {
         //        radarChartView.yAxis.drawAxisLineEnabled = false
         
         radarChartView.chartDescription?.text = "Ability Radar Chart"
-        radarChartView.animate(xAxisDuration: 0.0, yAxisDuration: 2.0, easingOption: .easeInBounce)
+        radarChartView.animate(xAxisDuration: 0.0, yAxisDuration: 1.0, easingOption: .easeInBounce)
         
     }
     override func setupTableView() {
@@ -69,6 +69,11 @@ class JLLRadarViewController: JLLBaseViewController {
         
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.radarChartView?.animate(xAxisDuration: 0.0, yAxisDuration: 1.0)
+    }
+    
     
     
 }

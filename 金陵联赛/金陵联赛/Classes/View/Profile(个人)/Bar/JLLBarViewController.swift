@@ -43,7 +43,7 @@ class JLLBarViewController: JLLBaseViewController {
             let chartData = BarChartData(dataSet: chartDataSet)
             barChartView.data = chartData
             chartDataSet.colors = [UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)]
-            barChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0, easingOption: .easeInBounce)
+            barChartView.animate(xAxisDuration: 1.0, yAxisDuration: 1.0, easingOption: .easeInBounce)
     
             //使x轴位于下方
             barChartView.xAxis.labelPosition = .bottom
@@ -57,8 +57,17 @@ class JLLBarViewController: JLLBaseViewController {
         self.view.backgroundColor = UIColor.white
         
         
+        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.barChartView.animate(xAxisDuration: 1.0, yAxisDuration: 1.0)
+    }
+    
+   
     
 
 
 }
+
+

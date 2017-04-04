@@ -52,7 +52,7 @@ class JLLPieViewController: JLLBaseViewController {
         //        centerText.addAttributes([NSFontAttributeName: UIFont(name: "HelveticaNeue-LightItalic", size: 13.0)!, NSForegroundColorAttributeName: UIColor(red: 51 / 255.0, green: 181 / 255.0, blue: 229 / 255.0, alpha: 1.0)], range: NSMakeRange(centerText.length - 19, 19))
         
         pieChartView.centerText = centerText
-        pieChartView.animate(xAxisDuration: 0.0, yAxisDuration: 2.0, easingOption: .easeInBounce)
+        pieChartView.animate(xAxisDuration: 0.0, yAxisDuration: 1.0, easingOption: .easeInBounce)
         pieChartView.data = data
         
         pieChartView.chartDescription?.text = "Ability Pie Chart"    }
@@ -62,6 +62,10 @@ class JLLPieViewController: JLLBaseViewController {
         self.view.backgroundColor = UIColor.white
         
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.pieChartView.animate(xAxisDuration: 0.0, yAxisDuration: 1.0)
     }
 
 

@@ -10,24 +10,22 @@ import UIKit
 import PageMenu
 
 class JLLProfileViewController: JLLBaseViewController {
-    @IBAction func settingbtn(_ sender: Any) {
-        let settingview = JLLSettingViewController()
-        self.present(settingview, animated: true, completion: nil)
-    }
+    
 
     var pageMenu : CAPSPageMenu?
     
+    @IBAction func settingbtn(_ sender: Any) {
+            let settingview = JLLSettingViewController()
+            self.present(settingview, animated: true, completion: nil)
+        
+    }
    
     var months:[String]!
  
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //隐藏导航栏
-        navigationBar.isHidden = true
 
-        setPage()
-        
         
         // Do any additional setup after loading the view.
     }
@@ -71,7 +69,9 @@ class JLLProfileViewController: JLLBaseViewController {
     //重写方法
     override func setupTableView() {
         self.view.backgroundColor = UIColor.white
-        
+        //隐藏导航栏
+        navigationBar.isHidden = true
+        setPage()
         
     }
 
