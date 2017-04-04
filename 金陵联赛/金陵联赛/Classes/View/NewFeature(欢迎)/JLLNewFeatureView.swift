@@ -11,7 +11,8 @@ import LTMorphingLabel
 
 class JLLNewFeatureView: UIView, LTMorphingLabelDelegate {
 
-    var i = -1
+    var i = 0
+    var j = 0
     var textArray = ["好不容易找到小伙伴",
                                  "却发现四处高楼林立?",
                                  "或许你想来场酣畅淋漓的友谊赛",
@@ -31,6 +32,14 @@ class JLLNewFeatureView: UIView, LTMorphingLabelDelegate {
     @IBAction func changeText(_ sender: Any) {
         label.text = text
         self.label.morphingEffect = .evaporate
+        
+        if j == 7 {
+            //动画结束跳转到社区
+            self.removeFromSuperview()
+            
+        }else {
+            j += 1
+        }
     }
     
     func newFeature() -> JLLNewFeatureView {
