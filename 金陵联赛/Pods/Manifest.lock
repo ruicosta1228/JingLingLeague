@@ -21,6 +21,7 @@ PODS:
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
   - LTMorphingLabel (0.4.0)
+  - PageMenu (2.0.0)
   - pop (1.0.9)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
@@ -33,6 +34,7 @@ DEPENDENCIES:
   - Charts
   - FMDB
   - LTMorphingLabel
+  - PageMenu
   - pop
   - SDWebImage
   - SVProgressHUD
@@ -43,11 +45,12 @@ SPEC CHECKSUMS:
   Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   LTMorphingLabel: d9a85f16ac306f0e07321d6819964deb2dc69638
+  PageMenu: 9c38fd7e0d9ef4b1408320f55bb907bbc0e538dc
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: b9d08007826f35ea8cd2d6c27a9d774d563587a9
+PODFILE CHECKSUM: 79c7368db5b18b07c3e7d01bc368690c4ad01bb7
 
 COCOAPODS: 1.2.0

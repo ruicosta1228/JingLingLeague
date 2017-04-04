@@ -11,8 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JLLProfileViewController" customModule="金陵联赛" customModuleProvider="target">
             <connections>
-                <outlet property="pieChartView" destination="fVp-aD-ewf" id="Vpv-Jr-foV"/>
-                <outlet property="radarChartView" destination="Kjx-sz-Wii" id="JF1-px-qJA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,7 +21,7 @@
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A2h-NX-Ulx">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="375" id="5bC-NE-RR8"/>
                         <constraint firstAttribute="height" constant="200" id="F0x-Ht-Y5d"/>
@@ -39,33 +37,11 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </imageView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fVp-aD-ewf" customClass="PieChartView" customModule="Charts">
-                    <rect key="frame" x="0.0" y="200" width="375" height="217"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="217" id="eNq-Ay-tEj"/>
-                        <constraint firstAttribute="width" constant="375" id="ome-jp-eOw"/>
-                    </constraints>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kjx-sz-Wii" customClass="RadarChartView" customModule="Charts">
-                    <rect key="frame" x="0.0" y="417" width="375" height="250"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="250" id="5LA-sI-daA"/>
-                        <constraint firstAttribute="width" constant="375" id="NPN-hB-1S5"/>
-                    </constraints>
-                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="fVp-aD-ewf" secondAttribute="trailing" id="7jQ-hB-M7r"/>
-                <constraint firstItem="Kjx-sz-Wii" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BfT-cG-fKW"/>
-                <constraint firstAttribute="trailing" secondItem="Kjx-sz-Wii" secondAttribute="trailing" id="N2K-id-hid"/>
-                <constraint firstItem="fVp-aD-ewf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="NeG-4A-gEF"/>
-                <constraint firstAttribute="bottom" secondItem="Kjx-sz-Wii" secondAttribute="bottom" id="Vcm-n6-YZD"/>
                 <constraint firstItem="A2h-NX-Ulx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Y5K-0I-Mep"/>
                 <constraint firstItem="A2h-NX-Ulx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jQt-XL-zdD"/>
-                <constraint firstItem="fVp-aD-ewf" firstAttribute="top" secondItem="A2h-NX-Ulx" secondAttribute="bottom" id="oPe-Jl-aFH"/>
                 <constraint firstAttribute="trailing" secondItem="A2h-NX-Ulx" secondAttribute="trailing" id="sii-Dr-8av"/>
             </constraints>
             <point key="canvasLocation" x="35.5" y="53.5"/>
