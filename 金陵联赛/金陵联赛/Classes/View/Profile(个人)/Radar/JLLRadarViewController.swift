@@ -35,7 +35,7 @@ class JLLRadarViewController: JLLBaseViewController {
         
         
         
-        let ys1 = Array(1..<6).map { x in return sin(Double(x) / 2.0 / 3.141 * 1.5) }
+        let ys1 = Array(1..<6).map { x in return 1.5*(Double(x) * 10.0 ) }
         
         
         let yse1 = ys1.enumerated().map { x, y in return RadarChartDataEntry(value: y) }
@@ -43,19 +43,32 @@ class JLLRadarViewController: JLLBaseViewController {
         
         let data = RadarChartData()
         let ds1 = RadarChartDataSet(values: yse1, label: "能力值")
-        ds1.colors = [NSUIColor.red]
+        ds1.drawFilledEnabled = true
+        let color = UIColor(red: 120/255, green: 117/255, blue: 199/255, alpha: 1)
+        ds1.fillColor = color//填充颜色
+        ds1.fillAlpha = 0.25 //填充透明度
+        ds1.colors = [color]
         data.addDataSet(ds1)
+        
         
         self.radarChartView.data = data
         
         
-        //        radarChartView.rotationEnabled = true
-        radarChartView.webLineWidth = 1.0
-        //        radarChartView.webColor = UIColor.gray  //网线颜色
-        radarChartView.innerWebLineWidth = 1.0
-        radarChartView.innerWebColor = UIColor.black  //圈线颜色
         
-        //        radarChartView.xAxis.labelTextColor = UIColor.blue //外圈名字颜色
+        radarChartView.webLineWidth = 0.25   //五条线宽度
+        radarChartView.webColor = UIColor.gray //五条线颜色
+        radarChartView.yAxis.drawLabelsEnabled = false
+        
+//        radarChartView.drawWeb = true
+        
+        radarChartView.innerWebLineWidth = 0.25  //圈线宽度
+        radarChartView.innerWebColor = UIColor.gray //圈线颜色
+        
+        
+        
+        
+        
+        
         radarChartView.xAxis.axisMaximum = 100.0  //最大值
         radarChartView.xAxis.axisMinimum = 0.0    //最小值
         //        radarChartView.yAxis.drawAxisLineEnabled = false
