@@ -10,6 +10,10 @@ import UIKit
 import PageMenu
 
 class JLLProfileViewController: JLLBaseViewController {
+    @IBAction func settingbtn(_ sender: Any) {
+        let settingview = JLLSettingViewController()
+        self.present(settingview, animated: true, completion: nil)
+    }
 
     var pageMenu : CAPSPageMenu?
     

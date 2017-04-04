@@ -39,14 +39,14 @@ class JLLSettingViewController: JLLBaseViewController {
     
     
     func showLeftButton(){
-        
-        let vc = JLLDemoViewController()
-        
-        navigationController?.pushViewController(vc, animated: true)
+
+        self.dismiss(animated: true, completion: nil)
     }
     
     
 }
+
+
 
 extension JLLSettingViewController{
     
