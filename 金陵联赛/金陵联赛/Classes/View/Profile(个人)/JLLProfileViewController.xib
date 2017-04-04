@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JLLProfileViewController" customModule="金陵联赛" customModuleProvider="target">
+            <connections>
+                <outlet property="barChartView" destination="MmK-KU-xiz" id="VK9-Mz-OgG"/>
+                <outlet property="radarChartView" destination="WYW-vr-PRV" id="ztR-9m-Okn"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A2h-NX-Ulx">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="375" id="UjJ-Va-gsa"/>
+                        <constraint firstAttribute="height" constant="200" id="zQR-hM-dJe"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MmK-KU-xiz" customClass="BarChartView" customModule="Charts">
+                    <rect key="frame" x="0.0" y="200" width="375" height="217"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="375" id="kOz-6X-9WV"/>
+                        <constraint firstAttribute="height" constant="217" id="nVx-1x-uUD"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WYW-vr-PRV" customClass="RadarChartView" customModule="Charts">
+                    <rect key="frame" x="0.0" y="417" width="375" height="250"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="375" id="FBR-Eg-mSq"/>
+                        <constraint firstAttribute="height" constant="250" id="xgs-cL-waD"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile_image_photo" translatesAutoresizingMaskIntoConstraints="NO" id="vAo-IY-jrE">
+                    <rect key="frame" x="137" y="50" width="100" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="50"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="WYW-vr-PRV" firstAttribute="top" secondItem="MmK-KU-xiz" secondAttribute="bottom" id="9CS-ct-AYu"/>
+                <constraint firstAttribute="trailing" secondItem="MmK-KU-xiz" secondAttribute="trailing" id="GrA-Ra-pXc"/>
+                <constraint firstAttribute="trailing" secondItem="A2h-NX-Ulx" secondAttribute="trailing" id="HoL-0h-54B"/>
+                <constraint firstAttribute="trailing" secondItem="WYW-vr-PRV" secondAttribute="trailing" id="KtY-mE-hu8"/>
+                <constraint firstItem="A2h-NX-Ulx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cHe-xp-1m7"/>
+                <constraint firstItem="MmK-KU-xiz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hcm-0C-RQA"/>
+                <constraint firstItem="MmK-KU-xiz" firstAttribute="top" secondItem="A2h-NX-Ulx" secondAttribute="bottom" id="iSD-5z-jo7"/>
+                <constraint firstItem="WYW-vr-PRV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uKO-l2-ECD"/>
+                <constraint firstItem="A2h-NX-Ulx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="w6n-KA-sAM"/>
+            </constraints>
+            <point key="canvasLocation" x="35.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="profile_image_photo" width="263" height="197"/>
+    </resources>
+</document>
