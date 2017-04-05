@@ -21,7 +21,7 @@ class JLLSocietyViewController: JLLBaseViewController {
 //        model.login(completion: { (isSuccess) in
 //            print(isSuccess)
 //        })
-        
+
         print("加载数据")
         //模拟延迟加载
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()){
@@ -87,5 +87,13 @@ extension JLLSocietyViewController{
         cell.textLabel?.text = statusList[indexPath.row]
         
         return cell
+    }
+    
+    //cell点击事件
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = DetailViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+        //向DetailViewController传值
+        vc.title = "123"
     }
 }
