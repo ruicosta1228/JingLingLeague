@@ -128,7 +128,7 @@ extension JLLBaseViewController{
     }
     
     private func setupVisitorView(){
-        let visitorView = JLLVisitorView(frame: view.bounds)
+        let visitorView = JLLVisitorView(frame: CGRect(x: 0, y: 64, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
                 
         view.insertSubview(visitorView, belowSubview: navigationBar)
         
