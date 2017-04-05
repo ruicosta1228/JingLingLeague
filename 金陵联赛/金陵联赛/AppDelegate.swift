@@ -9,7 +9,7 @@
 
 import UIKit
 import UserNotifications
-
+import AFNetworking
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        setupAdditions()
         //取得用户授权显示通知
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound], completionHandler: { (success, error) in
             print("授权" + (success ? "成功" : "识别"))
@@ -41,6 +42,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     @objc(application:supportedInterfaceOrientationsForWindow:) func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
         return .portrait
+    }
+}
+
+//设置框架等细节
+extension AppDelegate {
+    func setupAdditions() {
+        //设置网络加载指示器
+        AFNetworkActivityIndicatorManager.shared().isEnabled = true
     }
 }
 

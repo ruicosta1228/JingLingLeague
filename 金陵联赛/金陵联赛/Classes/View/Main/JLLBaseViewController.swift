@@ -76,6 +76,8 @@ extension JLLBaseViewController {
     @objc func loginSuccess(n: Notification){
         print("登录成功")
         
+        navItem.leftBarButtonItem = nil
+        navItem.rightBarButtonItem = nil
         //更新UI
         //view getter时 如果view == nil 会重新viewDidLoad
         view = nil
@@ -134,6 +136,9 @@ extension JLLBaseViewController{
         //设置内容缩进
         //将内容从navigationBar和tabBar中挤出来
         tableView?.contentInset = UIEdgeInsets(top: navigationBar.bounds.height, left: 0, bottom: tabBarController?.tabBar.bounds.height ?? 49, right: 0)
+        
+        //设置滚动条便宜位置
+        tableView?.scrollIndicatorInsets = tableView!.contentInset
         
         //刷新控件初始化
         refreshControl = UIRefreshControl()
