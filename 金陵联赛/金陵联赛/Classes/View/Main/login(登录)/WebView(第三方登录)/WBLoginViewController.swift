@@ -98,6 +98,14 @@ extension WBLoginViewController: UIWebViewDelegate{
                 SVProgressHUD.showInfo(withStatus: "网络请求失败")
             } else {
                 SVProgressHUD.showInfo(withStatus: "登录成功")
+                
+                self.close()
+                
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: JLLPlayerLoginSuccessNotification), object: nil)
+                
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: VistorView2TableView), object: nil)
+                
+                SVProgressHUD.dismiss()
             }
         }
         

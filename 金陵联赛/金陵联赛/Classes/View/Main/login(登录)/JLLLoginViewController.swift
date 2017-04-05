@@ -28,6 +28,8 @@ class JLLLoginViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(loginByWeibo), name: NSNotification.Name(rawValue: JLLPlayerShouldLoginByWeiboNotification), object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(loginByTencentQQ), name: NSNotification.Name(rawValue: JLLPlayerShouldLoginByTencentQQNotification), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(close), name: NSNotification.Name(rawValue: JLLPlayerLoginSuccessNotification), object: nil)
     }
     
     deinit{

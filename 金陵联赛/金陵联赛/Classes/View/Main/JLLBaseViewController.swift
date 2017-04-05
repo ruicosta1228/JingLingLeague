@@ -32,6 +32,14 @@ class JLLBaseViewController: UIViewController {
         
         //加载数据
         JLLNetworkingManager.shared.userLogon ? loadData() : ()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(loginSuccess), name: NSNotification.Name(rawValue: VistorView2TableView), object: nil)
+        
+        
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     override var title: String?{
@@ -65,6 +73,15 @@ class JLLBaseViewController: UIViewController {
 
 //访客视图监听方法
 extension JLLBaseViewController {
+    @objc func loginSuccess(n: Notification){
+        print("登录成功")
+        
+        //更新UI
+        //view getter时 如果view == nil 会重新viewDidLoad
+        view = nil
+        
+        NotificationCenter.default.removeObserver(self)
+    }
     
     @objc func login() {
 

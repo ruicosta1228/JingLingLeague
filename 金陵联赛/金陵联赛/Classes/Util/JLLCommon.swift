@@ -23,3 +23,8 @@ let JLLPlayerShouldLoginByWeiboNotification = "JLLPlayerShouldLoginByWeiboNotifi
 
 let JLLPlayerShouldLoginByTencentQQNotification = "JLLPlayerShouldLoginByTencentQQNotification"
 
+let JLLPlayerLoginSuccessNotification = "JLLPlayerShouldLoginSuccessNotification"
+
+let VistorView2TableView = "VistorView2TableView"
+
+
