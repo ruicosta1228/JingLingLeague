@@ -25,7 +25,9 @@ extension UIBarButtonItem {
         
         btn.setTitle(title, for: .normal)
         
-        btn.setTitleColor(UIColor.darkGray, for: .normal)
+        btn.setTitleColor(UIColor.white, for: .normal)
+        
+        btn.setTitleColor(UIColor.init(red: 167 / 255, green: 167 / 255, blue: 167 / 255, alpha: 1), for: .highlighted)
         
         btn.setTitleColor(UIColor.black, for: .highlighted)
         

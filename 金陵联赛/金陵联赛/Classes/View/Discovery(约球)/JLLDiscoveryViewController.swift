@@ -39,13 +39,15 @@ extension JLLDiscoveryViewController {
     override func setupTableView() {
         
 //        self.view.backgroundColor = UIColor.black
+        let bgImg = UIImageView(image: #imageLiteral(resourceName: "discover_background"))
+        bgImg.frame = CGRect(x: 0, y: 64, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         
         //右侧按钮
         navItem.rightBarButtonItem = UIBarButtonItem(title: "加入", target: self, action: #selector(showRightButton))
         
         //约球按钮
         let btn = UIButton.init(type: UIButtonType.custom) as UIButton
-        let img = UIImage(named: "yue_btn")
+        let img = UIImage(named: "map")
         btn.setImage(img, for: UIControlState.normal)
         
         let x = self.view.bounds.width / 2 - 50
@@ -55,6 +57,7 @@ extension JLLDiscoveryViewController {
         btn.addTarget(self, action: #selector(click), for: .touchUpInside)
         
         self.view.addSubview(btn)
+        self.view.insertSubview(bgImg, belowSubview: btn)
         showBtn(btn: btn)
 
     }
