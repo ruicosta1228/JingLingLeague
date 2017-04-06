@@ -35,12 +35,13 @@
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                             </userDefinedRuntimeAttributes>
                         </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wfv-ye-Fuw">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wfv-ye-Fuw">
                             <rect key="frame" x="325" y="0.0" width="50" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="EVr-9U-ajQ"/>
                                 <constraint firstAttribute="width" constant="50" id="lPR-zy-07M"/>
                             </constraints>
+                            <state key="normal" image="setting_image"/>
                             <connections>
                                 <action selector="settingbtn:" destination="-1" eventType="touchUpInside" id="zo2-Kg-hwG"/>
                             </connections>
@@ -83,5 +84,6 @@
     </objects>
     <resources>
         <image name="profile_image_photo" width="263" height="197"/>
+        <image name="setting_image" width="64" height="64"/>
     </resources>
 </document>
