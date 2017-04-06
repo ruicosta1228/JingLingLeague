@@ -25,9 +25,9 @@ class LoginView: UIView {
     
     lazy var password = UILabel.init(withText: "密码:", fontSize: 14.0, color: UIColor.black)
     
-    lazy var username_input: UITextField = UITextField.init(frame: CGRect(x: 0, y: 0, width: 300, height: 40))
+    lazy var username_input: UITextField = UITextField(frame: CGRect(x: 0, y: 0, width: 300, height: 40))
     
-    lazy var password_input: UITextField = UITextField.init(frame: CGRect(x: 0, y: 0, width: 300, height: 40))
+    lazy var password_input: UITextField = UITextField(frame: CGRect(x: 0, y: 0, width: 300, height: 40))
     
     lazy var wbBtn: UIButton = UIButton(title: "", normalColor: UIColor.black, highlightedColor: UIColor.orange, bgImageName: "login_weibo")
     
@@ -41,9 +41,6 @@ extension LoginView {
     func setupUI(){
         username_input.borderStyle = UITextBorderStyle.roundedRect
         password_input.borderStyle = UITextBorderStyle.roundedRect
-        
-        username_input.layer.borderColor = UIColor.black.cgColor
-        password_input.layer.borderColor = UIColor.black.cgColor
         
         password_input.isSecureTextEntry = true
         

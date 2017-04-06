@@ -18,7 +18,7 @@ extension UIBarButtonItem {
     ///   - fontSize: 字体大小
     ///   - target: 父类对象
     ///   - action: 监听函数
-    convenience init(title: String, fontSize: CGFloat = 16, target: AnyObject?, action: Selector){
+    convenience init(title: String, fontSize: CGFloat = 16, target: AnyObject?, action: Selector, Img: String = ""){
         let btn = UIButton(type: .custom)
         
         btn.titleLabel?.font = UIFont.systemFont(ofSize: fontSize)
@@ -28,6 +28,13 @@ extension UIBarButtonItem {
         btn.setTitleColor(UIColor.darkGray, for: .normal)
         
         btn.setTitleColor(UIColor.black, for: .highlighted)
+        
+        if Img != "" {
+        
+            btn.setImage(UIImage(named: Img + "_normal"), for: .normal)
+            
+            btn.setImage(UIImage(named: Img + "_selected"), for: .highlighted)
+        }
         
         btn.sizeToFit()
         

@@ -117,10 +117,10 @@ extension JLLBaseViewController{
         navigationBar.items = [navItem]
         
         //设置navigationBar背景色
-        navigationBar.barTintColor = UIColor.lightGray
+        navigationBar.barTintColor = UIColor.black
         
         //设置title颜色
-        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.darkGray]
+        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         
     }
     

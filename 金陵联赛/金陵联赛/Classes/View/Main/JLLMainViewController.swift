@@ -13,6 +13,8 @@ class JLLMainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tabBar.barTintColor = UIColor.black
+        
         setupChildControllers()
         
         setupComposeButton()
@@ -117,7 +119,7 @@ extension JLLMainViewController{
     
     //设置中间按钮
     func setupComposeButton(){
-        composeButton.setImage(UIImage(named: "TabIcon"), for: .normal)
+        composeButton.setImage(UIImage(named: "compose"), for: .normal)
         
         let count = CGFloat(childViewControllers.count)
         let w = tabBar.bounds.width / count 
@@ -168,7 +170,7 @@ extension JLLMainViewController{
     private func controller(dict: [String: Any]) -> UIViewController{
         guard let clsName = dict["clsName"] as? String,
         let title = dict["title"] as? String,
-        //let imageName = dict["imageName"],
+        let imageName = dict["imageName"],
         let cls = NSClassFromString(Bundle.main.namespace + "." + clsName) as? JLLBaseViewController.Type,
         let visitorDict = dict["visitorInfo"] as? [String: String]
         
@@ -184,8 +186,12 @@ extension JLLMainViewController{
         //设置控制器的访客信息字典
         vc.visitorInfoDictionary = visitorDict
         
+        vc.tabBarItem.image = UIImage(named: imageName as! String + "_normal")
+        vc.tabBarItem.selectedImage = UIImage(named: imageName as! String + "_selected")?.withRenderingMode(.alwaysOriginal)
+        
+        vc.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.init(red: 167 / 255, green: 167 / 255, blue: 167 / 255, alpha: 1)], for: .normal)
         //设置选中高亮
-        vc.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.blue], for: .highlighted)
+        vc.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.init(red: 1, green: 1, blue: 1, alpha: 1)], for: .highlighted)
         //设置字大小
         vc.tabBarItem.setTitleTextAttributes([NSFontAttributeName: UIFont.systemFont(ofSize: 14)], for: .normal)
         
