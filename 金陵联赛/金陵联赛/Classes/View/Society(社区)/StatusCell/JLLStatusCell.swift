@@ -20,6 +20,11 @@ class JLLStatusCell: UITableViewCell {
     @IBOutlet weak var sourceLabel: UILabel!
     //正文
     @IBOutlet weak var statusLabel: UILabel!
+    //底部工具栏
+    @IBOutlet var toolBar: JLLStatusToolBar!
+    //配图视图
+    @IBOutlet var picView: JLLStatusPictureView!
+    
     
     
     override func awakeFromNib() {
