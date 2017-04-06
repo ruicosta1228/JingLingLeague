@@ -11,6 +11,8 @@ import Charts
 
 class JLLPieViewController: JLLBaseViewController {
     
+    private let ability:[String] = ["速度","射门","身体","防守","意识"]
+    
     @IBOutlet weak var pieChartView: PieChartView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +31,10 @@ class JLLPieViewController: JLLBaseViewController {
 
     //饼图显示方法
     func setPie(){
-        let ys1 = Array(1..<6).map { x in return sin(Double(x) / 2.0 / 3.141 * 1.5) * 100.0 }
-        
-        let yse1 = ys1.enumerated().map { x, y in return PieChartDataEntry(value: y, label: String(x)) }
+//        let ys1 = Array(1..<6).map { x in return sin(Double(x) / 2.0 / 3.141 * 1.5) * 100.0 }
+        let ys1 = [20.0, 20.0, 20.0, 20.0,20.0]
+
+        let yse1 = ys1.enumerated().map { x, y in return PieChartDataEntry(value: y, label: ability[x]) }
         
         let data = PieChartData()
         let ds1 = PieChartDataSet(values: yse1, label: "能力值")
@@ -55,7 +58,7 @@ class JLLPieViewController: JLLBaseViewController {
         pieChartView.animate(xAxisDuration: 0.0, yAxisDuration: 1.0, easingOption: .easeInBounce)
         pieChartView.data = data
         
-        pieChartView.chartDescription?.text = "Ability Pie Chart"    }
+        pieChartView.chartDescription?.text = "能力饼状图"    }
     
     //重写方法
     override func setupTableView() {

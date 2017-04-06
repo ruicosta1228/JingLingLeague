@@ -165,8 +165,8 @@ extension JLLBaseViewController{
         visitorView.registerButton.addTarget(self, action: #selector(register), for: .touchUpInside)
         
         //设置导航条按钮
-        navItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: .plain, target: self, action: #selector(register))
-        navItem.rightBarButtonItem = UIBarButtonItem(title: "登录", style: .plain, target: self, action: #selector(login))
+        navItem.leftBarButtonItem = UIBarButtonItem(title: "注册", target: self, action: #selector(register))
+        navItem.rightBarButtonItem = UIBarButtonItem(title: "登录", target: self, action: #selector(login))
     }
 }
 
