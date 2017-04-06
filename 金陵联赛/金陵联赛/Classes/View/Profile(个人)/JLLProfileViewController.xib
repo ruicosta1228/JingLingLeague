@@ -22,19 +22,6 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="viy-27-zqg">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_image_photo" translatesAutoresizingMaskIntoConstraints="NO" id="64L-tE-eaJ">
-                            <rect key="frame" x="50" y="50" width="100" height="100"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="100" id="1kC-Ng-GRe"/>
-                                <constraint firstAttribute="width" constant="100" id="2dX-fq-YFt"/>
-                            </constraints>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                    <integer key="value" value="50"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                            </userDefinedRuntimeAttributes>
-                        </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wfv-ye-Fuw">
                             <rect key="frame" x="325" y="0.0" width="50" height="50"/>
                             <constraints>
@@ -46,20 +33,19 @@
                                 <action selector="settingbtn:" destination="-1" eventType="touchUpInside" id="zo2-Kg-hwG"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bs-hc-EVk">
-                            <rect key="frame" x="247" y="67" width="35" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="信息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNX-Dr-Xrg">
-                            <rect key="frame" x="247" y="109" width="35" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_image_photo" translatesAutoresizingMaskIntoConstraints="NO" id="64L-tE-eaJ">
+                            <rect key="frame" x="137" y="50" width="100" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="1kC-Ng-GRe"/>
+                                <constraint firstAttribute="width" constant="100" id="2dX-fq-YFt"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="50"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -67,7 +53,7 @@
                         <constraint firstItem="64L-tE-eaJ" firstAttribute="top" secondItem="viy-27-zqg" secondAttribute="top" constant="50" id="Gc6-gC-tXb"/>
                         <constraint firstAttribute="height" constant="200" id="PuK-wD-ejX"/>
                         <constraint firstItem="Wfv-ye-Fuw" firstAttribute="top" secondItem="viy-27-zqg" secondAttribute="top" id="dWL-RH-HXr"/>
-                        <constraint firstItem="64L-tE-eaJ" firstAttribute="leading" secondItem="viy-27-zqg" secondAttribute="leading" constant="50" id="qAZ-a3-hAh"/>
+                        <constraint firstItem="64L-tE-eaJ" firstAttribute="leading" secondItem="viy-27-zqg" secondAttribute="leading" constant="137" id="qAZ-a3-hAh"/>
                         <constraint firstAttribute="bottom" secondItem="64L-tE-eaJ" secondAttribute="bottom" constant="50" id="qpL-TH-TED"/>
                         <constraint firstAttribute="width" constant="375" id="sg9-9d-Rwd"/>
                     </constraints>

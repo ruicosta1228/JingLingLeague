@@ -23,7 +23,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="速度" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esH-e5-FyE">
-                            <rect key="frame" x="0.0" y="20" width="100" height="20"/>
+                            <rect key="frame" x="20" y="20" width="100" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="Rf8-DJ-Fs3"/>
                                 <constraint firstAttribute="width" constant="100" id="uQl-4L-iF0"/>
@@ -35,7 +35,7 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="esH-e5-FyE" firstAttribute="leading" secondItem="q1v-K0-9li" secondAttribute="leading" id="57m-Vw-OV8"/>
+                        <constraint firstItem="esH-e5-FyE" firstAttribute="leading" secondItem="q1v-K0-9li" secondAttribute="leading" constant="20" id="57m-Vw-OV8"/>
                         <constraint firstItem="esH-e5-FyE" firstAttribute="top" secondItem="q1v-K0-9li" secondAttribute="top" constant="20" id="EKw-8O-4Pj"/>
                         <constraint firstAttribute="bottom" secondItem="esH-e5-FyE" secondAttribute="bottom" constant="20" id="SW4-FW-kLB"/>
                         <constraint firstAttribute="width" constant="375" id="YGv-s9-4cD"/>
@@ -46,7 +46,7 @@
                     <rect key="frame" x="0.0" y="60" width="375" height="60"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="强壮" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xa-J7-97a">
-                            <rect key="frame" x="0.0" y="20" width="100" height="20"/>
+                            <rect key="frame" x="20" y="20" width="100" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="J3g-eb-QAD"/>
                                 <constraint firstAttribute="width" constant="100" id="fzu-qh-0r9"/>
@@ -59,7 +59,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="3Xa-J7-97a" secondAttribute="bottom" constant="20" id="AtZ-Am-BEi"/>
-                        <constraint firstItem="3Xa-J7-97a" firstAttribute="leading" secondItem="zBz-ej-TYn" secondAttribute="leading" id="OA5-wQ-5BW"/>
+                        <constraint firstItem="3Xa-J7-97a" firstAttribute="leading" secondItem="zBz-ej-TYn" secondAttribute="leading" constant="20" id="OA5-wQ-5BW"/>
                         <constraint firstAttribute="height" constant="60" id="fhx-bk-xm6"/>
                         <constraint firstAttribute="width" constant="375" id="mHM-Av-HTF"/>
                         <constraint firstItem="3Xa-J7-97a" firstAttribute="top" secondItem="zBz-ej-TYn" secondAttribute="top" constant="20" id="on6-Sg-bwD"/>
@@ -69,7 +69,7 @@
                     <rect key="frame" x="0.0" y="120" width="375" height="60"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="花式" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQD-WM-vqu">
-                            <rect key="frame" x="0.0" y="20" width="100" height="20"/>
+                            <rect key="frame" x="20" y="20" width="100" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="H0v-uj-rhf"/>
                                 <constraint firstAttribute="width" constant="100" id="cr3-3e-cRa"/>
@@ -82,7 +82,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="AQD-WM-vqu" firstAttribute="top" secondItem="cmK-8w-WkM" secondAttribute="top" constant="20" id="00k-KU-Di5"/>
-                        <constraint firstItem="AQD-WM-vqu" firstAttribute="leading" secondItem="cmK-8w-WkM" secondAttribute="leading" id="A3a-a7-Wjc"/>
+                        <constraint firstItem="AQD-WM-vqu" firstAttribute="leading" secondItem="cmK-8w-WkM" secondAttribute="leading" constant="20" id="A3a-a7-Wjc"/>
                         <constraint firstAttribute="height" constant="60" id="bPM-UM-fdM"/>
                         <constraint firstAttribute="width" constant="375" id="pBM-uC-O5y"/>
                         <constraint firstAttribute="bottom" secondItem="AQD-WM-vqu" secondAttribute="bottom" constant="20" id="uGe-4W-0ak"/>
@@ -92,7 +92,7 @@
                     <rect key="frame" x="0.0" y="180" width="375" height="60"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="体力" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOo-mE-KIO">
-                            <rect key="frame" x="0.0" y="20" width="100" height="20"/>
+                            <rect key="frame" x="20" y="20" width="100" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="100" id="AQi-VC-c9j"/>
                                 <constraint firstAttribute="height" constant="20" id="BXI-vd-ip8"/>
@@ -105,7 +105,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="FRJ-LR-lFh"/>
-                        <constraint firstItem="BOo-mE-KIO" firstAttribute="leading" secondItem="4hj-na-gRm" secondAttribute="leading" id="Haw-CN-FHy"/>
+                        <constraint firstItem="BOo-mE-KIO" firstAttribute="leading" secondItem="4hj-na-gRm" secondAttribute="leading" constant="20" id="Haw-CN-FHy"/>
                         <constraint firstItem="BOo-mE-KIO" firstAttribute="top" secondItem="4hj-na-gRm" secondAttribute="top" constant="20" id="Shh-pj-XMp"/>
                         <constraint firstAttribute="bottom" secondItem="BOo-mE-KIO" secondAttribute="bottom" constant="20" id="e1s-JQ-jKQ"/>
                         <constraint firstAttribute="width" constant="375" id="fLe-Yr-XaI"/>
@@ -115,7 +115,7 @@
                     <rect key="frame" x="0.0" y="240" width="375" height="60"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="射术" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwf-4y-o06">
-                            <rect key="frame" x="0.0" y="20" width="100" height="20"/>
+                            <rect key="frame" x="20" y="20" width="100" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="WDE-TV-CBp"/>
                                 <constraint firstAttribute="width" constant="100" id="flR-e7-wKc"/>
@@ -128,7 +128,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="dwf-4y-o06" secondAttribute="bottom" constant="20" id="A1m-E0-uBl"/>
-                        <constraint firstItem="dwf-4y-o06" firstAttribute="leading" secondItem="aO0-Sd-eEa" secondAttribute="leading" id="F1s-RC-Cgj"/>
+                        <constraint firstItem="dwf-4y-o06" firstAttribute="leading" secondItem="aO0-Sd-eEa" secondAttribute="leading" constant="20" id="F1s-RC-Cgj"/>
                         <constraint firstAttribute="height" constant="60" id="tua-mr-hwG"/>
                         <constraint firstAttribute="width" constant="375" id="wae-a0-KrK"/>
                         <constraint firstItem="dwf-4y-o06" firstAttribute="top" secondItem="aO0-Sd-eEa" secondAttribute="top" constant="20" id="xnC-zt-rYd"/>
@@ -169,6 +169,7 @@
                 <constraint firstItem="4hj-na-gRm" firstAttribute="top" secondItem="cmK-8w-WkM" secondAttribute="bottom" id="rDS-2x-Kr3"/>
                 <constraint firstItem="aO0-Sd-eEa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uif-ae-Quj"/>
             </constraints>
+            <point key="canvasLocation" x="109.5" y="54.5"/>
         </view>
     </objects>
 </document>

@@ -30,7 +30,7 @@ class JLLAbilityViewController: JLLBaseViewController {
 
     func speed() {
         
-        let numberButton = PPNumberButton.init(frame: CGRect(x: 310, y: 20, width: 100, height: 20))
+        let numberButton = PPNumberButton.init(frame: CGRect(x: 300, y: 20, width: 100, height: 20))
         
         //设置边框颜色
         numberButton.borderColor(UIColor.gray)
@@ -53,7 +53,7 @@ class JLLAbilityViewController: JLLBaseViewController {
 
     func strong() {
         
-        let numberButton = PPNumberButton.init(frame: CGRect(x: 310, y: 80, width: 100, height: 20))
+        let numberButton = PPNumberButton.init(frame: CGRect(x: 300, y: 80, width: 100, height: 20))
         
         //设置边框颜色
         numberButton.borderColor(UIColor.gray)
@@ -76,7 +76,7 @@ class JLLAbilityViewController: JLLBaseViewController {
     
     func skill() {
         
-        let numberButton = PPNumberButton.init(frame: CGRect(x: 310, y: 140, width: 100, height: 20))
+        let numberButton = PPNumberButton.init(frame: CGRect(x: 300, y: 140, width: 100, height: 20))
         
         //设置边框颜色
         numberButton.borderColor(UIColor.gray)
@@ -99,7 +99,7 @@ class JLLAbilityViewController: JLLBaseViewController {
     
     func strength() {
         
-        let numberButton = PPNumberButton.init(frame: CGRect(x: 310, y: 200, width: 100, height: 20))
+        let numberButton = PPNumberButton.init(frame: CGRect(x: 300, y: 200, width: 100, height: 20))
         
         //设置边框颜色
         numberButton.borderColor(UIColor.gray)
