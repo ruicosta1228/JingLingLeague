@@ -122,7 +122,7 @@ class JLLAbilityViewController: JLLBaseViewController {
     
     func shoot() {
         
-        let numberButton = PPNumberButton.init(frame: CGRect(x: 310, y: 260, width: 100, height: 20))
+        let numberButton = PPNumberButton.init(frame: CGRect(x: 270, y: 260, width: 100, height: 20))
         
         //设置边框颜色
         numberButton.borderColor(UIColor.gray)
