@@ -59,12 +59,45 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aGd-yG-fAc" userLabel="底部工具栏">
+                        <rect key="frame" x="0.0" y="236" width="375" height="28"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJ8-ku-V4h">
+                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="评论" backgroundImage="common_button_white_disable">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tu8-XY-AKw">
+                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="赞" backgroundImage="common_button_white_disable">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tu8-XY-AKw" firstAttribute="leading" secondItem="qJ8-ku-V4h" secondAttribute="trailing" id="1tt-nn-DJQ"/>
+                            <constraint firstAttribute="trailing" secondItem="tu8-XY-AKw" secondAttribute="trailing" id="CPb-aJ-Wqf"/>
+                            <constraint firstAttribute="height" constant="28" id="PSi-fz-7Di"/>
+                            <constraint firstAttribute="bottom" secondItem="qJ8-ku-V4h" secondAttribute="bottom" id="RUk-kr-KBO"/>
+                            <constraint firstItem="qJ8-ku-V4h" firstAttribute="leading" secondItem="aGd-yG-fAc" secondAttribute="leading" id="Wwm-Ei-eVs"/>
+                            <constraint firstItem="tu8-XY-AKw" firstAttribute="height" secondItem="qJ8-ku-V4h" secondAttribute="height" id="bMQ-7r-WcA"/>
+                            <constraint firstItem="tu8-XY-AKw" firstAttribute="centerY" secondItem="qJ8-ku-V4h" secondAttribute="centerY" id="hfu-NW-7Kh"/>
+                            <constraint firstItem="qJ8-ku-V4h" firstAttribute="top" secondItem="aGd-yG-fAc" secondAttribute="top" id="qeb-Rq-LM0"/>
+                            <constraint firstItem="tu8-XY-AKw" firstAttribute="width" secondItem="qJ8-ku-V4h" secondAttribute="width" id="tGB-OM-Yea"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="evo-et-ch4" firstAttribute="top" secondItem="AXI-B3-vBx" secondAttribute="top" id="0XO-lV-I6y"/>
                     <constraint firstItem="Cml-xW-ZON" firstAttribute="top" secondItem="EvW-oa-FK4" secondAttribute="top" constant="4" id="8aB-Zd-bAO"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xA6-xS-Jdl" secondAttribute="bottom" constant="12" id="EAt-Wm-hr3"/>
+                    <constraint firstAttribute="trailing" secondItem="aGd-yG-fAc" secondAttribute="trailing" id="DNO-NK-mRY"/>
                     <constraint firstItem="Cml-xW-ZON" firstAttribute="leading" secondItem="EvW-oa-FK4" secondAttribute="trailing" constant="11" id="QYF-Ui-yCD"/>
+                    <constraint firstAttribute="bottom" secondItem="aGd-yG-fAc" secondAttribute="bottom" id="RYk-d6-aBh"/>
+                    <constraint firstItem="aGd-yG-fAc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="xA6-xS-Jdl" secondAttribute="bottom" constant="12" id="RrM-XU-bHE"/>
                     <constraint firstItem="EvW-oa-FK4" firstAttribute="top" secondItem="evo-et-ch4" secondAttribute="bottom" constant="12" id="UjG-B7-7Rq"/>
                     <constraint firstItem="EvW-oa-FK4" firstAttribute="leading" secondItem="AXI-B3-vBx" secondAttribute="leadingMargin" constant="11" id="Vb2-E7-QCj"/>
                     <constraint firstItem="Jkv-ON-b5b" firstAttribute="centerY" secondItem="e0g-qr-EvR" secondAttribute="centerY" id="Vgc-Da-XiR"/>
@@ -73,6 +106,7 @@
                     <constraint firstItem="e0g-qr-EvR" firstAttribute="leading" secondItem="Cml-xW-ZON" secondAttribute="leading" id="boL-vu-SJM"/>
                     <constraint firstItem="xA6-xS-Jdl" firstAttribute="leading" secondItem="EvW-oa-FK4" secondAttribute="leading" id="llm-EG-Ckd"/>
                     <constraint firstItem="evo-et-ch4" firstAttribute="leading" secondItem="AXI-B3-vBx" secondAttribute="leading" id="nFq-56-hqq"/>
+                    <constraint firstItem="aGd-yG-fAc" firstAttribute="leading" secondItem="AXI-B3-vBx" secondAttribute="leading" id="oRk-su-Jr9"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xA6-xS-Jdl" secondAttribute="trailing" constant="11" id="p4b-Eq-MxU"/>
                     <constraint firstItem="xA6-xS-Jdl" firstAttribute="top" secondItem="EvW-oa-FK4" secondAttribute="bottom" constant="11" id="sYJ-1H-7on"/>
                     <constraint firstItem="EvW-oa-FK4" firstAttribute="leading" secondItem="AXI-B3-vBx" secondAttribute="leadingMargin" constant="11" id="t1r-RZ-W6G"/>
@@ -90,4 +124,7 @@
             <point key="canvasLocation" x="-80.5" y="-38.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="common_button_white_disable" width="11" height="35"/>
+    </resources>
 </document>
