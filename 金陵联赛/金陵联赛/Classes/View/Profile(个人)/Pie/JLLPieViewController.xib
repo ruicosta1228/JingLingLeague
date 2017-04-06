@@ -21,10 +21,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bps-1C-4vB" customClass="PieChartView" customModule="Charts">
-                    <rect key="frame" x="0.0" y="20" width="375" height="400"/>
+                    <rect key="frame" x="0.0" y="20" width="375" height="350"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="400" id="2kF-Mg-wKY"/>
+                        <constraint firstAttribute="height" constant="350" id="2kF-Mg-wKY"/>
                         <constraint firstAttribute="width" constant="375" id="R0L-LK-eMZ"/>
                     </constraints>
                 </view>
