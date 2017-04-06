@@ -53,14 +53,14 @@ extension JLLSettingViewController{
     override func setupTableView() {
         super.setupTableView()
         
-        //创建navigationBar右侧按钮控件
+        //创建navigationBar左侧按钮控件
         navItem.leftBarButtonItem = UIBarButtonItem(title: "返回", fontSize: 14.0, target: self, action: #selector(showLeftButton))
         
         //注册原型cell
         tableView?.register(UINib(nibName: "JLLSettingCell", bundle: nil), forCellReuseIdentifier: cellId)
         
         //设置行高
-        tableView?.rowHeight = 160
+        tableView?.rowHeight = 60
         tableView?.estimatedRowHeight = 600
         
         //取消分割线
@@ -77,7 +77,7 @@ extension JLLSettingViewController{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! JLLSettingCell
         
-        cell.textLabel?.text = statusList[indexPath.row]
+//        cell.textLabel?.text = statusList[indexPath.row]
         
         return cell
     }

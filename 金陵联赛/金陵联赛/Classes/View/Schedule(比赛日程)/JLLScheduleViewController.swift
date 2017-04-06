@@ -12,6 +12,8 @@ private let cellId = "cellId"
 
 class JLLScheduleViewController: JLLBaseViewController {
     
+    var search: UISearchBar = UISearchBar()
+    
     lazy var statusList = [String]()
     
     override func loadData() {
@@ -53,6 +55,11 @@ extension JLLScheduleViewController{
     override func setupTableView() {
         super.setupTableView()
         
+        //添加搜索框
+        search.frame = CGRect(x: 0, y: 0, width: 0, height: 44)
+        tableView?.tableHeaderView = search
+        self.search.placeholder = "搜索"
+        
         //创建navigationBar右侧按钮控件
         navItem.rightBarButtonItem = UIBarButtonItem(title: "我的比赛", fontSize: 14.0, target: self, action: #selector(showRightButton))
         
@@ -77,7 +84,7 @@ extension JLLScheduleViewController{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! JLLScheduleCell
         
-        cell.textLabel?.text = statusList[indexPath.row]
+//        cell.textLabel?.text = statusList[indexPath.row]
         
         return cell
     }
