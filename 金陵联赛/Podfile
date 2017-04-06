@@ -12,6 +12,9 @@ pod "pop"
 pod "LTMorphingLabel"
 pod "Charts"
 pod 'PageMenu'
+pod 'AMapNavi', '~>2.3'
+pod 'AMapSearch', '~>4.4'
+pod 'AMapLocation', '~>2.3'
 
   target '金陵联赛Tests' do
     inherit! :search_paths

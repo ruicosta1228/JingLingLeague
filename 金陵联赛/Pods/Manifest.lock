@@ -14,6 +14,16 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - AMap3DMap (4.6.1):
+    - AMapFoundation (~> 1.3)
+  - AMapFoundation (1.3.4)
+  - AMapLocation (2.3.1):
+    - AMapFoundation (~> 1.3)
+  - AMapNavi (2.3.0):
+    - AMap3DMap (~> 4.2)
+    - AMapFoundation (~> 1.2)
+  - AMapSearch (4.5.0):
+    - AMapFoundation (~> 1.2)
   - Charts (3.0.1):
     - Charts/Core (= 3.0.1)
   - Charts/Core (3.0.1)
@@ -31,6 +41,9 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - AMapLocation (~> 2.3)
+  - AMapNavi (~> 2.3)
+  - AMapSearch (~> 4.4)
   - Charts
   - FMDB
   - LTMorphingLabel
@@ -42,6 +55,11 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AMap3DMap: eb6656fb441ed7eb310b3c121032e947d4d649e5
+  AMapFoundation: 486493b8e9ae4a1cb7ce2d8d8978ee1aabf9bb34
+  AMapLocation: 6016f0e09c127461c9c8e36945f34c0f037ad962
+  AMapNavi: 4f48c7b34275f80f3d14eff669ac739e0e190c1b
+  AMapSearch: 7a6ebc20a42e34a021b042b047f198082fc2fc30
   Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   LTMorphingLabel: d9a85f16ac306f0e07321d6819964deb2dc69638
@@ -51,6 +69,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 79c7368db5b18b07c3e7d01bc368690c4ad01bb7
+PODFILE CHECKSUM: 9b9c2a2a6def148ee5dd584aab8985ba3feebfbe
 
 COCOAPODS: 1.2.0
