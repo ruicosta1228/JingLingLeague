@@ -17,7 +17,7 @@ class JLLUser: NSObject {
     //用户头像地址
     var image_url: String?
     
-//    override var description: String{
-//        return
-//    }
+    override var description: String{
+        return yy_modelDescription()
+    }
 }

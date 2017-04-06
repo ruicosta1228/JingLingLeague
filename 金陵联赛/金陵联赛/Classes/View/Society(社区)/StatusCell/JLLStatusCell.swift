@@ -26,7 +26,6 @@ class JLLStatusCell: UITableViewCell {
     @IBOutlet var picView: JLLStatusPictureView!
     
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
