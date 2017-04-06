@@ -10,27 +10,32 @@ import UIKit
 
 class DetailViewController: JLLBaseViewController {
 
+    let image: UIImageView = UIImageView()
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupTableView()
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
+}
 
-    /*
-    // MARK: - Navigation
+extension DetailViewController {
+    override func setupTableView() {
+        super.setupTableView()
+        
+        image.frame = CGRect(x: 0, y: self.navigationBar.frame.height, width: self.view.frame.width, height: self.view.frame.height / 2)
+        image.image = UIImage(named: "WechatIMG276")
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        self.view.addSubview(image)
+        
+        tableView?.separatorStyle = .none
     }
-    */
-
 }

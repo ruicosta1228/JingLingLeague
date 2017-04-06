@@ -27,7 +27,7 @@ class JLLSocietyViewController: JLLBaseViewController {
         print("加载数据")
         //模拟延迟加载
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()){
-            for i in 0..<15{
+            for i in 0..<3{
                 if self.isPullup{
                     //追加
                     self.statusList.append("上拉 \(i)")
@@ -101,6 +101,6 @@ extension JLLSocietyViewController{
         let vc = DetailViewController()
         self.navigationController?.pushViewController(vc, animated: true)
         //向DetailViewController传值
-        vc.title = "123"
+        vc.title = "金陵联赛"
     }
 }
