@@ -91,7 +91,7 @@ extension JLLSocietyViewController{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! JLLStatusCell
 
-        cell.textLabel?.text = statusList[indexPath.row]
+//        cell.textLabel?.text = statusList[indexPath.row]
         
         return cell
     }
