@@ -10,6 +10,7 @@ import UIKit
 import Charts
 
 class JLLRadarViewController: JLLBaseViewController {
+    private let ability:[String] = ["速度","射门","身体","防守","意识"]
     
     @IBOutlet weak var radarChartView: RadarChartView!
     
@@ -49,7 +50,7 @@ class JLLRadarViewController: JLLBaseViewController {
         ds1.fillAlpha = 0.25 //填充透明度
         ds1.colors = [color]
         data.addDataSet(ds1)
-        
+
         
         self.radarChartView.data = data
         
