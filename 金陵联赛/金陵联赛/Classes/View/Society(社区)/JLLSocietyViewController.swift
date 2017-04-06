@@ -12,6 +12,8 @@ private let cellId = "cellId"
 
 class JLLSocietyViewController: JLLBaseViewController {
     
+    var search: UISearchBar = UISearchBar()
+    
     lazy var statusList = [String]()
     
     lazy var model = JLLPlayerViewModel()
@@ -21,7 +23,7 @@ class JLLSocietyViewController: JLLBaseViewController {
 //        model.login(completion: { (isSuccess) in
 //            print(isSuccess)
 //        })
-
+        
         print("加载数据")
         //模拟延迟加载
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()){
@@ -59,6 +61,11 @@ extension JLLSocietyViewController{
     
     override func setupTableView() {
         super.setupTableView()
+        
+        //添加搜索框
+        search.frame = CGRect(x: 0, y: 0, width: 0, height: 44)
+        tableView?.tableHeaderView = search
+        self.search.placeholder = "搜索"
         
         //创建navigationBar左侧按钮控件
         navItem.leftBarButtonItem = UIBarButtonItem(title: "我的消息", fontSize: 14.0, target: self, action: #selector(showLeftButton))
