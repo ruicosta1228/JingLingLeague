@@ -55,13 +55,13 @@
                         <rect key="frame" x="19" y="96" width="453" height="218"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCQ-EO-VWa" userLabel="正文">
-                        <rect key="frame" x="19" y="321" width="453" height="23"/>
+                        <rect key="frame" x="19" y="321" width="453" height="45"/>
                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                         <color key="textColor" red="0.27450980392156865" green="0.27450980392156865" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6gw-ck-yn3" userLabel="底部工具栏" customClass="JLLStatusToolBar" customModule="金陵联赛" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="374" width="491" height="28"/>
+                        <rect key="frame" x="0.0" y="374" width="472" height="28"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0C-vj-UGJ">
                                 <rect key="frame" x="0.0" y="0.0" width="80" height="28"/>
@@ -99,13 +99,13 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="Rqc-6g-n4e" firstAttribute="leading" secondItem="uvx-kD-m3b" secondAttribute="leading" id="4yK-WW-3VL"/>
+                    <constraint firstItem="6gw-ck-yn3" firstAttribute="top" secondItem="hCQ-EO-VWa" secondAttribute="bottom" constant="8" id="66l-YO-AzC"/>
                     <constraint firstItem="0IZ-wb-xtu" firstAttribute="leading" secondItem="Jxy-EW-Ew9" secondAttribute="trailing" constant="8" id="7db-T7-R2Y"/>
                     <constraint firstItem="9yz-34-kG3" firstAttribute="leading" secondItem="Jxy-EW-Ew9" secondAttribute="trailing" constant="8" id="Adk-2t-5LV"/>
                     <constraint firstItem="hCQ-EO-VWa" firstAttribute="top" secondItem="gsU-FZ-xXL" secondAttribute="bottom" constant="7.5" id="CJu-qF-1q7"/>
                     <constraint firstAttribute="trailingMargin" secondItem="hCQ-EO-VWa" secondAttribute="trailing" constant="11" id="JhR-2p-kWc"/>
                     <constraint firstAttribute="trailingMargin" secondItem="kPf-Q4-OM0" secondAttribute="trailing" constant="11" id="MmC-Df-2zx"/>
                     <constraint firstItem="kPf-Q4-OM0" firstAttribute="top" secondItem="Jxy-EW-Ew9" secondAttribute="bottom" constant="8" id="Mo0-eU-QXd"/>
-                    <constraint firstAttribute="trailing" secondItem="6gw-ck-yn3" secondAttribute="trailing" id="NKU-Xs-u4m"/>
                     <constraint firstItem="hCQ-EO-VWa" firstAttribute="leading" secondItem="uvx-kD-m3b" secondAttribute="leadingMargin" constant="11" id="O94-IA-aSj"/>
                     <constraint firstItem="Rqc-6g-n4e" firstAttribute="top" secondItem="uvx-kD-m3b" secondAttribute="top" id="Q5N-D3-1Ru"/>
                     <constraint firstItem="Jxy-EW-Ew9" firstAttribute="leading" secondItem="uvx-kD-m3b" secondAttribute="leadingMargin" constant="11" id="TT4-kE-bBb"/>
@@ -119,6 +119,7 @@
                     <constraint firstItem="6gw-ck-yn3" firstAttribute="leading" secondItem="uvx-kD-m3b" secondAttribute="leading" id="iSN-eB-spP"/>
                     <constraint firstAttribute="trailingMargin" secondItem="gsU-FZ-xXL" secondAttribute="trailing" constant="11" id="kiR-uE-BQW"/>
                     <constraint firstItem="0IZ-wb-xtu" firstAttribute="bottom" secondItem="Jxy-EW-Ew9" secondAttribute="bottom" id="mBZ-ql-Y1s"/>
+                    <constraint firstItem="6gw-ck-yn3" firstAttribute="trailing" secondItem="hCQ-EO-VWa" secondAttribute="trailing" id="rdp-Iq-1BG"/>
                     <constraint firstAttribute="bottom" secondItem="6gw-ck-yn3" secondAttribute="bottom" id="yUG-Qj-P32"/>
                     <constraint firstItem="kPf-Q4-OM0" firstAttribute="leading" secondItem="Jxy-EW-Ew9" secondAttribute="leading" id="z60-bO-Axb"/>
                 </constraints>
