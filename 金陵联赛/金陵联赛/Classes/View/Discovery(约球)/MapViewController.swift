@@ -46,8 +46,8 @@ extension MapViewController {
         self.mapView.mapType = MKMapType.standard
         
         //设置地图范围
-        let latDelta = 0.01
-        let longDelta = 0.01
+        let latDelta = 0.005
+        let longDelta = 0.005
         let currentLocationSpan:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
         
         //定义地图的中心区域和中心坐标

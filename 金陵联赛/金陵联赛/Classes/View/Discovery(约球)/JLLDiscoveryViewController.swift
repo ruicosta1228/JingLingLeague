@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import pop
 
 class JLLDiscoveryViewController: JLLBaseViewController {
     
@@ -37,21 +38,34 @@ extension JLLDiscoveryViewController {
     
     override func setupTableView() {
         
+//        self.view.backgroundColor = UIColor.black
+        
         //右侧按钮
         navItem.rightBarButtonItem = UIBarButtonItem(title: "加入", target: self, action: #selector(showRightButton))
         
         //约球按钮
         let btn = UIButton.init(type: UIButtonType.custom) as UIButton
-        let img = UIImage(named: "btn_1")
+        let img = UIImage(named: "yue_btn")
         btn.setImage(img, for: UIControlState.normal)
         
         let x = self.view.bounds.width / 2 - 50
-        let y = self.view.bounds.height / 2 - 50
+        let y = self.view.bounds.height - 50
         btn.frame = CGRect(x:x, y:y, width:100, height:100)
         
         btn.addTarget(self, action: #selector(click), for: .touchUpInside)
         
         self.view.addSubview(btn)
+        showBtn(btn: btn)
 
+    }
+    
+    func showBtn(btn: UIButton) {
+        let anim = POPSpringAnimation(propertyNamed: kPOPLayerPosition)
+        let x = self.view.bounds.width / 2// - 50
+        let y = self.view.bounds.height / 2// - 50
+        anim?.toValue = NSValue(cgPoint: CGPoint(x: x,y: y))
+        anim?.springBounciness = 15
+        anim?.springSpeed = 10
+        btn.pop_add(anim, forKey: "springPosition")
     }
 }
