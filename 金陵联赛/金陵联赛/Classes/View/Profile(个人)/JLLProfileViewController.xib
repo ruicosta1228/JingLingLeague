@@ -33,7 +33,7 @@
                                 <action selector="settingbtn:" destination="-1" eventType="touchUpInside" id="zo2-Kg-hwG"/>
                             </connections>
                         </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_image_photo" translatesAutoresizingMaskIntoConstraints="NO" id="64L-tE-eaJ">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_selected" translatesAutoresizingMaskIntoConstraints="NO" id="64L-tE-eaJ">
                             <rect key="frame" x="137" y="50" width="100" height="100"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="100" id="1kC-Ng-GRe"/>
@@ -69,7 +69,7 @@
         </view>
     </objects>
     <resources>
-        <image name="profile_image_photo" width="263" height="197"/>
+        <image name="profile_selected" width="25" height="25"/>
         <image name="setting_image" width="64" height="64"/>
     </resources>
 </document>
