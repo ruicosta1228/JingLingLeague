@@ -59,7 +59,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aGd-yG-fAc" userLabel="底部工具栏">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aGd-yG-fAc" userLabel="底部工具栏" customClass="JLLStatusToolBar" customModule="金陵联赛" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="236" width="375" height="28"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJ8-ku-V4h">
@@ -89,6 +89,10 @@
                             <constraint firstItem="qJ8-ku-V4h" firstAttribute="top" secondItem="aGd-yG-fAc" secondAttribute="top" id="qeb-Rq-LM0"/>
                             <constraint firstItem="tu8-XY-AKw" firstAttribute="width" secondItem="qJ8-ku-V4h" secondAttribute="width" id="tGB-OM-Yea"/>
                         </constraints>
+                        <connections>
+                            <outlet property="commentBtn" destination="qJ8-ku-V4h" id="NTY-Jl-KNb"/>
+                            <outlet property="likeBtn" destination="tu8-XY-AKw" id="42u-xC-QRd"/>
+                        </connections>
                     </view>
                 </subviews>
                 <constraints>
