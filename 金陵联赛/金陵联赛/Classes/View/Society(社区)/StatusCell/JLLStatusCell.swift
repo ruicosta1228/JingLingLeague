@@ -28,11 +28,11 @@ class JLLStatusCell: UITableViewCell {
         
         composeImage.image = UIImage(named: "Neymar_full")
         
-//        userImage.image = UIImage(named: "Neymar")
-//        nameLabel.text = "孙一飞"
-//        timeLabel.text = "00:50"
-//        titleLabel.text = "吃屎吧邵昌昊"
-//        statusLabel.text = "有一天，耗子很开心，吃了好多💩"
+        userImage.image = UIImage(named: "Neymar")
+        nameLabel.text = "孙一飞"
+        timeLabel.text = "00:50"
+        titleLabel.text = "吃屎吧邵昌昊"
+        statusLabel.text = "有一天，耗子很开心，吃了好多💩，哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
