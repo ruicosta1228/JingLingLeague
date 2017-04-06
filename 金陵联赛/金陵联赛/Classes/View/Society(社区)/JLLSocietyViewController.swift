@@ -54,7 +54,6 @@ class JLLSocietyViewController: JLLBaseViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    
 }
 
 extension JLLSocietyViewController{

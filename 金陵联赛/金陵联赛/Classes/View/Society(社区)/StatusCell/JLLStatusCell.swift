@@ -23,9 +23,10 @@ class JLLStatusCell: UITableViewCell {
     //正文
     @IBOutlet weak var statusLabel: UILabel!
 
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+
         composeImage.image = UIImage(named: "Neymar_full")
         
         userImage.image = UIImage(named: "Neymar")
