@@ -44,15 +44,17 @@ class JLLMainViewController: UITabBarController {
     }
     
     func composeStatus(){
-        print("发布")
+        if JLLNetworkingManager.shared.userLogon {
+            print("发布")
         
-        //判断是否登录
+            //判断是否登录
         
-        //实例化视图
-        let v = JLLComposeView.composeView()
+            //实例化视图
+            let v = JLLComposeView.composeView()
         
-        //显示视图
-        v.show()
+            //显示视图
+            v.show()
+        }
     }
     
     lazy var composeButton = UIButton(frame:CGRect(x:0, y:0, width:100, height:30))

@@ -31,9 +31,7 @@ extension UIBarButtonItem {
         
         if Img != "" {
         
-            btn.setImage(UIImage(named: Img + "_normal"), for: .normal)
-            
-            btn.setImage(UIImage(named: Img + "_selected"), for: .highlighted)
+            btn.setImage(UIImage(named: Img ), for: .normal)
         }
         
         btn.sizeToFit()
