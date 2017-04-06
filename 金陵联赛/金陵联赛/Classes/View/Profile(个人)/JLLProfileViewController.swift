@@ -41,6 +41,10 @@ class JLLProfileViewController: JLLBaseViewController {
         // Initialize view controllers to display and place in array
         var controllerArray : [JLLBaseViewController] = []
         
+        let controller4 : JLLSettingViewController = JLLSettingViewController()
+        controller4.title = "个人信息"
+        controllerArray.append(controller4)
+        
         let controller1 : JLLRadarViewController = JLLRadarViewController()
 
         controller1.title = "雷达能力图"
@@ -56,9 +60,6 @@ class JLLProfileViewController: JLLBaseViewController {
         controller3.title = "柱形能力图"
         controllerArray.append(controller3)
         
-        let controller4 : JLLSettingViewController = JLLSettingViewController()
-        controller4.title = "个人信息"
-        controllerArray.append(controller4)
         
         let controller5 : JLLAbilityViewController = JLLAbilityViewController()
         controller5.title = "能力值"
