@@ -76,6 +76,9 @@ extension JLLBaseViewController {
     @objc func loginSuccess(n: Notification){
         print("登录成功")
         
+        //假装登录
+        JLLNetworkingManager.shared.userAccount.pId = "10"
+        
         navItem.leftBarButtonItem = nil
         navItem.rightBarButtonItem = nil
         //更新UI
@@ -117,10 +120,10 @@ extension JLLBaseViewController{
         navigationBar.items = [navItem]
         
         //设置navigationBar背景色
-        navigationBar.barTintColor = UIColor.lightGray
+        navigationBar.barTintColor = UIColor.black
         
         //设置title颜色
-        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.darkGray]
+        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         
     }
     

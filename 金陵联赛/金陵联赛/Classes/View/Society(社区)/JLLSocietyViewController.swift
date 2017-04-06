@@ -68,7 +68,7 @@ extension JLLSocietyViewController{
         self.search.placeholder = "搜索"
         
         //创建navigationBar左侧按钮控件
-        navItem.leftBarButtonItem = UIBarButtonItem(title: "我的消息", fontSize: 14.0, target: self, action: #selector(showLeftButton))
+        navItem.leftBarButtonItem = UIBarButtonItem(title: "", fontSize: 14.0, target: self, action: #selector(showLeftButton), Img: "search")
         
         //注册原型cell
         tableView?.register(UINib(nibName: "JLLStatusNormalCell", bundle: nil), forCellReuseIdentifier: cellId)

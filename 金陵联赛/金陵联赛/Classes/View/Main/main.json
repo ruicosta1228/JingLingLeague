@@ -6,7 +6,7 @@
       "imageName" : "",
       "message" : "关注一些人，回这里看看有什么惊喜"
     },
-    "imageName" : ""
+    "imageName" : "society"
   },
   {
     "clsName" : "JLLDiscoveryViewController",
@@ -15,7 +15,7 @@
       "imageName" : "visitordiscover_image_message",
       "message" : "登录后，约人踢一场比赛吧哈哈哈哈哈哈哈哈"
     },
-    "imageName" : ""
+    "imageName" : "discovery"
   },
   {
     "clsName" : "UIViewController"
@@ -27,7 +27,7 @@
       "imageName" : "visitordiscover_image_message",
       "message" : "登陆后，看看球队的最近表现哈哈哈哈哈哈哈哈"
     },
-    "imageName" : ""
+    "imageName" : "schedule"
   },
   {
     "clsName" : "JLLProfileViewController",
@@ -36,6 +36,6 @@
       "imageName" : "visitordiscover_image_profile",
       "message" : "登陆后，将你自己展示给别人哈哈哈哈哈哈哈哈"
     },
-    "imageName" : ""
+    "imageName" : "profile"
   }
 ]
