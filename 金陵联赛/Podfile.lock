@@ -33,6 +33,7 @@ PODS:
   - LTMorphingLabel (0.4.0)
   - PageMenu (2.0.0)
   - pop (1.0.9)
+  - PPNumberButtonSwift (0.2.0)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
@@ -49,9 +50,19 @@ DEPENDENCIES:
   - LTMorphingLabel
   - PageMenu
   - pop
+  - PPNumberButtonSwift (from `https://github.com/jkpang/PPNumberButtonSwift.git`)
   - SDWebImage
   - SVProgressHUD
   - YYModel
+
+EXTERNAL SOURCES:
+  PPNumberButtonSwift:
+    :git: https://github.com/jkpang/PPNumberButtonSwift.git
+
+CHECKOUT OPTIONS:
+  PPNumberButtonSwift:
+    :commit: 6c547baa56cad2f6aef99a218c5aa43926286f2c
+    :git: https://github.com/jkpang/PPNumberButtonSwift.git
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -65,10 +76,11 @@ SPEC CHECKSUMS:
   LTMorphingLabel: d9a85f16ac306f0e07321d6819964deb2dc69638
   PageMenu: 9c38fd7e0d9ef4b1408320f55bb907bbc0e538dc
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  PPNumberButtonSwift: 76c0cad544400dc555ad455a591594ed4d589198
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 9b9c2a2a6def148ee5dd584aab8985ba3feebfbe
+PODFILE CHECKSUM: cc41033bb510baa92ca1b1c00576f35e3f1a9760
 
 COCOAPODS: 1.2.0

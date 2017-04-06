@@ -15,8 +15,8 @@ class JLLProfileViewController: JLLBaseViewController {
     var pageMenu : CAPSPageMenu?
     
     @IBAction func settingbtn(_ sender: Any) {
-            let settingview = JLLSettingViewController()
-            self.present(settingview, animated: true, completion: nil)
+            let systemview = JLLSystemViewController()
+            self.present(systemview, animated: true, completion: nil)
         
     }
    
@@ -55,6 +55,14 @@ class JLLProfileViewController: JLLBaseViewController {
 
         controller3.title = "柱形能力图"
         controllerArray.append(controller3)
+        
+        let controller4 : JLLSettingViewController = JLLSettingViewController()
+        controller4.title = "个人信息"
+        controllerArray.append(controller4)
+        
+        let controller5 : JLLAbilityViewController = JLLAbilityViewController()
+        controller5.title = "能力值"
+        controllerArray.append(controller5)
 
         // Initialize scroll menu
         pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRect(x: 0.0, y: 200.0, width: self.view.frame.width, height: 600), pageMenuOptions: nil)
