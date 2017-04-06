@@ -16,7 +16,7 @@ import UIKit
 
 class UserAccount: NSObject {
     //用户id
-    var pId: String? = "10"
+    var pId: String? //= "10"
     
 //    var login_method: LoginMethod
 
