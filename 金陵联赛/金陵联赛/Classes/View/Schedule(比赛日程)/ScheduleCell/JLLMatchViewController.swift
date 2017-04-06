@@ -18,7 +18,9 @@ class JLLMatchViewController: JLLBaseViewController {
     override func loadData() {
         print("加载数据")
         //模拟延迟加载
-        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()){
+            for i in 0..<2{
+
                 if self.isPullup{
                     //追加
                     self.statusList.append("上拉 \(i)")
@@ -27,7 +29,7 @@ class JLLMatchViewController: JLLBaseViewController {
                     //在最上方更新
                     self.statusList.insert(i.description, at: 0)
                 }
-        
+            }
             //结束刷新控件
             self.refreshControl?.endRefreshing()
             //恢复上拉刷新标记
@@ -38,6 +40,8 @@ class JLLMatchViewController: JLLBaseViewController {
         }
     }
     
+}
+
     
     
 
