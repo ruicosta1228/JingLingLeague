@@ -7,85 +7,82 @@
 //
 
 import UIKit
-
+import PageMenu
 private let cellId = "cellId"
 
 class JLLScheduleViewController: JLLBaseViewController {
     
-    var search: UISearchBar = UISearchBar()
+    var pageMenu : CAPSPageMenu?
     
-    lazy var statusList = [String]()
-    
-    override func loadData() {
-        print("加载数据")
-        //模拟延迟加载
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
-            for i in 0..<15{
-                if self.isPullup{
-                    //追加
-                    self.statusList.append("上拉 \(i)")
-                }else{
-                    //在最上方更新
-                    self.statusList.insert(i.description, at: 0)
-                }
-            }
-            //结束刷新控件
-            self.refreshControl?.endRefreshing()
-            //恢复上拉刷新标记
-            self.isPullup = false
-            //刷新表
-            print("刷新表格")
-            self.tableView?.reloadData()
-        }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+        // Do any additional setup after loading the view.
     }
     
-    
-    func showRightButton(){
-        
-        let vc = JLLDemoViewController()
-        
-        navigationController?.pushViewController(vc, animated: true)
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
-    
-    
-}
 
-extension JLLScheduleViewController{
     
+    func setPage(){
+        // Initialize view controllers to display and place in array
+        var controllerArray : [JLLBaseViewController] = []
+        
+        let controller1 : JLLMatchViewController = JLLMatchViewController()
+        
+        controller1.title = "我的比赛"
+        controllerArray.append(controller1)
+        
+        let controller2 : JLLMatchViewController = JLLMatchViewController()
+        
+        controller2.title = "欧冠"
+        controllerArray.append(controller2)
+        
+        let controller3 : JLLMatchViewController = JLLMatchViewController()
+        
+        controller3.title = "英超"
+        controllerArray.append(controller3)
+        
+        
+        let controller4 : JLLMatchViewController = JLLMatchViewController()
+        
+        controller4.title = "德甲"
+        controllerArray.append(controller4)
+        
+        
+        let controller5 : JLLMatchViewController = JLLMatchViewController()
+        
+        controller5.title = "西甲"
+        controllerArray.append(controller5)
+        
+        
+        let controller6 : JLLMatchViewController = JLLMatchViewController()
+        
+        controller6.title = "中超"
+        controllerArray.append(controller6)
+        
+        // Initialize scroll menu
+        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRect(x: 0.0, y: 64.0, width: self.view.frame.width, height: 600), pageMenuOptions: nil)
+        
+        print(self.view.frame.height)
+        
+        self.view.addSubview(pageMenu!.view)
+        
+    }
+    
+    
+    //重写方法
     override func setupTableView() {
-        super.setupTableView()
+        self.view.backgroundColor = UIColor.white
+       
+        setPage()
         
-        //添加搜索框
-        search.frame = CGRect(x: 0, y: 0, width: 0, height: 44)
-        tableView?.tableHeaderView = search
-        self.search.placeholder = "搜索"
-        
-        //创建navigationBar右侧按钮控件
-        navItem.rightBarButtonItem = UIBarButtonItem(title: "我的比赛", fontSize: 14.0, target: self, action: #selector(showRightButton))
-        
-        //注册原型cell
-        tableView?.register(UINib(nibName: "JLLScheduleCell", bundle: nil), forCellReuseIdentifier: cellId)
-        
-        //设置行高
-        tableView?.rowHeight = 160
-        tableView?.estimatedRowHeight = 600
-        
-        //取消分割线
-        tableView?.separatorStyle = .none
     }
-}
 
-//具体数据源方法实现
-extension JLLScheduleViewController{
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return statusList.count
-    }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! JLLScheduleCell
-        
-//        cell.textLabel?.text = statusList[indexPath.row]
-        
-        return cell
-    }
+    
+    
 }
