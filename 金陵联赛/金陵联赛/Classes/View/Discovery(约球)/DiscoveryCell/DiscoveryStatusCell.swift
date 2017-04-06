@@ -29,12 +29,7 @@ class DiscoveryStatusCell: UITableViewCell {
         alert.addAction(call)
         
         //弹出alert
-        
-//        self.addSubview(alert.view)
-//        JoinViewController().present(alert, animated: true, completion: nil)
-        
-//        let alert = UIAlertView(title: "系统提示", message: "联系发起人", delegate: self, cancelButtonTitle: "取消")
-//        alert.show()
+        UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
     }
     
     //比赛地点
@@ -46,7 +41,15 @@ class DiscoveryStatusCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        userImage.image = UIImage(named: "TabIcon")
+        userImage.image = UIImage(named: "Neymar")
+        
+        locationLabel.text = "南大金陵足球场"
+        let date = NSDate()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyy-MM-dd 'at' HH:mm"
+        let strNowTime = formatter.string(from: date as Date) as String
+        let timeArray = strNowTime.components(separatedBy: "at")
+        timeLabel.text = timeArray[1]
 
     }
 

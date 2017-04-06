@@ -18,19 +18,19 @@ class JoinViewController: JLLBaseViewController {
         print("加载数据")
         //模拟延迟加载
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
-            for i in 0..<15{
-                if self.isPullup{
-                    //追加
-                    self.gameList.append("上拉 \(i)")
-                }else{
+            for i in 0..<1{
+//                if self.isPullup{
+//                    //追加
+//                    self.gameList.append("上拉 \(i)")
+//                }else{
                     //在最上方更新
                     self.gameList.insert(i.description, at: 0)
-                }
+//                }
             }
             //结束刷新控件
             self.refreshControl?.endRefreshing()
             //恢复上拉刷新标记
-            self.isPullup = false
+//            self.isPullup = false
             //刷新表
             print("刷新表格")
             self.tableView?.reloadData()
@@ -72,7 +72,7 @@ extension JoinViewController{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! DiscoveryStatusCell
         
-        cell.textLabel?.text = gameList[indexPath.row]
+//        cell.textLabel?.text = gameList[indexPath.row]
         
         return cell
     }

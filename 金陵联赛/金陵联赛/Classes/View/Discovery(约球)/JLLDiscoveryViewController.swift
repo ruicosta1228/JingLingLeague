@@ -61,8 +61,8 @@ extension JLLDiscoveryViewController {
     
     func showBtn(btn: UIButton) {
         let anim = POPSpringAnimation(propertyNamed: kPOPLayerPosition)
-        let x = self.view.bounds.width / 2// - 50
-        let y = self.view.bounds.height / 2// - 50
+        let x = self.view.bounds.width / 2
+        let y = self.view.bounds.height / 2
         anim?.toValue = NSValue(cgPoint: CGPoint(x: x,y: y))
         anim?.springBounciness = 15
         anim?.springSpeed = 10
