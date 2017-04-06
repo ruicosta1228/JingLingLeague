@@ -126,6 +126,7 @@
             <connections>
                 <outlet property="composeImage" destination="gsU-FZ-xXL" id="anu-zT-ntW"/>
                 <outlet property="nameLabel" destination="9yz-34-kG3" id="vgk-bR-HV7"/>
+                <outlet property="statusLabel" destination="hCQ-EO-VWa" id="B0e-ud-EcG"/>
                 <outlet property="timeLabel" destination="0IZ-wb-xtu" id="RCa-S5-lcc"/>
                 <outlet property="titleLabel" destination="kPf-Q4-OM0" id="QIV-C4-bZF"/>
                 <outlet property="userImage" destination="Jxy-EW-Ew9" id="gdL-Sq-FZx"/>
