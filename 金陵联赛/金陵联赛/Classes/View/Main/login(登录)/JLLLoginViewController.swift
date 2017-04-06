@@ -16,7 +16,11 @@ class JLLLoginViewController: UIViewController {
         
         view.backgroundColor = UIColor.white
         
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        
         title = "登录"
+        
+        navigationController?.navigationBar.barTintColor = UIColor.black
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "返回", target: self, action: #selector(close))
         

@@ -56,7 +56,7 @@ class JLLVisitorView: UIView {
     lazy var registerButton: UIButton = UIButton(
         title: "注册",
         fontSize: 16,
-        normalColor: UIColor.orange,
+        normalColor: UIColor.gray,
         highlightedColor: UIColor.black,
         bgImageName: "common_button_white_disable")
     

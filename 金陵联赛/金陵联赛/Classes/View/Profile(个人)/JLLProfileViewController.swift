@@ -43,17 +43,17 @@ class JLLProfileViewController: JLLBaseViewController {
         
         let controller1 : JLLRadarViewController = JLLRadarViewController()
 
-        controller1.title = "radar"
+        controller1.title = "雷达能力图"
         controllerArray.append(controller1)
         
         let controller2 : JLLPieViewController = JLLPieViewController()
 
-        controller2.title = "pie"
+        controller2.title = "饼状能力图"
         controllerArray.append(controller2)
 
         let controller3 : JLLBarViewController = JLLBarViewController()
 
-        controller3.title = "bar"
+        controller3.title = "柱形能力图"
         controllerArray.append(controller3)
 
         // Initialize scroll menu
