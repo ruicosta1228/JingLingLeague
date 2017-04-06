@@ -71,4 +71,8 @@ extension JLLDiscoveryViewController {
         anim?.springSpeed = 10
         btn.pop_add(anim, forKey: "springPosition")
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setupTableView()
+    }
 }
