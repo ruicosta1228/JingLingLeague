@@ -96,6 +96,8 @@ extension WBLoginViewController: UIWebViewDelegate{
         JLLNetworkingManager.shared.loadWBAccessToken(code: code){ (isSuccess) in
             if !isSuccess {
                 SVProgressHUD.showInfo(withStatus: "网络请求失败")
+                SVProgressHUD.dismiss()
+
             } else {
                 SVProgressHUD.showInfo(withStatus: "登录成功")
                 

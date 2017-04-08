@@ -20,7 +20,8 @@ class JLLMainViewController: UITabBarController {
         setupComposeButton()
         
         //设置新特性
-        setupNewFeatureView()
+        //登录了就不显示了
+        JLLNetworkingManager.shared.userLogon ? () : setupNewFeatureView()
         
         //设置代理
         delegate = self

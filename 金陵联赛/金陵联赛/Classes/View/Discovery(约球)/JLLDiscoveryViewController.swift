@@ -73,6 +73,6 @@ extension JLLDiscoveryViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setupTableView()
+        setupUI()
     }
 }

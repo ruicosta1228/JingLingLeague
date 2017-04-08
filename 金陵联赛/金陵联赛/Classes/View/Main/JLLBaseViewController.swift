@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SVProgressHUD
 //OC中不支持多继承，使用协议替代
 class JLLBaseViewController: UIViewController {
     
@@ -74,6 +74,8 @@ class JLLBaseViewController: UIViewController {
 //访客视图监听方法
 extension JLLBaseViewController {
     @objc func loginSuccess(n: Notification){
+        SVProgressHUD.dismiss()
+
         print("登录成功")
         
         //假装登录

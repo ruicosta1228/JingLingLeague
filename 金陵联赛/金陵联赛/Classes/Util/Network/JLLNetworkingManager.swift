@@ -31,7 +31,7 @@ class JLLNetworkingManager: AFHTTPSessionManager {
     }()
     
     //用户登录模型
-    lazy var userAccount = WBUserAccount()
+    lazy var userAccount = UserAccount()
     
     //用户登录标记
     var userLogon: Bool{

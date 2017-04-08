@@ -56,13 +56,46 @@ extension JLLNetworkingManager{
                       "redirect_uri": WBRedirectURI]
         
         request(method: .POST, URLString: urlString, parameters: params as [String : AnyObject], completion: { (json, isSuccess) in
-            self.userAccount.yy_modelSet(with: (json as? [String: Any]) ?? [:])
             
-            print(self.userAccount)
+            if isSuccess {
+                self.userAccount.wbAccount = WBUserAccount()
             
-            self.userAccount.saveAccount()
+                self.userAccount.wbAccount?.yy_modelSet(with: (json as? [String: Any]) ?? [:])
+                
+                ///FIXME 这里要和自己的服务器交互获得pid
+                self.userAccount.pId = "10"
             
-            completion(isSuccess)
+                self.loadWBUserInfo(completion: { (dict) in
+                    
+                    self.userAccount.wbAccount?.yy_modelSet(with: dict)
+                    
+                    self.userAccount.saveAccount()
+                    
+                    print(self.userAccount)
+
+                    //异步网络工具要完成才能使用闭包回调
+                    completion(isSuccess)
+
+                })
+            }
         })
+    }
+    
+    func loadWBUserInfo(completion: @escaping (_ dict: [String: AnyObject])->()) {
+        
+        guard let uid = userAccount.wbAccount?.uid else {
+            return
+        }
+        
+        let urlString = "https://api.weibo.com/2/users/show.json"
+        
+        let params = ["uid": uid,
+                      "access_token": userAccount.wbAccount?.access_token]
+        
+        // 发起网络请求
+        request(URLString: urlString, parameters: params as [String : AnyObject]) { (json, isSuccess) in
+            // 完成回调
+            completion((json as? [String: AnyObject]) ?? [:])
+        }
     }
 }
