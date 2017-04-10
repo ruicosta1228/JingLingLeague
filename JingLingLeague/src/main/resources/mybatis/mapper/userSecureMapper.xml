@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace必须指向Dao接口 -->
+<mapper namespace="cn.edu.jlxy.jinglingleague.dao.user.IUserSecureDao">
+
+    <cache eviction="FIFO" flushInterval="60000" size="500" readOnly="true"></cache>
+
+    <insert id="register" parameterType="UserSecure" useGeneratedKeys="true" keyProperty="pid" flushCache="true">
+        insert into user_secure(password, access_key) values(#{pPassword}, #{access_key})
+    </insert>
+
+    <insert id="createEmpty" parameterType="UserSecure" useGeneratedKeys="true" keyProperty="pid" flushCache="true">
+        insert into user_secure(access_key) values(#{access_key})
+    </insert>
+
+    <select id="login" parameterType="UserSecure" resultType="UserSecure" useCache="false">
+        select * from user_secure where pid = #{pid} and password = #{password}
+    </select>
+
+    <delete id="delete" parameterType="Integer" >
+        delete from user_secure where pid=#{pid}
+    </delete>
+
+</mapper>

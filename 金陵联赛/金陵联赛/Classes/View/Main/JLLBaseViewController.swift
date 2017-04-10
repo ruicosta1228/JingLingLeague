@@ -77,10 +77,7 @@ extension JLLBaseViewController {
         SVProgressHUD.dismiss()
 
         print("登录成功")
-        
-        //假装登录
-        JLLNetworkingManager.shared.userAccount.pId = "10"
-        
+                
         navItem.leftBarButtonItem = nil
         navItem.rightBarButtonItem = nil
         //更新UI

@@ -42,6 +42,48 @@ extension JLLNetworkingManager{
         })
 
     }
+    
+    //微博普通登录
+    func login_normal(input: String?, password: String?,  completion: @escaping (_ dict: Bool)->()){
+        let url = "http://localhost:8080/JingLingLeague/user/login_normal.json?"
+        
+        let param = ["input" : input , "password" : password]
+        
+        request(URLString: url, parameters: param as [String : AnyObject], completion: { (json, isSuccess) in
+            if !isSuccess {
+                
+                
+                completion(false)
+                
+                return
+            }
+            
+            self.userAccount.yy_modelSet(with: json as! [String : AnyObject])
+            
+            self.userAccount.saveAccount()
+            
+            print(self.userAccount)
+            
+            completion(true)
+        })
+    }
+    
+    //微博登录成功后与自己的服务器交互获得pid和access_key
+    func loginByWeibo(name: String, selfi: String, completion: @escaping (_ dict: [String: AnyObject])->()){
+        let url = "http://localhost:8080/JingLingLeague/user/login_weibo.json?"
+        
+        let param = ["name" : name , "selfi" : selfi]
+        
+        request(URLString: url, parameters: param as [String : AnyObject], completion: {(json, isSuccess) in
+            if !isSuccess {
+                completion([:])
+                
+                return
+            }
+            
+            completion(json as! [String : AnyObject] )
+        })
+    }
 }
 
 //第三方登录相关方法
@@ -61,20 +103,26 @@ extension JLLNetworkingManager{
                 self.userAccount.wbAccount = WBUserAccount()
             
                 self.userAccount.wbAccount?.yy_modelSet(with: (json as? [String: Any]) ?? [:])
-                
-                ///FIXME 这里要和自己的服务器交互获得pid
-                self.userAccount.pId = "10"
             
                 self.loadWBUserInfo(completion: { (dict) in
                     
                     self.userAccount.wbAccount?.yy_modelSet(with: dict)
                     
-                    self.userAccount.saveAccount()
+//                    self.userAccount.saveAccount()
+//                    
+//                    print(self.userAccount)
                     
-                    print(self.userAccount)
+                    self.loginByWeibo(name: self.userAccount.wbAccount?.screen_name ?? "", selfi: self.userAccount.wbAccount?.avatar_large ?? "", completion: { (json) in
+                        
+                            self.userAccount.yy_modelSet(with: json)
+                        
+                            self.userAccount.saveAccount()
 
-                    //异步网络工具要完成才能使用闭包回调
-                    completion(isSuccess)
+                            print(self.userAccount)
+
+                            //异步网络工具要完成才能使用闭包回调
+                            completion(isSuccess)
+                    })
 
                 })
             }

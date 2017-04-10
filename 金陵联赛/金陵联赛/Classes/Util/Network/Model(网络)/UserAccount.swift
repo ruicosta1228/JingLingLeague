@@ -18,7 +18,10 @@ enum LoginMethod{
 
 class UserAccount: NSObject {
     //用户id
-    var pId: String? 
+    var pid: String?
+    
+    //用户access_key
+    var access_key: String?
     
     //微博登录信息
     public var wbAccount: WBUserAccount?
@@ -56,7 +59,7 @@ class UserAccount: NSObject {
         case .WEIBO:
             print("微博登录")
             // 测试过期日期 - 开发中，每一个分支都需要测试！
-//                wbAccount?.expiresDate = Date(timeIntervalSinceNow: -3600 * 24)
+                wbAccount?.expiresDate = Date(timeIntervalSinceNow: -3600 * 24)
             //判断用户过期
             if wbAccount?.expiresDate?.compare(Date()) != .orderedDescending {
                 print("账户过期")
@@ -64,7 +67,7 @@ class UserAccount: NSObject {
                 // 清空 token
                 wbAccount = nil
                 
-                pId = nil
+                pid = nil
                 // 删除帐户文件
                 _ = try? FileManager.default.removeItem(atPath: path)
             }
