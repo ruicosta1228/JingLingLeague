@@ -29,6 +29,7 @@ class JLLDiscoveryViewController: JLLBaseViewController {
 //        UIView.commitAnimations()
         
         let mv = MapViewController()
+//        let vc = UINavigationController(rootViewController: mv)
         navigationController?.pushViewController(mv, animated: true)
     }
     
