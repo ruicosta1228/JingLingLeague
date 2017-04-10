@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: JLLBaseViewController {
+class MapViewController: JLLBaseViewController, MKMapViewDelegate {
 
 //    let APIKey = "fd3f7f3e534d8e6bf159cfbd5e15ee16"
     
@@ -50,6 +50,8 @@ extension MapViewController {
         mainMapView.frame = self.view.frame
         self.view.addSubview(mainMapView)
         
+        self.mainMapView.delegate = self
+        
         mainMapView.addSubview(returnBtn)
         
         //设置地图类型为标准地图
@@ -80,18 +82,6 @@ extension MapViewController {
         objectAnnotation.subtitle = "南大金陵足球场"
         //添加大头针
         self.mainMapView.addAnnotation(objectAnnotation)
-        
-        //创建一个大头针对象
-        let objectAnnotation_green = MKPointAnnotation()
-        
-        //设置大头针显示位置
-        objectAnnotation_green.coordinate = CLLocationCoordinate2D(latitude: 32.179799, longitude: 118.705904)
-        //设置点击大头针之后显示的标题
-        objectAnnotation_green.title = "南大金陵足球场"
-        //设置点击大头针之后显示的描述
-        objectAnnotation_green.subtitle = "南大金陵足球场"
-        //添加大头针
-        self.mainMapView.addAnnotation(objectAnnotation_green)
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -108,9 +98,12 @@ extension MapViewController {
             pinView?.canShowCallout = true
             pinView?.animatesDrop = true
             //设置大头针颜色
-            pinView?.pinTintColor = UIColor.green
+            pinView?.pinTintColor = UIColor.red
             //设置大头针点击注释视图的右侧按钮样式
-            pinView?.rightCalloutAccessoryView = UIButton(type: .contactAdd)
+            let addBtn = UIButton(type: .contactAdd)
+            pinView?.rightCalloutAccessoryView = addBtn
+            
+            addBtn.addTarget(self, action: #selector(add), for: .touchUpInside)
         } else {
             pinView?.annotation = annotation
         }
@@ -120,6 +113,26 @@ extension MapViewController {
     
     func click() {
         self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    func add() {
+        let alert = UIAlertController(title: "系统提示",
+                                      message: "踢球or看球",
+                                      preferredStyle: .actionSheet)
+        let play = UIAlertAction(title: "踢球",
+                                   style: .default,
+                                   handler: {action in print("踢球")})
+        let watch = UIAlertAction(title: "看球",
+                                 style: .default,
+                                 handler: {action in print("看球")})
+        let cancel = UIAlertAction(title: "取消",
+                                   style: .cancel,
+                                   handler: nil)
+        alert.addAction(play)
+        alert.addAction(watch)
+        alert.addAction(cancel)
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
 }
