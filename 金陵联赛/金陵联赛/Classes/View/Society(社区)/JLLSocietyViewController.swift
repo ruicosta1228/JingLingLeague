@@ -12,7 +12,21 @@ private let cellId = "cellId"
 
 class JLLSocietyViewController: JLLBaseViewController {
     
-    var search: UISearchBar = UISearchBar()
+    let search: UISearchBar = UISearchBar()
+    
+    let sv: UIScrollView = UIScrollView()
+    
+    var pageControl: UIPageControl? = nil
+    
+    var images = [UIImage]()
+    
+    var timer: NSTimeZone?
+    
+    var currentPage = 0 {
+        didSet{
+            pageControl!.currentPage = currentPage
+        }
+    }
     
     lazy var statusList = [String]()
     
@@ -61,8 +75,52 @@ extension JLLSocietyViewController{
     override func setupTableView() {
         super.setupTableView()
         
+        //添加scrollview
+        pageControl = UIPageControl()
+        
+        sv.frame = CGRect(x: 0, y: navigationBar.frame.height, width: view.frame.width, height: view.frame.width / 1242 * 582)
+        pageControl!.frame = CGRect(x: 0,
+                                    y: sv.frame.height + navigationBar.frame.height - 15,
+                                    width: view.frame.width,
+                                    height: 10)
+        
+        pageControl!.pageIndicatorTintColor = UIColor.gray
+        pageControl!.currentPageIndicatorTintColor = UIColor.black
+        
+        pageControl!.numberOfPages = 3
+        pageControl!.isEnabled = false
+        
+        
+        
+        let w = view.frame.width * 3
+        let h = view.frame.width / 1242 * 582
+        sv.contentSize = CGSize(width: w, height: h)
+        sv.showsHorizontalScrollIndicator = false
+        sv.showsVerticalScrollIndicator = false
+        sv.delegate = self
+        sv.contentOffset = CGPoint(x: self.view.frame.width, y: 0)
+        
+        sv.addSubview(UIImageView())
+        sv.addSubview(UIImageView())
+        sv.addSubview(UIImageView())
+        (sv.subviews[0] as! UIImageView).image = UIImage(named: "page1")
+        (sv.subviews[1] as! UIImageView).image = UIImage(named: "page2")
+        (sv.subviews[2] as! UIImageView).image = UIImage(named: "page3")
+        
+        for i in 0..<3 {
+            let imgView = sv.subviews[i] as! UIImageView
+            imgView.contentMode = .scaleAspectFill
+            imgView.clipsToBounds = true
+            imgView.frame = CGRect(x: CGFloat(i) * view.frame.width, y: 0, width: view.frame.width, height: sv.frame.height)
+        }
+        
+        sv.isPagingEnabled = true
+        
+        view.insertSubview(sv, aboveSubview: tableView!)
+        view.insertSubview(pageControl!, aboveSubview: sv)
+        
         //添加搜索框
-        search.frame = CGRect(x: 0, y: 0, width: 0, height: 44)
+        search.frame = CGRect(x: 0, y: navigationBar.frame.height + sv.frame.height, width: 0, height: 44)
         tableView?.tableHeaderView = search
         self.search.placeholder = "搜索"
         
