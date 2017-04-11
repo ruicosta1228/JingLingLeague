@@ -156,15 +156,6 @@ extension JLLSocietyViewController{
         let vc = DetailViewController()
         self.navigationController?.pushViewController(vc, animated: true)
         //向DetailViewController传值
-        vc.title = "金陵联赛"
-        if indexPath.row == 0 {
-            vc.image.image = UIImage(named: "WechatIMG276")
-        }
-        if indexPath.row == 1 {
-            vc.image.image = UIImage(named: "WechatIMG274")
-        }
-        if indexPath.row == 2 {
-            vc.image.image = UIImage(named: "WechatIMG83")
-        }
+        vc.title = "详情"
     }
 }

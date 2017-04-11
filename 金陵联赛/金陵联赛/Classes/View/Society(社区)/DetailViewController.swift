@@ -10,7 +10,7 @@ import UIKit
 
 class DetailViewController: JLLBaseViewController {
 
-    var image: UIImageView = UIImageView()
+//    var image: UIImageView = UIImageView()
     
     override func viewDidLoad() {
         
@@ -31,11 +31,7 @@ extension DetailViewController {
     override func setupTableView() {
         super.setupTableView()
         
-        image.frame = CGRect(x: 0, y: self.navigationBar.frame.height, width: self.view.frame.width, height: self.view.frame.height / 2)
-//        image.image = UIImage(named: "WechatIMG276")
-
-        self.view.addSubview(image)
-        
-        tableView?.separatorStyle = .none
+        let v = DetailView()
+        self.view.addSubview(v)
     }
 }
