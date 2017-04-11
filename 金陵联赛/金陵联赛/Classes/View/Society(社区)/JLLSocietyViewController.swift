@@ -157,5 +157,6 @@ extension JLLSocietyViewController{
         self.navigationController?.pushViewController(vc, animated: true)
         //向DetailViewController传值
         vc.title = "详情"
+        
     }
 }
