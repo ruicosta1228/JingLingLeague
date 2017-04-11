@@ -96,10 +96,13 @@ extension WBLoginViewController: UIWebViewDelegate{
         JLLNetworkingManager.shared.loadWBAccessToken(code: code){ (isSuccess) in
             if !isSuccess {
                 SVProgressHUD.showInfo(withStatus: "网络请求失败")
-                SVProgressHUD.dismiss()
+                
+                SVProgressHUD.dismiss(withDelay: 2)
 
             } else {
                 SVProgressHUD.showInfo(withStatus: "登录成功")
+                
+                SVProgressHUD.dismiss(withDelay: 2)
                 
                 self.close()
                 
@@ -107,7 +110,6 @@ extension WBLoginViewController: UIWebViewDelegate{
                 
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: VistorView2TableView), object: nil)
                 
-                SVProgressHUD.dismiss()
             }
         }
         

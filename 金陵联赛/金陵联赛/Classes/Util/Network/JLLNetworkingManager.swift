@@ -35,7 +35,7 @@ class JLLNetworkingManager: AFHTTPSessionManager {
     
     //用户登录标记
     var userLogon: Bool{
-        return userAccount.pId != nil
+        return userAccount.pid != nil
     }
     
     /// 封装GET\POST方法

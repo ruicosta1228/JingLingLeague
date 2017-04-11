@@ -71,121 +71,7 @@ extension LoginView {
         addSubview(qqBtn)
         addSubview(submitBtn)
         
-//        //label
-//        addConstraint(NSLayoutConstraint(item: username,
-//                                         attribute: .centerX,
-//                                         relatedBy: .equal,
-//                                         toItem: username_input,
-//                                         attribute: .centerX,
-//                                         multiplier: 1.0,
-//                                         constant: -50))
-//        
-//        addConstraint(NSLayoutConstraint(item: username,
-//                                         attribute: .centerY,
-//                                         relatedBy: .equal,
-//                                         toItem: self,
-//                                         attribute: .centerY,
-//                                         multiplier: 1.0,
-//                                         constant: 20))
-//        
-//        addConstraint(NSLayoutConstraint(item: password,
-//                                         attribute: .centerX,
-//                                         relatedBy: .equal,
-//                                         toItem: self,
-//                                         attribute: .centerX,
-//                                         multiplier: 1.0,
-//                                         constant: -50))
-//        
-//        addConstraint(NSLayoutConstraint(item: password,
-//                                         attribute: .centerY,
-//                                         relatedBy: .equal,
-//                                         toItem: self,
-//                                         attribute: .centerY,
-//                                         multiplier: 1.0,
-//                                         constant: -20))
-//        
-//        //textField
-//        addConstraint(NSLayoutConstraint(item: username_input,
-//                                         attribute: .centerX,
-//                                         relatedBy: .equal,
-//                                         toItem: self,
-//                                         attribute: .centerX,
-//                                         multiplier: 1.0,
-//                                         constant: 0))
-//        
-//        addConstraint(NSLayoutConstraint(item: username_input,
-//                                         attribute: .centerY,
-//                                         relatedBy: .equal,
-//                                         toItem: self,
-//                                         attribute: .centerY,
-//                                         multiplier: 1.0,
-//                                         constant: -20))
-//        
-//        addConstraint(NSLayoutConstraint(item: password_input,
-//                                         attribute: .centerX,
-//                                         relatedBy: .equal,
-//                                         toItem: self,
-//                                         attribute: .centerX,
-//                                         multiplier: 1.0,
-//                                         constant: 0))
-//        
-//        addConstraint(NSLayoutConstraint(item: password_input,
-//                                         attribute: .centerY,
-//                                         relatedBy: .equal,
-//                                         toItem: self,
-//                                         attribute: .centerY,
-//                                         multiplier: 1.0,
-//                                         constant: 20))
-//
-//        
-//        //button
-//        addConstraint(NSLayoutConstraint(item: submitBtn,
-//                                         attribute: .centerX,
-//                                         relatedBy: .equal,
-//                                         toItem: self,
-//                                         attribute: .centerX,
-//                                         multiplier: 1.0,
-//                                         constant: 0))
-//        
-//        addConstraint(NSLayoutConstraint(item: submitBtn,
-//                                         attribute: .centerY,
-//                                         relatedBy: .equal,
-//                                         toItem: self,
-//                                         attribute: .centerY,
-//                                         multiplier: 1.0,
-//                                         constant: 60))
-//        
-//        addConstraint(NSLayoutConstraint(item: wbBtn,
-//                                         attribute: .centerX,
-//                                         relatedBy: .equal,
-//                                         toItem: self,
-//                                         attribute: .centerX,
-//                                         multiplier: 1.0,
-//                                         constant: -20))
-//        
-//        addConstraint(NSLayoutConstraint(item: wbBtn,
-//                                         attribute: .centerY,
-//                                         relatedBy: .equal,
-//                                         toItem: self,
-//                                         attribute: .centerY,
-//                                         multiplier: 1.0,
-//                                         constant: 130))
-//        
-//        addConstraint(NSLayoutConstraint(item: qqBtn,
-//                                         attribute: .centerX,
-//                                         relatedBy: .equal,
-//                                         toItem: self,
-//                                         attribute: .centerX,
-//                                         multiplier: 1.0,
-//                                         constant: 20))
-//        
-//        addConstraint(NSLayoutConstraint(item: qqBtn,
-//                                         attribute: .centerY,
-//                                         relatedBy: .equal,
-//                                         toItem: self,
-//                                         attribute: .centerY,
-//                                         multiplier: 1.0,
-//                                         constant: 130))
+
         //微博监听
         wbBtn.addTarget(self, action: #selector(wbLogin), for: .touchUpInside)
         
@@ -198,15 +84,27 @@ extension LoginView {
 //监听事件
 extension LoginView{
     @objc func nmLogin(){
-        SVProgressHUD.showInfo(withStatus: "登录成功")
         
-        JLLNetworkingManager.shared.userAccount.pId = "10"
+        JLLNetworkingManager.shared.login_normal(input: username_input.text, password: password_input.text, completion: { (isSuccess) in 
+            if isSuccess {
+                SVProgressHUD.showInfo(withStatus: "登录成功")
+                
+                SVProgressHUD.dismiss(withDelay: 2)
+                
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: JLLPlayerLoginSuccessNotification), object: nil)
         
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: JLLPlayerLoginSuccessNotification), object: nil)
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: VistorView2TableView), object: nil)
         
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: VistorView2TableView), object: nil)
+            } else {
+                SVProgressHUD.showInfo(withStatus: "登录失败")
+                
+                print("登录失败")
+                
+                SVProgressHUD.dismiss(withDelay: 2)
+
+            }
+        })
         
-        SVProgressHUD.dismiss()
 
     }
     
