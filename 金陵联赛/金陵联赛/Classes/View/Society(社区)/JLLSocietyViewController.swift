@@ -12,9 +12,21 @@ private let cellId = "cellId"
 
 class JLLSocietyViewController: JLLBaseViewController {
     
-    var search: UISearchBar = UISearchBar()
+    let search: UISearchBar = UISearchBar()
     
-    var sv: UIScrollView = UIScrollView()
+    let sv: UIScrollView = UIScrollView()
+    
+//    let pageControl: UIPageControl
+    
+    var images = [UIImage]()
+    
+//    var timer: NSTimeZone
+//    
+//    var currentPage = 0 {
+//        didSet{
+//            pageControl.currentPage = currentPage
+//        }
+//    }
     
     lazy var statusList = [String]()
     
@@ -65,7 +77,31 @@ extension JLLSocietyViewController{
         
         //添加scrollview
         sv.frame = CGRect(x: 0, y: navigationBar.frame.height, width: view.frame.width, height: view.frame.width / 1242 * 582)
-        sv.backgroundColor = UIColor.blue
+        
+        let w = view.frame.width * 3
+        let h = view.frame.width / 1242 * 582
+        sv.contentSize = CGSize(width: w, height: h)
+        sv.showsHorizontalScrollIndicator = false
+        sv.showsVerticalScrollIndicator = false
+        sv.delegate = self
+        sv.contentOffset = CGPoint(x: self.view.frame.width, y: 0)
+        
+        sv.addSubview(UIImageView())
+        sv.addSubview(UIImageView())
+        sv.addSubview(UIImageView())
+        (sv.subviews[0] as! UIImageView).image = UIImage(named: "page1")
+        (sv.subviews[1] as! UIImageView).image = UIImage(named: "page2")
+        (sv.subviews[2] as! UIImageView).image = UIImage(named: "page3")
+        
+        for i in 0..<3 {
+            let imgView = sv.subviews[i] as! UIImageView
+            imgView.contentMode = .scaleAspectFill
+            imgView.clipsToBounds = true
+            imgView.frame = CGRect(x: CGFloat(i) * view.frame.width, y: 0, width: view.frame.width, height: sv.frame.height)
+        }
+        
+        sv.isPagingEnabled = true
+        
         view.insertSubview(sv, aboveSubview: tableView!)
         
         //添加搜索框
