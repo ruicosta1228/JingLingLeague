@@ -64,7 +64,7 @@ extension JLLSocietyViewController{
         super.setupTableView()
         
         //添加scrollview
-        sv.frame = CGRect(x: 0, y: navigationBar.frame.height, width: view.frame.width * 3, height: 300)
+        sv.frame = CGRect(x: 0, y: navigationBar.frame.height, width: view.frame.width, height: view.frame.width / 1242 * 582)
         sv.backgroundColor = UIColor.blue
         view.insertSubview(sv, aboveSubview: tableView!)
         
