@@ -16,17 +16,17 @@ class JLLSocietyViewController: JLLBaseViewController {
     
     let sv: UIScrollView = UIScrollView()
     
-//    let pageControl: UIPageControl
+    var pageControl: UIPageControl? = nil
     
     var images = [UIImage]()
     
-//    var timer: NSTimeZone
-//    
-//    var currentPage = 0 {
-//        didSet{
-//            pageControl.currentPage = currentPage
-//        }
-//    }
+    var timer: NSTimeZone?
+    
+    var currentPage = 0 {
+        didSet{
+            pageControl!.currentPage = currentPage
+        }
+    }
     
     lazy var statusList = [String]()
     
@@ -76,7 +76,21 @@ extension JLLSocietyViewController{
         super.setupTableView()
         
         //添加scrollview
+        pageControl = UIPageControl()
+        
         sv.frame = CGRect(x: 0, y: navigationBar.frame.height, width: view.frame.width, height: view.frame.width / 1242 * 582)
+        pageControl!.frame = CGRect(x: 0,
+                                    y: sv.frame.height + navigationBar.frame.height - 15,
+                                    width: view.frame.width,
+                                    height: 10)
+        
+        pageControl!.pageIndicatorTintColor = UIColor.gray
+        pageControl!.currentPageIndicatorTintColor = UIColor.black
+        
+        pageControl!.numberOfPages = 3
+        pageControl!.isEnabled = false
+        
+        
         
         let w = view.frame.width * 3
         let h = view.frame.width / 1242 * 582
@@ -103,6 +117,7 @@ extension JLLSocietyViewController{
         sv.isPagingEnabled = true
         
         view.insertSubview(sv, aboveSubview: tableView!)
+        view.insertSubview(pageControl!, aboveSubview: sv)
         
         //添加搜索框
         search.frame = CGRect(x: 0, y: navigationBar.frame.height + sv.frame.height, width: 0, height: 44)
