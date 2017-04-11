@@ -10,12 +10,36 @@ import UIKit
 
 class DetailViewController: JLLBaseViewController {
 
-//    var image: UIImageView = UIImageView()
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var userImage: UIImageView!
+    
+    @IBOutlet weak var userName: UILabel!
+    
+    @IBOutlet weak var composeTime: UILabel!
+    
+    @IBOutlet weak var subtitle: UILabel!
+    
+    @IBOutlet weak var statusLabel: UILabel!
+    
+    @IBOutlet weak var composeImage: UIImageView!
+    
+    @IBOutlet weak var likedUsers: UIImageView!
+    
+    @IBAction func likeBtn(_ sender: Any) {
+    }
+    
+    @IBOutlet weak var commentUser: UIImageView!
+    
+    @IBOutlet weak var commentName: UILabel!
+    
+    @IBOutlet weak var contentLabel: UILabel!
+    
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-
+        
         setupTableView()
         
     }
@@ -25,13 +49,16 @@ class DetailViewController: JLLBaseViewController {
         
     }
     
+    override func awakeFromNib() {
+        composeImage.image = UIImage(named: "Neymar_full")
+    }
+
 }
 
 extension DetailViewController {
     override func setupTableView() {
-        super.setupTableView()
+//        self.view.backgroundColor = UIColor.white
         
-        let v = DetailView()
-        self.view.addSubview(v)
+        
     }
 }
