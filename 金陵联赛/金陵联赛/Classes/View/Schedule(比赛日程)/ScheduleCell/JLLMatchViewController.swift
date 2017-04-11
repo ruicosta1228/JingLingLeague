@@ -15,21 +15,25 @@ class JLLMatchViewController: JLLBaseViewController {
     
     lazy var statusList = [String]()
     
+    lazy var model: JLLScheduleViewModel = JLLScheduleViewModel()
+    
     override func loadData() {
         print("加载数据")
+        
+        model.matches_init()
         //模拟延迟加载
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()){
-            for i in 0..<2{
-
-                if self.isPullup{
-                    //追加
-                    self.statusList.append("上拉 \(i)")
-                }
-                else{
-                    //在最上方更新
-                    self.statusList.insert(i.description, at: 0)
-                }
-            }
+//            for i in 0..<2{
+//
+//                if self.isPullup{
+//                    //追加
+//                    self.statusList.append("上拉 \(i)")
+//                }
+//                else{
+//                    //在最上方更新
+//                    self.statusList.insert(i.description, at: 0)
+//                }
+//            }
             //结束刷新控件
             self.refreshControl?.endRefreshing()
             //恢复上拉刷新标记
@@ -67,12 +71,18 @@ extension JLLMatchViewController{
 //具体数据源方法实现
 extension JLLMatchViewController{
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return statusList.count
+        return model.matches.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! JLLScheduleCell
-        
+        cell.Team1Name.text = model.matches[indexPath.row].team1_name
+        cell.Team2Name.text = model.matches[indexPath.row].team2_name
+        cell.Team1Logo.image = UIImage(named: model.matches[indexPath.row].team1_icon!)
+        cell.Team2Logo.image = UIImage(named: model.matches[indexPath.row].team2_icon!)
+        cell.VS.text = model.matches[indexPath.row].result
+        cell.Time.text = model.matches[indexPath.row].time
+
         //        cell.textLabel?.text = statusList[indexPath.row]
         
         return cell
