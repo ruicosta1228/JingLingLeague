@@ -74,7 +74,7 @@ extension JLLSocietyViewController{
     
     override func setupTableView() {
         super.setupTableView()
-        
+
         //添加scrollview
         pageControl = UIPageControl()
         
@@ -89,8 +89,6 @@ extension JLLSocietyViewController{
         
         pageControl!.numberOfPages = 3
         pageControl!.isEnabled = false
-        
-        
         
         let w = view.frame.width * 3
         let h = view.frame.width / 1242 * 582
@@ -136,6 +134,12 @@ extension JLLSocietyViewController{
         
         //取消分割线
         tableView?.separatorStyle = .none
+        
+        tableView?.contentInset = UIEdgeInsets(top: navigationBar.bounds.height + sv.frame.height, left: 0, bottom: tabBarController?.tabBar.bounds.height ?? 49, right: 0)
+    }
+    
+    func upade() {
+        
     }
 }
 
