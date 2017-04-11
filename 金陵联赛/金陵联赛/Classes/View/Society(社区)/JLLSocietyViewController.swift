@@ -14,6 +14,8 @@ class JLLSocietyViewController: JLLBaseViewController {
     
     var search: UISearchBar = UISearchBar()
     
+    var sv: UIScrollView = UIScrollView()
+    
     lazy var statusList = [String]()
     
     lazy var model = JLLPlayerViewModel()
@@ -61,8 +63,13 @@ extension JLLSocietyViewController{
     override func setupTableView() {
         super.setupTableView()
         
+        //添加scrollview
+        sv.frame = CGRect(x: 0, y: navigationBar.frame.height, width: view.frame.width * 3, height: 300)
+        sv.backgroundColor = UIColor.blue
+        view.insertSubview(sv, aboveSubview: tableView!)
+        
         //添加搜索框
-        search.frame = CGRect(x: 0, y: 0, width: 0, height: 44)
+        search.frame = CGRect(x: 0, y: navigationBar.frame.height + sv.frame.height, width: 0, height: 44)
         tableView?.tableHeaderView = search
         self.search.placeholder = "搜索"
         
