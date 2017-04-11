@@ -18,7 +18,27 @@ class JLLSocietyViewController: JLLBaseViewController {
     
     var images = [UIImage]()
     
-    var timer: NSTimeZone?
+//    var timer: Timer?
+    
+    var rollingTime: TimeInterval = 2
+    
+//    var rollingEnable: Bool = false {
+//        willSet {
+//            if newValue != rollingEnable{
+//                if newValue {
+//                    startTimer()
+//                } else {
+//                    stopTimer()
+//                }
+//            }
+//        }
+//    }
+    
+//    var currentPage = 0 {
+//        didSet {
+//            upade()
+//        }
+//    }
     
     lazy var statusList = [String]()
     
@@ -73,6 +93,7 @@ extension JLLSocietyViewController{
         let w = view.frame.width * 3
         let h = view.frame.width / 1242 * 582
         sv.contentSize = CGSize(width: w, height: h)
+        sv.isPagingEnabled = true
         sv.showsHorizontalScrollIndicator = false
         sv.showsVerticalScrollIndicator = false
         sv.delegate = self
@@ -81,9 +102,10 @@ extension JLLSocietyViewController{
         sv.addSubview(UIImageView())
         sv.addSubview(UIImageView())
         sv.addSubview(UIImageView())
-        (sv.subviews[0] as! UIImageView).image = UIImage(named: "page1")
-        (sv.subviews[1] as! UIImageView).image = UIImage(named: "page2")
-        (sv.subviews[2] as! UIImageView).image = UIImage(named: "page3")
+        images = [UIImage(named: "page1")!, UIImage(named: "page2")!, UIImage(named: "page3")!]
+        (sv.subviews[0] as! UIImageView).image = images.last//UIImage(named: "page1")
+        (sv.subviews[1] as! UIImageView).image = images[0]//UIImage(named: "page2")
+        (sv.subviews[2] as! UIImageView).image = images[1]//UIImage(named: "page3")
         
         for i in 0..<3 {
             let imgView = sv.subviews[i] as! UIImageView
@@ -109,12 +131,10 @@ extension JLLSocietyViewController{
         //取消分割线
         tableView?.separatorStyle = .none
         
+        //将scrollview放到第一个cell上面
         tableView?.tableHeaderView = sv
     }
-    
-    func upade() {
-        
-    }
+
 }
 
 //具体数据源方法实现
