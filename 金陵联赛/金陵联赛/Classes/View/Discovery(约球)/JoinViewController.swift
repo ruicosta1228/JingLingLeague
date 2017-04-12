@@ -18,7 +18,7 @@ class JoinViewController: JLLBaseViewController {
         print("加载数据")
         //模拟延迟加载
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
-            for i in 0..<1{
+            for i in 0..<3{
 //                if self.isPullup{
 //                    //追加
 //                    self.gameList.append("上拉 \(i)")
@@ -39,7 +39,7 @@ class JoinViewController: JLLBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "加入比赛"
+        self.title = "金陵联赛"
 
     }
     
@@ -56,7 +56,7 @@ extension JoinViewController{
         //设置行高
         tableView?.rowHeight = UITableViewAutomaticDimension
         tableView?.estimatedRowHeight = 100
-        tableView?.rowHeight = 100
+        tableView?.rowHeight = 190
 
         //取消分割线
         tableView?.separatorStyle = .none
@@ -75,6 +75,11 @@ extension JoinViewController{
 //        cell.textLabel?.text = gameList[indexPath.row]
         
         return cell
+    }
+    
+    //cell点击事件
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
 
 }
