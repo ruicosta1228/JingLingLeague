@@ -16,6 +16,8 @@ class JLLSocietyViewController: JLLBaseViewController {
     
     let sv: UIScrollView = UIScrollView()
     
+    lazy var society_model: JLLSocietyViewModel = JLLSocietyViewModel()
+    
     var images = [UIImage]()
     
 //    var timer: Timer?
@@ -49,19 +51,19 @@ class JLLSocietyViewController: JLLBaseViewController {
 //        model.login(completion: { (isSuccess) in
 //            print(isSuccess)
 //        })
-        
+        society_model.society_init()
         print("加载数据")
         //模拟延迟加载
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()){
-            for i in 0..<3{
-                if self.isPullup{
-                    //追加
-                    self.statusList.append("上拉 \(i)")
-                }else{
-                    //在最上方更新
-                    self.statusList.insert(i.description, at: 0)
-                }
-            }
+//            for i in 0..<3{
+//                if self.isPullup{
+//                    //追加
+//                    self.statusList.append("上拉 \(i)")
+//                }else{
+//                    //在最上方更新
+//                    self.statusList.insert(i.description, at: 0)
+//                }
+//            }
             //结束刷新控件
             self.refreshControl?.endRefreshing()
             //恢复上拉刷新标记
@@ -140,13 +142,22 @@ extension JLLSocietyViewController{
 //具体数据源方法实现
 extension JLLSocietyViewController{
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return statusList.count
+        return society_model.society.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! JLLStatusCell
 
 //        cell.textLabel?.text = statusList[indexPath.row]
+        cell.composeImage.contentMode = UIViewContentMode.scaleAspectFit
+        cell.composeImage.image = UIImage(named: society_model.society[indexPath.row].composeImage!)
+        cell.userImage.contentMode = UIViewContentMode.scaleAspectFit
+        cell.userImage.image = UIImage(named: society_model.society[indexPath.row].userImage!)
+        
+        cell.nameLabel.text = society_model.society[indexPath.row].nameLabel
+        cell.timeLabel.text = society_model.society[indexPath.row].timeLabel
+        cell.titleLabel.text = society_model.society[indexPath.row].titleLabel
+        cell.statusLabel.text = society_model.society[indexPath.row].statusLabel
         
         return cell
     }

@@ -78,8 +78,12 @@ extension JLLMatchViewController{
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! JLLScheduleCell
         cell.Team1Name.text = model.matches[indexPath.row].team1_name
         cell.Team2Name.text = model.matches[indexPath.row].team2_name
+        
+        cell.Team1Logo.contentMode = UIViewContentMode.scaleAspectFit
         cell.Team1Logo.image = UIImage(named: model.matches[indexPath.row].team1_icon!)
+        cell.Team2Logo.contentMode = UIViewContentMode.scaleAspectFit
         cell.Team2Logo.image = UIImage(named: model.matches[indexPath.row].team2_icon!)
+        
         cell.VS.text = model.matches[indexPath.row].result
         cell.Time.text = model.matches[indexPath.row].time
 
