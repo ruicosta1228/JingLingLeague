@@ -8,50 +8,57 @@
 
 import UIKit
 
+private let cellId = "cellId"
+
 class JLLDiscoveryViewController: JLLBaseViewController {
+    
+    lazy var gameList = [String]()
+    
+    override func loadData() {
+        print("加载数据")
+        //模拟延迟加载
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
+            for i in 0..<3{
+                //                if self.isPullup{
+                //                    //追加
+                //                    self.gameList.append("上拉 \(i)")
+                //                }else{
+                //在最上方更新
+                self.gameList.insert(i.description, at: 0)
+                //                }
+            }
+            //结束刷新控件
+            self.refreshControl?.endRefreshing()
+            //恢复上拉刷新标记
+            //            self.isPullup = false
+            //刷新表
+            print("刷新表格")
+            self.tableView?.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    func showRightButton() {
-        let mv = MapViewController()
-        navigationController?.pushViewController(mv, animated: true)
-    }
-    
-    func click() {
-        
-        let jv = JoinViewController()
-        navigationController?.pushViewController(jv, animated: true)
-    }
     
 }
 
 extension JLLDiscoveryViewController {
     
     override func setupTableView() {
+        super.setupTableView()
         
-//        self.view.backgroundColor = UIColor.black
-        let bgImg = UIImageView(image: #imageLiteral(resourceName: "discover_background"))
-        bgImg.frame = CGRect(x: 0, y: 64, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        //注册原型cell
+        tableView?.register(UINib(nibName: "DiscoveryCell", bundle: nil), forCellReuseIdentifier: cellId)
         
-        //右侧按钮
-        navItem.rightBarButtonItem = UIBarButtonItem(title: "发起", target: self, action: #selector(showRightButton))
+        //设置行高
+        tableView?.rowHeight = UITableViewAutomaticDimension
+        tableView?.estimatedRowHeight = 100
+        tableView?.rowHeight = 190
         
-        //发起按钮
-        let btn = UIButton.init(type: UIButtonType.custom) as UIButton
-        let img = UIImage(named: "map")
-        btn.setImage(img, for: UIControlState.normal)
-        
-        let x = self.view.bounds.width / 2 - 50
-        let y = self.view.bounds.height / 2 - 50
-        btn.frame = CGRect(x:x, y:y, width:100, height:100)
-        
-        btn.addTarget(self, action: #selector(click), for: .touchUpInside)
-        
-        self.view.addSubview(btn)
-        self.view.insertSubview(bgImg, belowSubview: btn)
-
+        //取消分割线
+        tableView?.separatorStyle = .none
     }
     
     
@@ -59,3 +66,36 @@ extension JLLDiscoveryViewController {
         setupUI()
     }
 }
+
+//具体数据源方法实现
+extension JLLDiscoveryViewController{
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return gameList.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! DiscoveryStatusCell
+        
+        //        cell.textLabel?.text = gameList[indexPath.row]
+        
+        if indexPath.row == 0 {
+            cell.backgroundImg.image = UIImage(named: "background1")
+        }
+        if indexPath.row == 1 {
+            cell.backgroundImg.image = UIImage(named: "background2")
+        }
+        if indexPath.row == 2 {
+            cell.backgroundImg.image = UIImage(named: "background3")
+        }
+        
+        return cell
+    }
+    
+    //cell点击事件
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = DiscoveryDetailViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+}
+

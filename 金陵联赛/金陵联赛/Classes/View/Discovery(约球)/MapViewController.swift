@@ -112,7 +112,8 @@ extension MapViewController {
     }
     
     func click() {
-        self.navigationController?.popToRootViewController(animated: true)
+//        self.navigationController?.popToRootViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     func add() {
