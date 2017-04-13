@@ -65,6 +65,20 @@ class DiscoveryStartViewController: JLLBaseViewController {
         super.didReceiveMemoryWarning()
         
     }
+    
+    func click() {
+        let alert = UIAlertController(title: "系统提示",
+                                      message: "已成功发起",
+                                      preferredStyle: .alert)
+        let start = UIAlertAction(title: "确定",
+                                 style: .default,
+                                 handler: {action in self.navigationController?.popToRootViewController(animated: true)})
+
+        alert.addAction(start)
+        
+        self.present(alert, animated: true, completion: nil)
+        
+    }
 
 }
 
@@ -102,6 +116,7 @@ extension DiscoveryStartViewController {
         startBtn?.frame = CGRect(x: 0, y: self.view.frame.height - 40, width: self.view.frame.width, height: 40)
         startBtn?.backgroundColor = UIColor.red
         startBtn?.setTitle("我要发起活动", for: UIControlState.normal)
+        startBtn?.addTarget(self, action: #selector(click), for: .touchUpInside)
         self.view.addSubview(startBtn!)
         
         sv.frame = CGRect(x: 0, y: self.navigationBar.frame.height, width: self.view.frame.width, height: self.view.frame.width / 1242 * 600)

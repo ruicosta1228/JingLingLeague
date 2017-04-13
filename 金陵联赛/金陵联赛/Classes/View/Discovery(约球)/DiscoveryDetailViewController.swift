@@ -59,8 +59,6 @@ class DiscoveryDetailViewController: JLLBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        tableView?.frame = CGRect(x: 0, y: navigationBar.frame.height + sv.frame.height, width: self.view.frame.width, height: self.view.frame.height)
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,7 +66,28 @@ class DiscoveryDetailViewController: JLLBaseViewController {
         
     }
     
+    func click() {
+        let alert = UIAlertController(title: "系统提示",
+                                      message: "呼叫发起用户",
+                                      preferredStyle: .alert)
+        let join = UIAlertAction(title: "呼叫",
+                                  style: .default,
+                                  handler: {action in self.call()})
+        let cancel = UIAlertAction(title: "取消",
+                                   style: .cancel,
+                                   handler: nil)
+        
+        alert.addAction(join)
+        alert.addAction(cancel)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
 
+    func call() {
+        let phone = "10086"
+        UIApplication.shared.openURL(URL(string: "tel://"+"\(phone)")!)
+    }
+    
 }
 
 extension DiscoveryDetailViewController {
@@ -106,6 +125,7 @@ extension DiscoveryDetailViewController {
         joinBtn?.frame = CGRect(x: 0, y: self.view.frame.height - 40, width: self.view.frame.width, height: 40)
         joinBtn?.backgroundColor = UIColor.red
         joinBtn?.setTitle("我要参加活动", for: UIControlState.normal)
+        joinBtn?.addTarget(self, action: #selector(click), for: .touchUpInside)
         self.view.addSubview(joinBtn!)
         
         sv.frame = CGRect(x: 0, y: self.navigationBar.frame.height, width: self.view.frame.width, height: self.view.frame.width / 1242 * 600)
