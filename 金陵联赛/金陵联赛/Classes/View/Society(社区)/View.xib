@@ -118,9 +118,13 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lku-B0-Zow" userLabel="点赞">
-                            <rect key="frame" x="313" y="8" width="46" height="30"/>
-                            <state key="normal" title="Button"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lku-B0-Zow" userLabel="点赞">
+                            <rect key="frame" x="319" y="2.5" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="CYJ-16-nOd"/>
+                                <constraint firstAttribute="width" constant="40" id="vre-8K-RNt"/>
+                            </constraints>
+                            <state key="normal" title="Button" image="favor"/>
                             <connections>
                                 <action selector="likeBtn:" destination="-1" eventType="touchUpInside" id="C31-FH-41C"/>
                             </connections>
@@ -249,4 +253,7 @@
             <point key="canvasLocation" x="39.5" y="67.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="favor" width="27" height="27"/>
+    </resources>
 </document>

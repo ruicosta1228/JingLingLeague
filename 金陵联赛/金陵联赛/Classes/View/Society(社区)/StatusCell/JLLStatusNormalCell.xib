@@ -53,6 +53,10 @@
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gsU-FZ-xXL">
                         <rect key="frame" x="19" y="96" width="453" height="218"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="453" id="gE2-sa-6uI"/>
+                            <constraint firstAttribute="height" constant="218" id="wun-gp-67Q"/>
+                        </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCQ-EO-VWa" userLabel="正文">
                         <rect key="frame" x="19" y="321" width="453" height="45"/>

@@ -43,13 +43,14 @@ class DetailViewController: JLLBaseViewController {
         super.viewDidLoad()
         
         //设置空间具体内容
-        titleLabel.text = "内马尔"
-        userImage.image = UIImage(named: "Neymar")
-        userName.text = "内马尔"
+        titleLabel.text = "【今日战报】三江1：0电子，三江绝杀取胜"
+        userImage.image = UIImage(named: "Messi")
+        userName.text = "茜茜公主"
         composeTime.text = "20:52"
-        subtitle.text = "巴塞罗那内马尔"
-        statusLabel.text = "我是巴塞罗那的内马尔，我也不知道写什么，那就......哈哈哈哈"
-        composeImage.image = UIImage(named: "Neymar_full")
+        subtitle.text = "【今日战报】三江1：0电子，三江绝杀取胜"
+        statusLabel.text = "本轮联赛，电子对抗三江，比赛开始，电子掌控了求全，三江大幅度回收到本方半场防守。电子多次通过边路传中与四十五度斜传球，瘸着破门机会，但并没有良机"
+        composeImage.contentMode = UIViewContentMode.scaleAspectFit
+        composeImage.image = UIImage(named: "WechatIMG83")
         likedUsers.image = UIImage(named: "Neymar")
         commentUser.image = UIImage(named: "Barca")
         commentName.text = "巴塞罗那"
@@ -103,3 +104,4 @@ extension DetailViewController {
         commentView.addSubview(couBtn)
     }
 }
+

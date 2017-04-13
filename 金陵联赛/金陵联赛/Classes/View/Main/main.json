@@ -18,9 +18,6 @@
     "imageName" : "discovery"
   },
   {
-    "clsName" : "UIViewController"
-  },
-  {
     "clsName" : "JLLScheduleViewController",
     "title" : "比赛",
     "visitorInfo" : {

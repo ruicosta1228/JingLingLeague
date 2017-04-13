@@ -17,7 +17,7 @@ class JLLMainViewController: UITabBarController {
         
         setupChildControllers()
         
-        setupComposeButton()
+//        setupComposeButton()
         
         //设置新特性
         //登录了就不显示了
@@ -44,19 +44,19 @@ class JLLMainViewController: UITabBarController {
         present(nav, animated: true, completion: nil)
     }
     
-    func composeStatus(){
-        if JLLNetworkingManager.shared.userLogon {
-            print("发布")
-        
-            //判断是否登录
-        
-            //实例化视图
-            let v = JLLComposeView.composeView()
-        
-            //显示视图
-            v.show()
-        }
-    }
+//    func composeStatus(){
+//        if JLLNetworkingManager.shared.userLogon {
+//            print("发布")
+//        
+//            //判断是否登录
+//        
+//            //实例化视图
+//            let v = JLLComposeView.composeView()
+//        
+//            //显示视图
+//            v.show()
+//        }
+//    }
     
     lazy var composeButton = UIButton(frame:CGRect(x:0, y:0, width:100, height:30))
     
@@ -121,18 +121,18 @@ extension JLLMainViewController {
 extension JLLMainViewController{
     
     //设置中间按钮
-    func setupComposeButton(){
-        composeButton.setImage(UIImage(named: "compose"), for: .normal)
-        
-        let count = CGFloat(childViewControllers.count)
-        let w = tabBar.bounds.width / count 
-        
-        composeButton.frame = tabBar.bounds.insetBy(dx: 2 * w, dy: 0)
-        tabBar.addSubview(composeButton)
-        
-        composeButton.addTarget(self, action: #selector(composeStatus), for: .touchUpInside)
-        
-    }
+//    func setupComposeButton(){
+//        composeButton.setImage(UIImage(named: "compose"), for: .normal)
+//        
+//        let count = CGFloat(childViewControllers.count)
+//        let w = tabBar.bounds.width / count 
+//        
+//        composeButton.frame = tabBar.bounds.insetBy(dx: 2 * w, dy: 0)
+//        tabBar.addSubview(composeButton)
+//        
+//        composeButton.addTarget(self, action: #selector(composeStatus), for: .touchUpInside)
+//        
+//    }
     
     //设置子控制器
     func setupChildControllers(){
