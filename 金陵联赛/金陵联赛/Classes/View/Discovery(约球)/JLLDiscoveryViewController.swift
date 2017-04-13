@@ -17,7 +17,7 @@ class JLLDiscoveryViewController: JLLBaseViewController {
     override func loadData() {
         print("加载数据")
         //模拟延迟加载
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()){
             for i in 0..<3{
                 //                if self.isPullup{
                 //                    //追加
@@ -41,6 +41,10 @@ class JLLDiscoveryViewController: JLLBaseViewController {
         super.viewDidLoad()
     }
     
+    func showRightBtn() {
+        let vc = DiscoveryStartViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
 }
 
@@ -59,6 +63,8 @@ extension JLLDiscoveryViewController {
         
         //取消分割线
         tableView?.separatorStyle = .none
+        
+        navItem.rightBarButtonItem = UIBarButtonItem(title: "", fontSize: 14.0, target: self, action: #selector(showRightBtn), Img: "compose")
     }
     
     
