@@ -84,8 +84,25 @@ class DiscoveryDetailViewController: JLLBaseViewController {
     }
 
     func call() {
-        let phone = "10086"
+        let phone = "13505228821"
         UIApplication.shared.openURL(URL(string: "tel://"+"\(phone)")!)
+    }
+    
+    func btn_click() {
+        joinBtn?.backgroundColor = UIColor.gray
+        joinBtn?.setTitle("已加入", for: UIControlState.normal)
+        joinBtn?.isSelected = true
+        let alert = UIAlertController(title: "系统提示",
+                                      message: "加入成功",
+                                      preferredStyle: .alert)
+
+        let cancel = UIAlertAction(title: "确定",
+                                   style: .default,
+                                   handler: nil)
+        
+        alert.addAction(cancel)
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
 }
@@ -112,6 +129,9 @@ extension DiscoveryDetailViewController {
         if indexPath.row == 6 {
             self.navigationController?.pushViewController(map, animated: true)
         }
+        if indexPath.row == 0 {
+            click()
+        }
     }
 
 }
@@ -125,7 +145,7 @@ extension DiscoveryDetailViewController {
         joinBtn?.frame = CGRect(x: 0, y: self.view.frame.height - 40, width: self.view.frame.width, height: 40)
         joinBtn?.backgroundColor = UIColor.red
         joinBtn?.setTitle("我要参加活动", for: UIControlState.normal)
-        joinBtn?.addTarget(self, action: #selector(click), for: .touchUpInside)
+        joinBtn?.addTarget(self, action: #selector(btn_click), for: .touchUpInside)
         self.view.addSubview(joinBtn!)
         
         sv.frame = CGRect(x: 0, y: self.navigationBar.frame.height, width: self.view.frame.width, height: self.view.frame.width / 1242 * 600)
