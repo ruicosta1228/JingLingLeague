@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "dort.jpg",
+      "filename" : "dort-1.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "dort-1.jpg",
+      "filename" : "dort-2.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "dort-2.jpg",
+      "filename" : "dort.png",
       "scale" : "3x"
     }
   ],

@@ -25,35 +25,35 @@ class DiscoveryStartViewController: JLLBaseViewController {
     override func loadData() {
         print("加载数据")
         
-        gameList = ["组织者",
-                    "时间",
-                    "报名截止",
-                    "类型",
+        gameList = ["计算机系队长",
+                    "4月14日下午2点",
+                    "4月14日",
+                    "踢野球",
                     "单位",
-                    "单位上限",
-                    "活动地址",
-                    "活动介绍",
-                    "报名人员"]
+                    "无上限",
+                    "学府路8号南京大学金陵学院",
+                    "足球队训练，今天的主题是射门练习",
+                    "孙一飞、杨耀东、王凌翔"]
         
         //模拟延迟加载
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()){
-            //            for i in 0..<9{
-            //                //                if self.isPullup{
-            //                //                    //追加
-            //                //                    self.gameList.append("上拉 \(i)")
-            //                //                }else{
-            //                //在最上方更新
-            //                self.gameList.insert(i.description, at: 0)
-            //                //                }
-            //            }
-            //结束刷新控件
+//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()){
+//            //            for i in 0..<9{
+//            //                //                if self.isPullup{
+//            //                //                    //追加
+//            //                //                    self.gameList.append("上拉 \(i)")
+//            //                //                }else{
+//            //                //在最上方更新
+//            //                self.gameList.insert(i.description, at: 0)
+//            //                //                }
+//            //            }
+//            //结束刷新控件
             self.refreshControl?.endRefreshing()
-            //恢复上拉刷新标记
-            //            self.isPullup = false
-            //刷新表
-            print("刷新表格")
-            self.tableView?.reloadData()
-        }
+//            //恢复上拉刷新标记
+//            //            self.isPullup = false
+//            //刷新表
+//            print("刷新表格")
+//            self.tableView?.reloadData()
+//        }
     }
     
     override func viewDidLoad() {

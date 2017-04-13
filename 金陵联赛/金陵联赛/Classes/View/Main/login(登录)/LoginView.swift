@@ -84,26 +84,32 @@ extension LoginView {
 //监听事件
 extension LoginView{
     @objc func nmLogin(){
+        JLLNetworkingManager.shared.userAccount.pid = "10"
         
-        JLLNetworkingManager.shared.login_normal(input: username_input.text, password: password_input.text, completion: { (isSuccess) in 
-            if isSuccess {
-                SVProgressHUD.showInfo(withStatus: "登录成功")
-                
-                SVProgressHUD.dismiss(withDelay: 2)
-                
-                NotificationCenter.default.post(name: NSNotification.Name(rawValue: JLLPlayerLoginSuccessNotification), object: nil)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: JLLPlayerLoginSuccessNotification), object: nil)
         
-                NotificationCenter.default.post(name: NSNotification.Name(rawValue: VistorView2TableView), object: nil)
-        
-            } else {
-                SVProgressHUD.showInfo(withStatus: "登录失败")
-                
-                print("登录失败")
-                
-                SVProgressHUD.dismiss(withDelay: 2)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: VistorView2TableView), object: nil)
 
-            }
-        })
+        
+//        JLLNetworkingManager.shared.login_normal(input: username_input.text, password: password_input.text, completion: { (isSuccess) in 
+//            if isSuccess {
+//                SVProgressHUD.showInfo(withStatus: "登录成功")
+//                
+//                SVProgressHUD.dismiss(withDelay: 2)
+//                
+//                NotificationCenter.default.post(name: NSNotification.Name(rawValue: JLLPlayerLoginSuccessNotification), object: nil)
+//        
+//                NotificationCenter.default.post(name: NSNotification.Name(rawValue: VistorView2TableView), object: nil)
+//        
+//            } else {
+//                SVProgressHUD.showInfo(withStatus: "登录失败")
+//                
+//                print("登录失败")
+//                
+//                SVProgressHUD.dismiss(withDelay: 2)
+//
+//            }
+//        })
         
 
     }
