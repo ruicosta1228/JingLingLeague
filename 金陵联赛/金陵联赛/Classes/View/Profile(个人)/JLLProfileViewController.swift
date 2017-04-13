@@ -66,7 +66,7 @@ class JLLProfileViewController: JLLBaseViewController {
         controllerArray.append(controller5)
 
         // Initialize scroll menu
-        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRect(x: 0.0, y: 200.0, width: self.view.frame.width, height: 600), pageMenuOptions: nil)
+        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRect(x: 0.0, y: 150.0, width: self.view.frame.width, height: 600), pageMenuOptions: nil)
         
         print(self.view.frame.height)
         

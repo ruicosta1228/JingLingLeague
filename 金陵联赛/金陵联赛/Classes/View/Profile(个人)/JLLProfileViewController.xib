@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -20,24 +20,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="viy-27-zqg">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wfv-ye-Fuw">
-                            <rect key="frame" x="325" y="0.0" width="50" height="50"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="50" id="EVr-9U-ajQ"/>
-                                <constraint firstAttribute="width" constant="50" id="lPR-zy-07M"/>
-                            </constraints>
-                            <state key="normal" image="setting_image"/>
-                            <connections>
-                                <action selector="settingbtn:" destination="-1" eventType="touchUpInside" id="zo2-Kg-hwG"/>
-                            </connections>
-                        </button>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_selected" translatesAutoresizingMaskIntoConstraints="NO" id="64L-tE-eaJ">
-                            <rect key="frame" x="137" y="50" width="100" height="100"/>
+                            <rect key="frame" x="137" y="25" width="100" height="100"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="100" id="1kC-Ng-GRe"/>
                                 <constraint firstAttribute="width" constant="100" id="2dX-fq-YFt"/>
+                                <constraint firstAttribute="height" constant="100" id="W6v-Al-EZf"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -46,16 +35,28 @@
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                             </userDefinedRuntimeAttributes>
                         </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wfv-ye-Fuw">
+                            <rect key="frame" x="350" y="25" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="EVr-9U-ajQ"/>
+                                <constraint firstAttribute="width" constant="25" id="lPR-zy-07M"/>
+                            </constraints>
+                            <state key="normal" image="setting_image"/>
+                            <connections>
+                                <action selector="settingbtn:" destination="-1" eventType="touchUpInside" id="zo2-Kg-hwG"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="Wfv-ye-Fuw" secondAttribute="trailing" id="6M8-qF-eIS"/>
-                        <constraint firstItem="64L-tE-eaJ" firstAttribute="top" secondItem="viy-27-zqg" secondAttribute="top" constant="50" id="Gc6-gC-tXb"/>
-                        <constraint firstAttribute="height" constant="200" id="PuK-wD-ejX"/>
-                        <constraint firstItem="Wfv-ye-Fuw" firstAttribute="top" secondItem="viy-27-zqg" secondAttribute="top" id="dWL-RH-HXr"/>
+                        <constraint firstAttribute="bottom" secondItem="64L-tE-eaJ" secondAttribute="bottom" constant="25" id="A3j-aY-KlZ"/>
+                        <constraint firstItem="64L-tE-eaJ" firstAttribute="top" secondItem="viy-27-zqg" secondAttribute="top" constant="25" id="Hvg-ed-Ra2"/>
+                        <constraint firstItem="64L-tE-eaJ" firstAttribute="centerY" secondItem="viy-27-zqg" secondAttribute="centerY" id="cqN-17-FDt"/>
+                        <constraint firstItem="Wfv-ye-Fuw" firstAttribute="top" secondItem="viy-27-zqg" secondAttribute="top" constant="25" id="dWL-RH-HXr"/>
                         <constraint firstItem="64L-tE-eaJ" firstAttribute="leading" secondItem="viy-27-zqg" secondAttribute="leading" constant="137" id="qAZ-a3-hAh"/>
-                        <constraint firstAttribute="bottom" secondItem="64L-tE-eaJ" secondAttribute="bottom" constant="50" id="qpL-TH-TED"/>
                         <constraint firstAttribute="width" constant="375" id="sg9-9d-Rwd"/>
+                        <constraint firstAttribute="height" constant="150" id="wIH-4a-8oc"/>
                     </constraints>
                 </view>
             </subviews>
@@ -64,6 +65,7 @@
                 <constraint firstAttribute="trailing" secondItem="viy-27-zqg" secondAttribute="trailing" id="07G-JQ-HZw"/>
                 <constraint firstItem="viy-27-zqg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9Ui-KP-vn5"/>
                 <constraint firstItem="viy-27-zqg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="LOA-vU-qRn"/>
+                <constraint firstAttribute="bottom" secondItem="viy-27-zqg" secondAttribute="bottom" constant="517" id="xhz-H0-rJf"/>
             </constraints>
             <point key="canvasLocation" x="35.5" y="53.5"/>
         </view>
