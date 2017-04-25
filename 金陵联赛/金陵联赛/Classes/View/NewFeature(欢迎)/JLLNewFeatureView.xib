@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -30,22 +30,14 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="click anywhere" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84d-6A-pgT">
-                    <rect key="frame" x="131" y="551" width="114" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="fxp-5F-z7C" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5I6-Nj-j5R"/>
-                <constraint firstAttribute="bottom" secondItem="84d-6A-pgT" secondAttribute="bottom" constant="95" id="8Ep-qu-XP4"/>
                 <constraint firstAttribute="bottom" secondItem="ZH4-YW-Epg" secondAttribute="bottom" id="9e6-ps-ZXL"/>
                 <constraint firstAttribute="trailing" secondItem="ZH4-YW-Epg" secondAttribute="trailing" id="HtJ-R9-KEl"/>
                 <constraint firstItem="ZH4-YW-Epg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Qtk-X6-hqa"/>
                 <constraint firstItem="fxp-5F-z7C" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="UZJ-6t-sZN"/>
-                <constraint firstItem="84d-6A-pgT" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Uee-Nj-Ivj"/>
                 <constraint firstItem="ZH4-YW-Epg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dPZ-f7-NEE"/>
                 <constraint firstItem="fxp-5F-z7C" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="hhq-wP-V6x"/>
                 <constraint firstAttribute="trailing" secondItem="fxp-5F-z7C" secondAttribute="trailing" id="nbw-0c-lfk"/>
