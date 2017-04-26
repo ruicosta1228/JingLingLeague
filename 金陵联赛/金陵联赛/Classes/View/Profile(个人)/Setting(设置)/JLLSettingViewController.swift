@@ -41,13 +41,15 @@ class JLLSettingViewController: JLLBaseViewController {
     
    
     func setupRadar(){
-        let radarChart = Yashin(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
+        let radarChart = Yashin(frame: CGRect(x: 150.0, y: -20.0, width: 200, height: 180))
+        print(self.view.frame)
         self.view.addSubview(radarChart)
         
         radarChart.set(keys:
             ["shoot", "pass", "dribble", "speed", "power", "stamina", "mentality"],
-                       [([8,9,8,8,7,6,9], UIColor.green.withAlphaComponent(0.40))]
+                       [([8,9,8,8,7,6,9], UIColor.gray.withAlphaComponent(0.40))]
         )
+        
     }
     
     
