@@ -20,8 +20,11 @@ class JLLScheduleDetailViewController: JLLBaseViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
+    
+    override func setupTableView() {
+        self.view.backgroundColor = UIColor.white
+    }
     /*
     // MARK: - Navigation
 

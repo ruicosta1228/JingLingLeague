@@ -46,8 +46,8 @@ class JLLSettingViewController: JLLBaseViewController {
         self.view.addSubview(radarChart)
         
         radarChart.set(keys:
-            ["shoot", "pass", "dribble", "speed", "power", "stamina", "mentality"],
-                       [([8,9,8,8,7,6,9], UIColor.gray.withAlphaComponent(0.40))]
+            ["射术", "传球", "速度", "力量", "耐力"],
+                       [([8,9,8,7,6], UIColor.gray.withAlphaComponent(0.40))]
         )
         
     }
