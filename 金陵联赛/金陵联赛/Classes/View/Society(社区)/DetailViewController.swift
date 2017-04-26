@@ -97,8 +97,6 @@ extension DetailViewController {
         //取消分割线
         tableView?.separatorStyle = .none
         
-        contentField.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 200)
-        
         contentField.addSubview(tableView!)
     }
 }

@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aOV-cx-yGH" id="e92-jz-nOn">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tao-wu-laF" userLabel="评论用户头像">
@@ -44,16 +44,26 @@
                         <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRA-S4-TZd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Ix2-Qu-mFP"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailingMargin" secondItem="579-q8-zDb" secondAttribute="trailing" constant="8" id="0sQ-F9-xmN"/>
+                    <constraint firstAttribute="trailing" secondItem="bRA-S4-TZd" secondAttribute="trailing" id="6wy-Kk-her"/>
                     <constraint firstItem="TcT-ui-Qk3" firstAttribute="leading" secondItem="tao-wu-laF" secondAttribute="trailing" constant="8" id="9WL-4p-Phv"/>
                     <constraint firstItem="tao-wu-laF" firstAttribute="leading" secondItem="e92-jz-nOn" secondAttribute="leading" constant="8" id="Awx-dA-jt8"/>
                     <constraint firstItem="TcT-ui-Qk3" firstAttribute="bottom" secondItem="tao-wu-laF" secondAttribute="bottom" id="OCc-OO-2Vf"/>
                     <constraint firstItem="579-q8-zDb" firstAttribute="leading" secondItem="TcT-ui-Qk3" secondAttribute="leading" id="OJY-Qb-wWA"/>
+                    <constraint firstItem="bRA-S4-TZd" firstAttribute="top" secondItem="e92-jz-nOn" secondAttribute="top" id="TbC-rD-rjC"/>
                     <constraint firstItem="579-q8-zDb" firstAttribute="top" secondItem="TcT-ui-Qk3" secondAttribute="bottom" constant="12" id="ZBh-YF-tDQ"/>
                     <constraint firstItem="iEj-eY-khg" firstAttribute="leading" secondItem="tao-wu-laF" secondAttribute="trailing" constant="8" id="aUg-sE-Uql"/>
                     <constraint firstItem="iEj-eY-khg" firstAttribute="top" secondItem="tao-wu-laF" secondAttribute="top" id="iUG-uV-NDm"/>
+                    <constraint firstItem="bRA-S4-TZd" firstAttribute="leading" secondItem="e92-jz-nOn" secondAttribute="leading" id="l5O-Hx-PvV"/>
                     <constraint firstItem="tao-wu-laF" firstAttribute="top" secondItem="e92-jz-nOn" secondAttribute="top" constant="8" id="lB4-8R-pcW"/>
                 </constraints>
             </tableViewCellContentView>

@@ -171,14 +171,14 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Piz-gM-Hdc" userLabel="评论区域">
-                            <rect key="frame" x="0.0" y="458" width="375" height="100"/>
+                            <rect key="frame" x="0.0" y="458" width="375" height="200"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="100" id="5cN-tN-7VC"/>
+                                <constraint firstAttribute="height" constant="200" id="5cN-tN-7VC"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1F6-iq-040" userLabel="发表评论">
-                            <rect key="frame" x="0.0" y="561" width="375" height="45"/>
+                            <rect key="frame" x="0.0" y="661" width="375" height="45"/>
                             <subviews>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="发表评论" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fim-ey-aoV" userLabel="发表评论">
                                     <rect key="frame" x="4" y="0.0" width="311" height="42"/>
