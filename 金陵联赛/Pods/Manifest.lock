@@ -24,9 +24,6 @@ PODS:
     - AMapFoundation (~> 1.2)
   - AMapSearch (4.5.0):
     - AMapFoundation (~> 1.2)
-  - Charts (3.0.1):
-    - Charts/Core (= 3.0.1)
-  - Charts/Core (3.0.1)
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
@@ -46,7 +43,6 @@ DEPENDENCIES:
   - AMapLocation (~> 2.3)
   - AMapNavi (~> 2.3)
   - AMapSearch (~> 4.4)
-  - Charts
   - FMDB
   - LTMorphingLabel
   - PageMenu
@@ -73,7 +69,6 @@ SPEC CHECKSUMS:
   AMapLocation: 6016f0e09c127461c9c8e36945f34c0f037ad962
   AMapNavi: 4f48c7b34275f80f3d14eff669ac739e0e190c1b
   AMapSearch: 7a6ebc20a42e34a021b042b047f198082fc2fc30
-  Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   LTMorphingLabel: d9a85f16ac306f0e07321d6819964deb2dc69638
   PageMenu: 9c38fd7e0d9ef4b1408320f55bb907bbc0e538dc
@@ -84,6 +79,6 @@ SPEC CHECKSUMS:
   Yashin: b57e67795d809c1580e68393c484314a8b2bf583
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: a393c215d57c577aca40b961c86065ed7f913517
+PODFILE CHECKSUM: 9b3c5413e833c87a26508e2db1934284b977cbb4
 
 COCOAPODS: 1.2.0

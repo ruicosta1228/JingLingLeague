@@ -10,7 +10,6 @@ pod "FMDB"
 pod "SVProgressHUD"
 pod "pop"
 pod "LTMorphingLabel"
-pod "Charts"
 pod 'PageMenu'
 pod 'AMapNavi', '~>2.3'
 pod 'AMapSearch', '~>4.4'

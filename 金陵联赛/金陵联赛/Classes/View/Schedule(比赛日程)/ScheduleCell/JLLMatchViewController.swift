@@ -91,5 +91,14 @@ extension JLLMatchViewController{
         
         return cell
     }
+    
+    //cell点击事件
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = JLLScheduleDetailViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+        vc.title = "详情"
+    }
+    
 
 }
+

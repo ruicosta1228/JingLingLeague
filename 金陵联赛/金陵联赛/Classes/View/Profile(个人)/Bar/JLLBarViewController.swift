@@ -7,12 +7,11 @@
 //
 
 import UIKit
-import Charts
 import Yashin
 
 class JLLBarViewController: JLLBaseViewController {
     var ability:[String]!
-    @IBOutlet weak var barChartView: BarChartView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //隐藏导航栏
