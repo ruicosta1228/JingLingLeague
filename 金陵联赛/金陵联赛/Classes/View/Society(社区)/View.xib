@@ -12,12 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="金陵联赛" customModuleProvider="target">
             <connections>
-                <outlet property="commentName" destination="RsJ-H0-Ygr" id="u4J-AH-uDz"/>
-                <outlet property="commentTime" destination="zmk-Qg-un7" id="awJ-LI-aoA"/>
-                <outlet property="commentUser" destination="rJf-ys-Xu1" id="l8t-Tv-SL5"/>
                 <outlet property="composeImage" destination="eOm-fq-MGb" id="H7f-d0-dFa"/>
                 <outlet property="composeTime" destination="k9R-kq-jSo" id="FOR-lg-K9h"/>
-                <outlet property="contentLabel" destination="8Sl-Ic-Pn9" id="AYJ-ol-IaR"/>
+                <outlet property="contentField" destination="Piz-gM-Hdc" id="ZOl-Ce-95c"/>
                 <outlet property="likedUsers" destination="I3Q-B1-j0A" id="kKi-vC-YCi"/>
                 <outlet property="statusLabel" destination="hBg-fk-kPB" id="ijG-Bd-4xb"/>
                 <outlet property="subtitle" destination="3Ia-xd-sFl" id="coD-EB-k3v"/>
@@ -175,53 +172,15 @@
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Piz-gM-Hdc" userLabel="评论区域">
                             <rect key="frame" x="0.0" y="458" width="375" height="100"/>
-                            <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rJf-ys-Xu1" userLabel="评论用户头像">
-                                    <rect key="frame" x="8" y="8" width="40" height="40"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="40" id="DmN-Ru-rXp"/>
-                                        <constraint firstAttribute="height" constant="40" id="EYv-xg-XHD"/>
-                                    </constraints>
-                                </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RsJ-H0-Ygr" userLabel="评论用户名">
-                                    <rect key="frame" x="56" y="8" width="42" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmk-Qg-un7" userLabel="评论时间">
-                                    <rect key="frame" x="56" y="30" width="38" height="18"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Sl-Ic-Pn9">
-                                    <rect key="frame" x="56" y="60" width="311" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                    <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstItem="8Sl-Ic-Pn9" firstAttribute="trailing" secondItem="Piz-gM-Hdc" secondAttribute="trailingMargin" id="65l-Wm-kGd"/>
-                                <constraint firstItem="RsJ-H0-Ygr" firstAttribute="leading" secondItem="zmk-Qg-un7" secondAttribute="leading" id="Dkh-3w-gd5"/>
-                                <constraint firstItem="zmk-Qg-un7" firstAttribute="top" secondItem="RsJ-H0-Ygr" secondAttribute="bottom" constant="1" id="UnH-WK-hmF"/>
-                                <constraint firstItem="rJf-ys-Xu1" firstAttribute="leading" secondItem="Piz-gM-Hdc" secondAttribute="leadingMargin" id="ZFh-Nd-dhb"/>
-                                <constraint firstItem="rJf-ys-Xu1" firstAttribute="bottom" secondItem="zmk-Qg-un7" secondAttribute="bottom" id="ZNJ-31-bIW"/>
-                                <constraint firstAttribute="bottom" secondItem="8Sl-Ic-Pn9" secondAttribute="bottom" constant="19" id="mBj-Nc-aNa"/>
-                                <constraint firstItem="8Sl-Ic-Pn9" firstAttribute="leading" secondItem="Piz-gM-Hdc" secondAttribute="leading" constant="56" id="mrJ-XD-vYR"/>
-                                <constraint firstItem="zmk-Qg-un7" firstAttribute="leading" secondItem="8Sl-Ic-Pn9" secondAttribute="leading" id="pAy-ju-mva"/>
-                                <constraint firstItem="rJf-ys-Xu1" firstAttribute="top" secondItem="RsJ-H0-Ygr" secondAttribute="top" id="qBg-x8-0A9"/>
-                                <constraint firstItem="8Sl-Ic-Pn9" firstAttribute="top" secondItem="zmk-Qg-un7" secondAttribute="bottom" constant="12" id="uKe-Yp-ynR"/>
-                                <constraint firstItem="RsJ-H0-Ygr" firstAttribute="leading" secondItem="rJf-ys-Xu1" secondAttribute="trailing" constant="8" symbolic="YES" id="uQy-O8-Ag3"/>
-                                <constraint firstItem="rJf-ys-Xu1" firstAttribute="top" secondItem="Piz-gM-Hdc" secondAttribute="topMargin" id="vgU-pc-b3z"/>
+                                <constraint firstAttribute="height" constant="100" id="5cN-tN-7VC"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1F6-iq-040" userLabel="发表评论">
                             <rect key="frame" x="0.0" y="561" width="375" height="45"/>
                             <subviews>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="发表评论" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fim-ey-aoV" userLabel="发表评论">
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="发表评论" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fim-ey-aoV" userLabel="发表评论">
                                     <rect key="frame" x="4" y="0.0" width="311" height="42"/>
                                     <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -254,7 +213,7 @@
                         <constraint firstItem="843-Pr-sCu" firstAttribute="leading" secondItem="waz-kz-vkN" secondAttribute="leading" id="5d8-Xf-t4o"/>
                         <constraint firstItem="hBg-fk-kPB" firstAttribute="centerX" secondItem="eOm-fq-MGb" secondAttribute="centerX" id="FjD-VO-Oid"/>
                         <constraint firstItem="PN1-fa-K2s" firstAttribute="leading" secondItem="k9R-kq-jSo" secondAttribute="leading" id="GXf-WT-t6f"/>
-                        <constraint firstAttribute="bottom" secondItem="1F6-iq-040" secondAttribute="bottom" constant="-3" id="Iri-WB-Ysl"/>
+                        <constraint firstAttribute="bottom" secondItem="1F6-iq-040" secondAttribute="bottom" id="Gei-Bp-tHv" userLabel="bottom = 发表评论.bottom + 2"/>
                         <constraint firstItem="seQ-9f-v4E" firstAttribute="top" secondItem="k9R-kq-jSo" secondAttribute="bottom" constant="8" symbolic="YES" id="KWV-Af-Juy"/>
                         <constraint firstItem="l1h-RE-h1L" firstAttribute="leading" secondItem="3Ia-xd-sFl" secondAttribute="leading" id="LX5-5d-LmG"/>
                         <constraint firstItem="eOm-fq-MGb" firstAttribute="centerX" secondItem="waz-kz-vkN" secondAttribute="centerX" id="M19-92-eb9"/>

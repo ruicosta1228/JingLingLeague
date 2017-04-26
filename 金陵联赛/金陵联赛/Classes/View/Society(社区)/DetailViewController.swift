@@ -8,6 +8,8 @@
 
 import UIKit
 
+private let cellId = "cellId"
+
 class DetailViewController: JLLBaseViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
@@ -29,13 +31,17 @@ class DetailViewController: JLLBaseViewController {
     @IBAction func likeBtn(_ sender: Any) {
     }
     
-    @IBOutlet weak var commentUser: UIImageView!
+    @IBOutlet weak var contentField: UIView!
+
+//    @IBOutlet weak var commentUser: UIImageView!
+//    
+//    @IBOutlet weak var commentName: UILabel!
+//    
+//    @IBOutlet weak var commentTime: UILabel!
+//    
+//    @IBOutlet weak var contentLabel: UILabel!
     
-    @IBOutlet weak var commentName: UILabel!
-    
-    @IBOutlet weak var commentTime: UILabel!
-    
-    @IBOutlet weak var contentLabel: UILabel!
+    let contentList:[String] = ["1", "2"]
     
     
     override func viewDidLoad() {
@@ -52,10 +58,6 @@ class DetailViewController: JLLBaseViewController {
         composeImage.contentMode = UIViewContentMode.scaleAspectFit
         composeImage.image = UIImage(named: "WechatIMG83")
         likedUsers.image = UIImage(named: "Neymar")
-        commentUser.image = UIImage(named: "Barca")
-        commentName.text = "巴塞罗那"
-        commentTime.text = "10分钟前"
-        contentLabel.text = "哈哈哈哈哈"
         
     }
 
@@ -74,34 +76,56 @@ class DetailViewController: JLLBaseViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    override func loadData() {
+        print("加载数据")
+    }
+    
 }
 
 extension DetailViewController {
     override func setupTableView() {
-//        self.view.backgroundColor = UIColor.black
+        super.setupTableView()
         
-//        //底部工具栏
-//        let commentView = UIView()
-//        commentView.frame = CGRect(x: 0, y: self.view.frame.height - 50, width: self.view.frame.width, height: 50)
-////        commentView.backgroundColor = UIColor.blue
-//        self.view.addSubview(commentView)
+        tableView?.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: contentField.bounds.height, right: 0)
         
-        //文本输入框
-//        let text = UITextField()
-//        text.frame = CGRect(x: 10, y: 5, width: self.view.frame.width - 80, height: 40)
-////        text.borderStyle = UITextBorderStyle.roundedRect
-//        text.layer.borderWidth = 0.5
-//        text.layer.cornerRadius = 20
-//        text.placeholder = "  发表评论"
+        //注册原型cell
+        tableView?.register(UINib(nibName: "cell", bundle: nil), forCellReuseIdentifier: cellId)
         
-//        //表情按钮
-//        let couBtn = UIButton.init(type: UIButtonType.custom) as UIButton
-//        let smile = UIImage(named: "bq")
-//        couBtn.setImage(smile, for: UIControlState.normal)
-//        couBtn.frame = CGRect(x: self.view.frame.width - 55, y: 5, width: 40, height: 40)
+        //设置行高
+        tableView?.rowHeight = 100
         
-//        commentView.addSubview(text)
-//        commentView.addSubview(couBtn)
+        //取消分割线
+        tableView?.separatorStyle = .none
+        
+        contentField.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 200)
+        
+        contentField.addSubview(tableView!)
     }
 }
 
+extension DetailViewController {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return contentList.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! commentCell
+        
+        if indexPath.row == 0 {
+            cell.commentUser.image = UIImage(named: "Barca")
+            cell.commentName.text = "巴塞罗那"
+            cell.commentTime.text = "10分钟前"
+            cell.contentLabel.text = "哈哈哈哈哈"
+        }
+        
+        if indexPath.row == 1 {
+            cell.commentUser.image = UIImage(named: "Real Madrid CF")
+            cell.commentName.text = "皇马"
+            cell.commentTime.text = "15分钟前"
+            cell.contentLabel.text = "很强"
+        }
+        
+        return cell
+    }
+
+}
