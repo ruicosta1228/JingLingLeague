@@ -80,28 +80,28 @@ extension DetailViewController {
     override func setupTableView() {
 //        self.view.backgroundColor = UIColor.black
         
-        //底部工具栏
-        let commentView = UIView()
-        commentView.frame = CGRect(x: 0, y: self.view.frame.height - 50, width: self.view.frame.width, height: 50)
-//        commentView.backgroundColor = UIColor.blue
-        self.view.addSubview(commentView)
+//        //底部工具栏
+//        let commentView = UIView()
+//        commentView.frame = CGRect(x: 0, y: self.view.frame.height - 50, width: self.view.frame.width, height: 50)
+////        commentView.backgroundColor = UIColor.blue
+//        self.view.addSubview(commentView)
         
         //文本输入框
-        let text = UITextField()
-        text.frame = CGRect(x: 10, y: 5, width: self.view.frame.width - 80, height: 40)
-//        text.borderStyle = UITextBorderStyle.roundedRect
-        text.layer.borderWidth = 2
-        text.layer.cornerRadius = 20
-        text.placeholder = "  发表评论"
+//        let text = UITextField()
+//        text.frame = CGRect(x: 10, y: 5, width: self.view.frame.width - 80, height: 40)
+////        text.borderStyle = UITextBorderStyle.roundedRect
+//        text.layer.borderWidth = 0.5
+//        text.layer.cornerRadius = 20
+//        text.placeholder = "  发表评论"
         
-        //表情按钮
-        let couBtn = UIButton.init(type: UIButtonType.custom) as UIButton
-        let smile = UIImage(named: "bq")
-        couBtn.setImage(smile, for: UIControlState.normal)
-        couBtn.frame = CGRect(x: self.view.frame.width - 55, y: 5, width: 40, height: 40)
+//        //表情按钮
+//        let couBtn = UIButton.init(type: UIButtonType.custom) as UIButton
+//        let smile = UIImage(named: "bq")
+//        couBtn.setImage(smile, for: UIControlState.normal)
+//        couBtn.frame = CGRect(x: self.view.frame.width - 55, y: 5, width: 40, height: 40)
         
-        commentView.addSubview(text)
-        commentView.addSubview(couBtn)
+//        commentView.addSubview(text)
+//        commentView.addSubview(couBtn)
     }
 }
 
