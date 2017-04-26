@@ -21,6 +21,13 @@ class LoginView: UIView {
     @IBAction func registerBtn(_ sender: Any) {
     }
     
+    @IBAction func qqLogin(_ sender: Any) {
+    }
+    
+    @IBAction func weiboLogin(_ sender: Any) {
+    }
+    
+    
 //    override init(frame: CGRect) {
 //        super.init(frame: frame)
 //        
