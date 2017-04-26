@@ -8,7 +8,7 @@
 
 import UIKit
 import PageMenu
-import Charts
+
 
 class JLLProfileViewController: JLLBaseViewController {
     
@@ -47,15 +47,8 @@ class JLLProfileViewController: JLLBaseViewController {
         controller4.title = "个人信息"
         controllerArray.append(controller4)
         
-        let controller1 : JLLRadarViewController = JLLRadarViewController()
 
-        controller1.title = "雷达能力图"
-        controllerArray.append(controller1)
-        
-        let controller2 : JLLPieViewController = JLLPieViewController()
-
-        controller2.title = "饼状能力图"
-        controllerArray.append(controller2)
+      
 
         let controller3 : JLLBarViewController = JLLBarViewController()
 

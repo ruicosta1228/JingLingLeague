@@ -8,7 +8,7 @@
 
 import UIKit
 import PPNumberButtonSwift
-import Charts
+
 import Yashin
 private let cellId = "cellId"
 
