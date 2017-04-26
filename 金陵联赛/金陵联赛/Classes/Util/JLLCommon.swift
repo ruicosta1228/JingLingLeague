@@ -27,4 +27,9 @@ let JLLPlayerLoginSuccessNotification = "JLLPlayerShouldLoginSuccessNotification
 
 let VistorView2TableView = "VistorView2TableView"
 
+//日程细节跳转
+
+let JLLScheduleDetail = "JLLScheduleDetail"
+
+
 

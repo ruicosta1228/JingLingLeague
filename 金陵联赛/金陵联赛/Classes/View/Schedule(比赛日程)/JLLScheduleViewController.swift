@@ -76,13 +76,20 @@ class JLLScheduleViewController: JLLBaseViewController {
     
     //重写方法
     override func setupTableView() {
+        NotificationCenter.default.addObserver(self, selector: #selector(detail), name: NSNotification.Name(rawValue: JLLScheduleDetail), object: nil)
+        
         self.view.backgroundColor = UIColor.white
        
         setPage()
         
     }
 
-    
-    
+    @objc func detail(){
+        let vc = JLLScheduleDetailViewController()
+        navigationController?.pushViewController(vc, animated: true)
+        vc.title = "详情"
+    }
     
 }
+
+
