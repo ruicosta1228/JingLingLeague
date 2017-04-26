@@ -62,7 +62,7 @@ class JLLPieViewController: JLLBaseViewController {
     
     //重写方法
     override func setupTableView() {
-        self.view.backgroundColor = UIColor.white
+        self.view.backgroundColor = UIColor.blue
         
         
     }

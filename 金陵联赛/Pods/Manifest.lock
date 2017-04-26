@@ -38,6 +38,7 @@ PODS:
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
   - SVProgressHUD (2.1.2)
+  - Yashin (0.2.0)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
@@ -53,6 +54,7 @@ DEPENDENCIES:
   - PPNumberButtonSwift (from `https://github.com/jkpang/PPNumberButtonSwift.git`)
   - SDWebImage
   - SVProgressHUD
+  - Yashin
   - YYModel
 
 EXTERNAL SOURCES:
@@ -79,8 +81,9 @@ SPEC CHECKSUMS:
   PPNumberButtonSwift: 76c0cad544400dc555ad455a591594ed4d589198
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  Yashin: b57e67795d809c1580e68393c484314a8b2bf583
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: cc41033bb510baa92ca1b1c00576f35e3f1a9760
+PODFILE CHECKSUM: a393c215d57c577aca40b961c86065ed7f913517
 
 COCOAPODS: 1.2.0

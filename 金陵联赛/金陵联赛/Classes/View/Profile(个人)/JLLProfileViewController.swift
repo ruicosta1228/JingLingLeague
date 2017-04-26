@@ -8,8 +8,10 @@
 
 import UIKit
 import PageMenu
+import Charts
 
 class JLLProfileViewController: JLLBaseViewController {
+    
     
 
     var pageMenu : CAPSPageMenu?
@@ -66,7 +68,7 @@ class JLLProfileViewController: JLLBaseViewController {
         controllerArray.append(controller5)
 
         // Initialize scroll menu
-        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRect(x: 0.0, y: 150.0, width: self.view.frame.width, height: 600), pageMenuOptions: nil)
+        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRect(x: 0.0, y: 10.0, width: self.view.frame.width, height: 650), pageMenuOptions: nil)
         
         print(self.view.frame.height)
         
@@ -75,11 +77,13 @@ class JLLProfileViewController: JLLBaseViewController {
     }
     
     
+    
     //重写方法
     override func setupTableView() {
         self.view.backgroundColor = UIColor.white
         //隐藏导航栏
         navigationBar.isHidden = true
+        
         setPage()
         
     }

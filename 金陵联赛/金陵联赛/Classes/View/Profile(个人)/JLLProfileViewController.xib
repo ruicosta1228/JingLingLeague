@@ -23,7 +23,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_selected" translatesAutoresizingMaskIntoConstraints="NO" id="64L-tE-eaJ">
-                            <rect key="frame" x="137" y="25" width="100" height="100"/>
+                            <rect key="frame" x="35" y="25" width="100" height="100"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="100" id="2dX-fq-YFt"/>
                                 <constraint firstAttribute="height" constant="100" id="W6v-Al-EZf"/>
@@ -54,7 +54,7 @@
                         <constraint firstItem="64L-tE-eaJ" firstAttribute="top" secondItem="viy-27-zqg" secondAttribute="top" constant="25" id="Hvg-ed-Ra2"/>
                         <constraint firstItem="64L-tE-eaJ" firstAttribute="centerY" secondItem="viy-27-zqg" secondAttribute="centerY" id="cqN-17-FDt"/>
                         <constraint firstItem="Wfv-ye-Fuw" firstAttribute="top" secondItem="viy-27-zqg" secondAttribute="top" constant="25" id="dWL-RH-HXr"/>
-                        <constraint firstItem="64L-tE-eaJ" firstAttribute="leading" secondItem="viy-27-zqg" secondAttribute="leading" constant="137" id="qAZ-a3-hAh"/>
+                        <constraint firstItem="64L-tE-eaJ" firstAttribute="leading" secondItem="viy-27-zqg" secondAttribute="leading" constant="35" id="qAZ-a3-hAh"/>
                         <constraint firstAttribute="width" constant="375" id="sg9-9d-Rwd"/>
                         <constraint firstAttribute="height" constant="150" id="wIH-4a-8oc"/>
                     </constraints>
