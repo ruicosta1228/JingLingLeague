@@ -46,7 +46,7 @@ extension JLLScheduleDetailViewController{
         super.setupTableView()
         self.view.backgroundColor = UIColor.white
         tableView?.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: tabBarController?.tabBar.bounds.height ?? 49, right: 0)
-        navigationBar.isHidden = true
+        
         //注册原型cell
         tableView?.register(UINib(nibName: "DetailCell", bundle: nil), forCellReuseIdentifier: cellId)
         
