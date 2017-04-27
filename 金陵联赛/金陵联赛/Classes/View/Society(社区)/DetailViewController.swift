@@ -28,8 +28,8 @@ class DetailViewController: JLLBaseViewController {
     
     @IBOutlet weak var likedUsers: UIImageView!
     
-    @IBAction func likeBtn(_ sender: Any) {
-    }
+    @IBOutlet weak var likedBtn: UIButton!
+
     
     @IBOutlet weak var contentField: UIView!
 
@@ -41,12 +41,14 @@ class DetailViewController: JLLBaseViewController {
 //    
 //    @IBOutlet weak var contentLabel: UILabel!
     
-    let contentList:[String] = ["1", "2"]
+    let contentList:[String] = ["1", "2", "3"]
     
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        likedBtn.addTarget(self, action: #selector(click), for: .touchUpInside)
         
         //设置空间具体内容
         titleLabel.text = "【今日战报】三江1：0电子，三江绝杀取胜"
@@ -98,6 +100,11 @@ extension DetailViewController {
         tableView?.separatorStyle = .none
         
         contentField.addSubview(tableView!)
+        
+    }
+    
+    func click() {
+        likedBtn.isSelected = !likedBtn.isSelected
     }
 }
 

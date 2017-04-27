@@ -15,6 +15,7 @@
                 <outlet property="composeImage" destination="eOm-fq-MGb" id="H7f-d0-dFa"/>
                 <outlet property="composeTime" destination="k9R-kq-jSo" id="FOR-lg-K9h"/>
                 <outlet property="contentField" destination="Piz-gM-Hdc" id="ZOl-Ce-95c"/>
+                <outlet property="likedBtn" destination="p1U-8J-czV" id="oMF-QO-2DH"/>
                 <outlet property="likedUsers" destination="I3Q-B1-j0A" id="kKi-vC-YCi"/>
                 <outlet property="statusLabel" destination="hBg-fk-kPB" id="ijG-Bd-4xb"/>
                 <outlet property="subtitle" destination="3Ia-xd-sFl" id="coD-EB-k3v"/>
@@ -145,10 +146,8 @@
                                     <constraints>
                                         <constraint firstAttribute="width" constant="35" id="aoa-j7-ZOX"/>
                                     </constraints>
-                                    <state key="normal" title="Button" image="favor"/>
-                                    <connections>
-                                        <action selector="likeBtn:" destination="-1" eventType="touchUpInside" id="ItH-M7-NKb"/>
-                                    </connections>
+                                    <state key="normal" image="favor"/>
+                                    <state key="selected" image="favor_selected"/>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -278,5 +277,6 @@
     <resources>
         <image name="bq" width="50" height="50"/>
         <image name="favor" width="27" height="27"/>
+        <image name="favor_selected" width="27" height="27"/>
     </resources>
 </document>
