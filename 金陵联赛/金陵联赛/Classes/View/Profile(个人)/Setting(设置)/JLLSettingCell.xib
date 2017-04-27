@@ -25,14 +25,17 @@
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJG-GC-2Np">
-                        <rect key="frame" x="155" y="4" width="65" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJG-GC-2Np">
+                        <rect key="frame" x="167" y="4" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="wJG-GC-2Np" firstAttribute="centerY" secondItem="Q1R-VK-2xz" secondAttribute="centerY" id="8vu-w8-m5V"/>
+                    <constraint firstItem="wJG-GC-2Np" firstAttribute="centerX" secondItem="Q1R-VK-2xz" secondAttribute="centerX" id="mIl-5A-Dca"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="cell" destination="wJG-GC-2Np" id="6tD-UH-yC9"/>

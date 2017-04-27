@@ -73,12 +73,15 @@ extension JLLScheduleDetailViewController{
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! DetailCell
         if indexPath.row == 0{
             cell.cellimage.image = UIImage(named: "Schedule")
+            cell.cellimage.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 550)
         }
         if indexPath.row == 1 {
             cell.cellimage.image = UIImage(named: "Schedule1")
+            cell.cellimage.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 550)
         }
         if indexPath.row == 2 {
             cell.cellimage.image = UIImage(named: "Schedule2")
+            cell.cellimage.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 550)
         }
         return cell
     }

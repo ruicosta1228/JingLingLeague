@@ -21,27 +21,7 @@ class JLLMatchViewController: JLLBaseViewController {
         print("加载数据")
         
         model.matches_init()
-        //模拟延迟加载
-//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()){
-////            for i in 0..<2{
-////
-////                if self.isPullup{
-////                    //追加
-////                    self.statusList.append("上拉 \(i)")
-////                }
-////                else{
-////                    //在最上方更新
-////                    self.statusList.insert(i.description, at: 0)
-////                }
-////            }
-//            //结束刷新控件
-//            self.refreshControl?.endRefreshing()
-//            //恢复上拉刷新标记
-//            self.isPullup = false
-//            //刷新表
-//            print("刷新表格")
-//            self.tableView?.reloadData()
-//        }
+
     }
     
 }
@@ -94,10 +74,6 @@ extension JLLMatchViewController{
     
     //cell点击事件
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("dianzi")
-//        let vc = JLLScheduleDetailViewController()
-//        navigationController?.pushViewController(vc, animated: true)
-//        vc.title = "详情"
          NotificationCenter.default.post(name: NSNotification.Name(rawValue: JLLScheduleDetail), object: nil)
     }
     

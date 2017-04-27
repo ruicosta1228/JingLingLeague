@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11762"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -21,40 +21,8 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="viy-27-zqg">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
-                    <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_selected" translatesAutoresizingMaskIntoConstraints="NO" id="64L-tE-eaJ">
-                            <rect key="frame" x="35" y="25" width="100" height="100"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="100" id="2dX-fq-YFt"/>
-                                <constraint firstAttribute="height" constant="100" id="W6v-Al-EZf"/>
-                            </constraints>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                    <integer key="value" value="50"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                            </userDefinedRuntimeAttributes>
-                        </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wfv-ye-Fuw">
-                            <rect key="frame" x="350" y="25" width="25" height="25"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="25" id="EVr-9U-ajQ"/>
-                                <constraint firstAttribute="width" constant="25" id="lPR-zy-07M"/>
-                            </constraints>
-                            <state key="normal" image="setting_image"/>
-                            <connections>
-                                <action selector="settingbtn:" destination="-1" eventType="touchUpInside" id="zo2-Kg-hwG"/>
-                            </connections>
-                        </button>
-                    </subviews>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="Wfv-ye-Fuw" secondAttribute="trailing" id="6M8-qF-eIS"/>
-                        <constraint firstAttribute="bottom" secondItem="64L-tE-eaJ" secondAttribute="bottom" constant="25" id="A3j-aY-KlZ"/>
-                        <constraint firstItem="64L-tE-eaJ" firstAttribute="top" secondItem="viy-27-zqg" secondAttribute="top" constant="25" id="Hvg-ed-Ra2"/>
-                        <constraint firstItem="64L-tE-eaJ" firstAttribute="centerY" secondItem="viy-27-zqg" secondAttribute="centerY" id="cqN-17-FDt"/>
-                        <constraint firstItem="Wfv-ye-Fuw" firstAttribute="top" secondItem="viy-27-zqg" secondAttribute="top" constant="25" id="dWL-RH-HXr"/>
-                        <constraint firstItem="64L-tE-eaJ" firstAttribute="leading" secondItem="viy-27-zqg" secondAttribute="leading" constant="35" id="qAZ-a3-hAh"/>
                         <constraint firstAttribute="width" constant="375" id="sg9-9d-Rwd"/>
                         <constraint firstAttribute="height" constant="150" id="wIH-4a-8oc"/>
                     </constraints>
@@ -70,8 +38,4 @@
             <point key="canvasLocation" x="35.5" y="53.5"/>
         </view>
     </objects>
-    <resources>
-        <image name="profile_selected" width="25" height="25"/>
-        <image name="setting_image" width="64" height="64"/>
-    </resources>
 </document>
