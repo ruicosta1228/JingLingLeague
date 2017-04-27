@@ -41,7 +41,7 @@ class DetailViewController: JLLBaseViewController {
 //    
 //    @IBOutlet weak var contentLabel: UILabel!
     
-    let contentList:[String] = ["1", "2", "3"]
+    let contentList:[String] = ["1", "2"]
     
     
     override func viewDidLoad() {
