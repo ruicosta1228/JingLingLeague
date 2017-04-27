@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JLLScheduleDetailViewController" customModule="金陵联赛" customModuleProvider="target">
             <connections>
+                <outlet property="tabview" destination="0vI-dn-oCW" id="IPe-eH-wC3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -63,10 +64,6 @@
                         <constraint firstAttribute="height" constant="120" id="yr0-ht-Ffj"/>
                     </constraints>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Schedule" translatesAutoresizingMaskIntoConstraints="NO" id="MJO-22-OBC">
-                    <rect key="frame" x="0.0" y="264" width="375" height="425"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G22-Qd-YqS">
                     <rect key="frame" x="0.0" y="184" width="375" height="80"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -101,6 +98,11 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0vI-dn-oCW">
+                    <rect key="frame" x="0.0" y="284" width="375" height="383"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -114,6 +116,5 @@
     <resources>
         <image name="Bayer" width="50" height="50"/>
         <image name="Dortmond" width="50" height="50"/>
-        <image name="Schedule" width="425" height="374"/>
     </resources>
 </document>
