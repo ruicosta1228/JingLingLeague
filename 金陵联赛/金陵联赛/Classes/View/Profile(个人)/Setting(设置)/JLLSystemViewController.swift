@@ -10,7 +10,6 @@ import UIKit
 
 class JLLSystemViewController: JLLBaseViewController {
     @IBAction func quitbtn(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
     }
 
     override func viewDidLoad() {
@@ -25,16 +24,11 @@ class JLLSystemViewController: JLLBaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func showLeftButton(){
-        
-        self.dismiss(animated: true, completion: nil)    }
 
     
     override func setupTableView() {
         self.view.backgroundColor = UIColor.white
-        
-        //创建navigationBar左侧按钮控件
-        navItem.leftBarButtonItem = UIBarButtonItem(title: "返回", fontSize: 14.0, target: self, action: #selector(showLeftButton))
+        navigationBar.isHidden = true
         
         
     }

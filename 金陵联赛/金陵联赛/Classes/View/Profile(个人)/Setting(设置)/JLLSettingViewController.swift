@@ -13,8 +13,12 @@ import Yashin
 private let cellId = "cellId"
 
 class JLLSettingViewController: JLLBaseViewController {
+    @IBAction func btnClick(_ sender: Any) {
+        let systemview = JLLSystemViewController()
+        self.present(systemview, animated: true, completion: nil)
+    }
     @IBOutlet weak var tabview: UIView!
-     let ability:[String] = ["速度","射门","身体","防守","意识"]
+     let ability:[String] = ["速度","射门","身体","防守","意识","yyd","yyd","yyd","yyd"]
     
     @IBOutlet weak var topview: UIView!
     
@@ -62,6 +66,7 @@ extension JLLSettingViewController{
     
     override func setupTableView() {
         super.setupTableView()
+        tableView?.backgroundColor = UIColor.darkGray
         setupRadar()
         self.view.backgroundColor = UIColor.white
         tableView?.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: tabBarController?.tabBar.bounds.height ?? 49, right: 0)
@@ -70,7 +75,7 @@ extension JLLSettingViewController{
         tableView?.register(UINib(nibName: "JLLSettingCell", bundle: nil), forCellReuseIdentifier: cellId)
         
         //设置行高
-        tableView?.rowHeight = 75
+        tableView?.rowHeight = 30
         tableView?.estimatedRowHeight = 600
         
         //取消分割线
@@ -90,7 +95,14 @@ extension JLLSettingViewController{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! JLLSettingCell
         //        cell.textLabel?.text = statusList[indexPath.row]
-        
+        if indexPath.row % 2 == 0
+        {
+            cell.contentView.backgroundColor = UIColor.lightGray
+        }
+        else{
+            cell.contentView.backgroundColor = UIColor.darkGray
+        }
+        cell.cell.text = ability[indexPath.row]
         return cell
 }
 

@@ -16,13 +16,6 @@ class JLLProfileViewController: JLLBaseViewController {
 
     var pageMenu : CAPSPageMenu?
     
-    @IBAction func settingbtn(_ sender: Any) {
-            let systemview = JLLSystemViewController()
-            self.present(systemview, animated: true, completion: nil)
-        
-    }
-   
-    var months:[String]!
  
     
     override func viewDidLoad() {
@@ -43,25 +36,25 @@ class JLLProfileViewController: JLLBaseViewController {
         // Initialize view controllers to display and place in array
         var controllerArray : [JLLBaseViewController] = []
         
-        let controller4 : JLLSettingViewController = JLLSettingViewController()
-        controller4.title = "个人信息"
-        controllerArray.append(controller4)
+        let controller1 : JLLSettingViewController = JLLSettingViewController()
+        controller1.title = "个人能力值"
+        controllerArray.append(controller1)
         
 
       
 
-        let controller3 : JLLBarViewController = JLLBarViewController()
+        let controller2 : JLLAbilityViewController = JLLAbilityViewController()
 
-        controller3.title = "柱形能力图"
+        controller2.title = "个人信息"
+        controllerArray.append(controller2)
+        
+        
+        let controller3 : JLLSystemViewController = JLLSystemViewController()
+        controller3.title = "系统设置"
         controllerArray.append(controller3)
-        
-        
-        let controller5 : JLLAbilityViewController = JLLAbilityViewController()
-        controller5.title = "能力值"
-        controllerArray.append(controller5)
 
         // Initialize scroll menu
-        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRect(x: 0.0, y: 10.0, width: self.view.frame.width, height: 650), pageMenuOptions: nil)
+        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRect(x: 0.0, y: 20.0, width: self.view.frame.width, height: 650), pageMenuOptions: nil)
         
         print(self.view.frame.height)
         

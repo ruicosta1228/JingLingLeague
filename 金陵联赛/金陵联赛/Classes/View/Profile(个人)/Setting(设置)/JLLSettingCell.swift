@@ -10,6 +10,7 @@ import UIKit
 
 class JLLSettingCell: UITableViewCell {
 
+    @IBOutlet weak var cell: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
