@@ -46,7 +46,6 @@
                     <rect key="frame" x="0.0" y="230" width="375" height="437"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="375" id="3DO-ab-LjA"/>
                         <constraint firstAttribute="height" constant="437" id="CSR-4G-2PT"/>
                     </constraints>
                 </view>
@@ -64,7 +63,6 @@
                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="IZh-w2-DUO"/>
-                        <constraint firstAttribute="width" constant="375" id="kn5-B5-zsS"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fzd-T6-cgz">
