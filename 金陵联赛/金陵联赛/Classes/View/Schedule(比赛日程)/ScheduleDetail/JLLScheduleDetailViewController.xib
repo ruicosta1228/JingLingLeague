@@ -64,7 +64,7 @@
                     </constraints>
                 </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Schedule" translatesAutoresizingMaskIntoConstraints="NO" id="MJO-22-OBC">
-                    <rect key="frame" x="0.0" y="264" width="375" height="470"/>
+                    <rect key="frame" x="0.0" y="264" width="375" height="425"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G22-Qd-YqS">
@@ -78,22 +78,22 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Dortmond" translatesAutoresizingMaskIntoConstraints="NO" id="g0p-hY-8Aa">
-                            <rect key="frame" x="277" y="30" width="50" height="50"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bayer" translatesAutoresizingMaskIntoConstraints="NO" id="ak1-cD-nXb">
+                            <rect key="frame" x="57" y="30" width="40" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                    <integer key="value" value="25"/>
+                                    <integer key="value" value="20"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                             </userDefinedRuntimeAttributes>
                         </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bayer" translatesAutoresizingMaskIntoConstraints="NO" id="ak1-cD-nXb">
-                            <rect key="frame" x="48" y="30" width="50" height="50"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Dortmond" translatesAutoresizingMaskIntoConstraints="NO" id="g0p-hY-8Aa">
+                            <rect key="frame" x="282" y="30" width="40" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                    <integer key="value" value="25"/>
+                                    <integer key="value" value="20"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                             </userDefinedRuntimeAttributes>
