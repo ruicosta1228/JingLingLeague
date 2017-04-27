@@ -44,6 +44,7 @@ extension JLLScheduleDetailViewController{
     
     override func setupTableView() {
         super.setupTableView()
+        tableView?.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         self.view.backgroundColor = UIColor.white
         tableView?.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: tabBarController?.tabBar.bounds.height ?? 49, right: 0)
         
