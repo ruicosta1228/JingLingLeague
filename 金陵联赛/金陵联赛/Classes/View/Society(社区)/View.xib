@@ -15,6 +15,7 @@
                 <outlet property="composeImage" destination="eOm-fq-MGb" id="H7f-d0-dFa"/>
                 <outlet property="composeTime" destination="k9R-kq-jSo" id="FOR-lg-K9h"/>
                 <outlet property="contentField" destination="Piz-gM-Hdc" id="ZOl-Ce-95c"/>
+                <outlet property="image2" destination="fOD-OW-lGB" id="X7W-jY-CuH"/>
                 <outlet property="likedBtn" destination="p1U-8J-czV" id="oMF-QO-2DH"/>
                 <outlet property="likedUsers" destination="I3Q-B1-j0A" id="kKi-vC-YCi"/>
                 <outlet property="statusLabel" destination="hBg-fk-kPB" id="ijG-Bd-4xb"/>
@@ -149,13 +150,28 @@
                                     <state key="normal" image="favor"/>
                                     <state key="selected" image="favor_selected"/>
                                 </button>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fOD-OW-lGB">
+                                    <rect key="frame" x="95" y="10" width="35" height="35"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="35" id="gbt-mW-wOw"/>
+                                        <constraint firstAttribute="height" constant="35" id="yFA-J1-ech"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <real key="value" value="17.5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="qDF-2u-IuS" firstAttribute="bottom" secondItem="PDL-4p-UF1" secondAttribute="bottomMargin" id="5hZ-lt-7vS"/>
                                 <constraint firstItem="qDF-2u-IuS" firstAttribute="top" secondItem="PDL-4p-UF1" secondAttribute="topMargin" id="Ax6-a4-0aM"/>
+                                <constraint firstItem="fOD-OW-lGB" firstAttribute="top" secondItem="PDL-4p-UF1" secondAttribute="top" constant="10" id="CJp-gA-wf3"/>
                                 <constraint firstItem="qDF-2u-IuS" firstAttribute="centerY" secondItem="I3Q-B1-j0A" secondAttribute="centerY" id="K5S-jG-0Fb"/>
                                 <constraint firstItem="qDF-2u-IuS" firstAttribute="leading" secondItem="PDL-4p-UF1" secondAttribute="leadingMargin" id="Qmw-tp-ecj"/>
+                                <constraint firstItem="fOD-OW-lGB" firstAttribute="leading" secondItem="I3Q-B1-j0A" secondAttribute="trailing" constant="8" id="VUI-Qw-tuR"/>
                                 <constraint firstItem="I3Q-B1-j0A" firstAttribute="top" secondItem="p1U-8J-czV" secondAttribute="top" id="VeR-ZG-Ofn"/>
                                 <constraint firstItem="I3Q-B1-j0A" firstAttribute="bottom" secondItem="p1U-8J-czV" secondAttribute="bottom" id="okc-6r-afY"/>
                                 <constraint firstItem="I3Q-B1-j0A" firstAttribute="leading" secondItem="qDF-2u-IuS" secondAttribute="trailing" constant="10" id="qDe-8g-yf9"/>

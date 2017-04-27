@@ -32,6 +32,8 @@ class DetailViewController: JLLBaseViewController {
 
     
     @IBOutlet weak var contentField: UIView!
+    
+    @IBOutlet weak var image2: UIImageView!
 
 //    @IBOutlet weak var commentUser: UIImageView!
 //    
@@ -105,6 +107,7 @@ extension DetailViewController {
     
     func click() {
         likedBtn.isSelected = !likedBtn.isSelected
+        image2.image = UIImage(named: "Bayer")
     }
 }
 
