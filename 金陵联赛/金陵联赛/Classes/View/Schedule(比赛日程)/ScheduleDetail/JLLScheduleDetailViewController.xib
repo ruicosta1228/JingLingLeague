@@ -64,9 +64,8 @@
                         <constraint firstAttribute="height" constant="120" id="yr0-ht-Ffj"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G22-Qd-YqS">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G22-Qd-YqS">
                     <rect key="frame" x="0.0" y="184" width="375" height="80"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="技术统计" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gec-S2-NJc">
                             <rect key="frame" x="0.0" y="0.0" width="90" height="32"/>
@@ -97,18 +96,31 @@
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="375" id="MyV-Xk-oDk"/>
+                        <constraint firstAttribute="height" constant="80" id="pA7-Fx-2hm"/>
+                    </constraints>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0vI-dn-oCW">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0vI-dn-oCW">
                     <rect key="frame" x="0.0" y="284" width="375" height="383"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="375" id="QQM-Qz-Ll3"/>
+                        <constraint firstAttribute="height" constant="383" id="zWX-1p-yod"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="G22-Qd-YqS" firstAttribute="top" secondItem="Gr7-Qi-Art" secondAttribute="bottom" id="1Jk-e4-uk5"/>
+                <constraint firstItem="G22-Qd-YqS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1LX-ia-aq8"/>
+                <constraint firstItem="0vI-dn-oCW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UZo-dL-hFh"/>
                 <constraint firstItem="Gr7-Qi-Art" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="Xyi-he-mdK"/>
                 <constraint firstItem="Gr7-Qi-Art" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="efx-wg-i4n"/>
+                <constraint firstAttribute="trailing" secondItem="G22-Qd-YqS" secondAttribute="trailing" id="fzg-7q-dqz"/>
+                <constraint firstItem="0vI-dn-oCW" firstAttribute="top" secondItem="G22-Qd-YqS" secondAttribute="bottom" constant="20" id="gfW-6w-AxI"/>
                 <constraint firstAttribute="trailing" secondItem="Gr7-Qi-Art" secondAttribute="trailing" id="syJ-bH-VaM"/>
+                <constraint firstAttribute="trailing" secondItem="0vI-dn-oCW" secondAttribute="trailing" id="t0R-JR-SyM"/>
             </constraints>
             <point key="canvasLocation" x="58.5" y="53.5"/>
         </view>

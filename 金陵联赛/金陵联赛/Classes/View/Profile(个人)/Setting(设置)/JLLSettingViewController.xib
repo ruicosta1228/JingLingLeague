@@ -38,16 +38,20 @@
                     <constraints>
                         <constraint firstAttribute="width" constant="375" id="F8l-Ez-uMh"/>
                         <constraint firstAttribute="height" constant="150" id="KGr-9n-JfZ"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="dq3-ZC-qPQ"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="qVT-qw-fOF"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lRF-l2-9dG">
-                    <rect key="frame" x="0.0" y="230" width="375" height="500"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lRF-l2-9dG">
+                    <rect key="frame" x="0.0" y="230" width="375" height="437"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="375" id="3DO-ab-LjA"/>
+                        <constraint firstAttribute="height" constant="437" id="CSR-4G-2PT"/>
+                    </constraints>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lra-Y5-SWA">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lra-Y5-SWA">
                     <rect key="frame" x="0.0" y="170" width="375" height="60"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="个人能力值" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjg-p6-BR5">
                             <rect key="frame" x="128" y="8" width="119" height="38"/>
@@ -58,10 +62,17 @@
                         </label>
                     </subviews>
                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="IZh-w2-DUO"/>
+                        <constraint firstAttribute="width" constant="375" id="kn5-B5-zsS"/>
+                    </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fzd-T6-cgz">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fzd-T6-cgz">
                     <rect key="frame" x="0.0" y="150" width="60" height="20"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="8nC-3i-OiM"/>
+                        <constraint firstAttribute="width" constant="60" id="aef-UW-sQW"/>
+                    </constraints>
                     <state key="normal" title="编辑"/>
                     <connections>
                         <action selector="btnClick:" destination="-1" eventType="touchUpInside" id="xiw-Tt-JdK"/>
@@ -70,9 +81,20 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="Fzd-T6-cgz" firstAttribute="top" secondItem="YX7-aH-vSG" secondAttribute="bottom" id="6T7-5J-CdB"/>
                 <constraint firstItem="YX7-aH-vSG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="8Td-j9-79D"/>
+                <constraint firstItem="YX7-aH-vSG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="8hD-z1-ZLn"/>
+                <constraint firstItem="Lra-Y5-SWA" firstAttribute="top" secondItem="Fzd-T6-cgz" secondAttribute="bottom" id="9MI-c2-7dS"/>
+                <constraint firstItem="Fzd-T6-cgz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="F3y-qM-0bW"/>
+                <constraint firstItem="YX7-aH-vSG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="KPo-S7-NCt"/>
                 <constraint firstAttribute="trailing" secondItem="YX7-aH-vSG" secondAttribute="trailing" id="MDn-Xf-NE7"/>
+                <constraint firstItem="lRF-l2-9dG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="UqH-HR-lfQ"/>
+                <constraint firstAttribute="trailing" secondItem="Lra-Y5-SWA" secondAttribute="trailing" id="mNb-Cn-0Wc"/>
                 <constraint firstItem="YX7-aH-vSG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="nhM-NA-gc0"/>
+                <constraint firstItem="lRF-l2-9dG" firstAttribute="top" secondItem="Lra-Y5-SWA" secondAttribute="bottom" id="oOy-FP-wPC"/>
+                <constraint firstItem="Lra-Y5-SWA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="pwa-co-hrg"/>
+                <constraint firstAttribute="trailing" secondItem="YX7-aH-vSG" secondAttribute="trailing" id="rze-TE-paG"/>
+                <constraint firstAttribute="trailing" secondItem="lRF-l2-9dG" secondAttribute="trailing" id="yqM-9F-Vy7"/>
             </constraints>
             <point key="canvasLocation" x="63.5" y="58.5"/>
         </view>
