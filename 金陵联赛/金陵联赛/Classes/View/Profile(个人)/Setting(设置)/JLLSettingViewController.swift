@@ -18,7 +18,8 @@ class JLLSettingViewController: JLLBaseViewController {
         self.present(systemview, animated: true, completion: nil)
     }
     @IBOutlet weak var tabview: UIView!
-     let ability:[String] = ["速度","射门","身体","防守","意识","yyd","yyd","yyd","yyd"]
+     let ability:[String] = ["速度","射门","身体","防守","意识","速度","加速","拦截","平衡","花式","弹跳","积极性",]
+    let abilitynum: [String] = ["91","95","85","55","90","95","95","80","95","99","70","50"]
     
     @IBOutlet weak var topview: UIView!
     
@@ -94,7 +95,9 @@ extension JLLSettingViewController{
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! JLLSettingCell
-        //        cell.textLabel?.text = statusList[indexPath.row]
+        
+        cell.cell.text = ability[indexPath.row]
+        cell.cellnum.text = abilitynum[indexPath.row]
         if indexPath.row % 2 == 0
         {
             cell.contentView.backgroundColor = UIColor.lightGray
@@ -102,7 +105,23 @@ extension JLLSettingViewController{
         else{
             cell.contentView.backgroundColor = UIColor.darkGray
         }
-        cell.cell.text = ability[indexPath.row]
+        
+        for _ in 0..<10
+        {
+            if Int(cell.cellnum.text!)!  >= 90
+            {
+                cell.cellnum.backgroundColor = UIColor.green
+            }
+            else if Int(cell.cellnum.text!)! < 60
+            {
+                cell.cellnum.backgroundColor = UIColor.red
+            }
+            else
+            {
+                cell.cellnum.backgroundColor = UIColor.orange
+            }
+        }
+        
         return cell
 }
 
