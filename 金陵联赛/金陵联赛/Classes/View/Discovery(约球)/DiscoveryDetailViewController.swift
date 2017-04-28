@@ -20,6 +20,16 @@ class DiscoveryDetailViewController: JLLBaseViewController {
     let ball: UIImageView? = nil
     var joinBtn: UIButton? = nil
     
+    let picList = ["leader",
+                   "time",
+                   "deadline",
+                   "type",
+                   "unit",
+                   "max",
+                   "location",
+                   "intro",
+                   "member"]
+    
     lazy var gameList = [String]()
     
     override func loadData() {
@@ -115,7 +125,7 @@ extension DiscoveryDetailViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
         
-        cell.imageView?.image = UIImage(named: "discovery_normal")
+        cell.imageView?.image = UIImage(named: picList[indexPath.row])
         cell.textLabel?.text = gameList[indexPath.row]
         
         cell.selectionStyle = UITableViewCellSelectionStyle.none
