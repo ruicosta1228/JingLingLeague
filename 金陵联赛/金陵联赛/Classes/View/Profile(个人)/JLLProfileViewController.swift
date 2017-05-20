@@ -55,6 +55,8 @@ class JLLProfileViewController: JLLBaseViewController {
         
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+  
 
 
 
@@ -104,7 +106,7 @@ extension JLLProfileViewController{
         cell.progress.trackTintColor = UIColor.black
         cell.progress.transform = CGAffineTransform(scaleX: 1.0, y: 3.0)
         
-         cell.progress.progress = Float(Double(cell.cellnum.text!)! / Double(100))
+         cell.progress.setProgress(Float(Double(cell.cellnum.text!)! / Double(100)), animated: true)
         
        
         if indexPath.row % 2 == 0
