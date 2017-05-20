@@ -38,6 +38,8 @@ class LoginView: UIView {
     }
     
     @IBAction func registerBtn(_ sender: Any) {
+        let v = registerView()
+        self.addSubview(v)
     }
     
     @IBAction func qqLogin(_ sender: Any) {

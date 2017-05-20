@@ -123,14 +123,14 @@ extension DetailViewController {
             cell.commentUser.image = UIImage(named: "Barca")
             cell.commentName.text = "巴塞罗那"
             cell.commentTime.text = "10分钟前"
-            cell.contentLabel.text = "哈哈哈哈哈"
+            cell.contentLabel.text = "这场比赛我去看了，很精彩！球员们踢的很努力！"
         }
         
         if indexPath.row == 1 {
             cell.commentUser.image = UIImage(named: "Real Madrid CF")
             cell.commentName.text = "皇马"
             cell.commentTime.text = "15分钟前"
-            cell.contentLabel.text = "很强"
+            cell.contentLabel.text = "两只球队都很强，这些都是平时训练的结果，我们队也要加紧训练！"
         }
         
         return cell
