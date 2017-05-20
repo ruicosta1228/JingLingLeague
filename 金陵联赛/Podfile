@@ -16,6 +16,7 @@ pod 'AMapSearch', '~>4.4'
 pod 'AMapLocation', '~>2.3'
 pod 'PPNumberButtonSwift',:git => 'https://github.com/jkpang/PPNumberButtonSwift.git'
 pod "Yashin"
+pod "XLPagerTabStrip"
 
   target '金陵联赛Tests' do
     inherit! :search_paths

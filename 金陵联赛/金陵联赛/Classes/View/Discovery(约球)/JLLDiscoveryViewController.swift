@@ -46,6 +46,11 @@ class JLLDiscoveryViewController: JLLBaseViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    func showLeftBtn() {
+        let vc = MyDiscoveryViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 
 extension JLLDiscoveryViewController {
@@ -65,6 +70,8 @@ extension JLLDiscoveryViewController {
         tableView?.separatorStyle = .none
         
         navItem.rightBarButtonItem = UIBarButtonItem(title: "", fontSize: 14.0, target: self, action: #selector(showRightBtn), Img: "compose")
+        
+        navItem.leftBarButtonItem = UIBarButtonItem(title: "我的约球", target: self, action: #selector(showLeftBtn))
     }
     
     
@@ -86,12 +93,17 @@ extension JLLDiscoveryViewController{
         
         if indexPath.row == 0 {
             cell.backgroundImg.image = UIImage(named: "background1")
+            cell.titleLabel.text = "兄弟，一起去看球!"
+            cell.subtitleLabel.text = "5.1 南京大学浦口校区体育场"
         }
         if indexPath.row == 1 {
             cell.backgroundImg.image = UIImage(named: "background2")
+            cell.titleLabel.text = "速来！一起踢球!"
+            cell.subtitleLabel.text = "4.30 南京大学浦口校区体育场"
         }
         if indexPath.row == 2 {
             cell.backgroundImg.image = UIImage(named: "background3")
+            cell.subtitleLabel.text = "4.29 南京大学浦口校区体育场"
         }
         
         return cell

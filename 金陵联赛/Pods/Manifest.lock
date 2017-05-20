@@ -35,6 +35,7 @@ PODS:
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
   - SVProgressHUD (2.1.2)
+  - XLPagerTabStrip (7.0.0)
   - Yashin (0.2.0)
   - YYModel (1.0.4)
 
@@ -50,6 +51,7 @@ DEPENDENCIES:
   - PPNumberButtonSwift (from `https://github.com/jkpang/PPNumberButtonSwift.git`)
   - SDWebImage
   - SVProgressHUD
+  - XLPagerTabStrip
   - Yashin
   - YYModel
 
@@ -76,9 +78,10 @@ SPEC CHECKSUMS:
   PPNumberButtonSwift: 76c0cad544400dc555ad455a591594ed4d589198
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  XLPagerTabStrip: 9be80a66c6b7d60306b2c0a6004965016d68f813
   Yashin: b57e67795d809c1580e68393c484314a8b2bf583
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 9b3c5413e833c87a26508e2db1934284b977cbb4
+PODFILE CHECKSUM: cd1f0e6fb5cd3b4c61c8edfb0715cf0ee907b65b
 
 COCOAPODS: 1.2.0
