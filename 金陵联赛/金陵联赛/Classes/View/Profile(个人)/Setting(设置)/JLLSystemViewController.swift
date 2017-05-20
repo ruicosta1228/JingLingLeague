@@ -9,12 +9,39 @@
 import UIKit
 
 class JLLSystemViewController: JLLBaseViewController {
+    var switchBtn:UISwitch!
+    var switchBtn2:UISwitch!
+   
     @IBAction func quitbtn(_ sender: Any) {
+        //点击弹窗
+        let alertView = UIAlertView()
+        alertView.title = "系统提示"
+        alertView.message = "您确定要退出登录吗？"
+        alertView.addButton(withTitle: "取消")
+        alertView.addButton(withTitle: "确定")
+        alertView.cancelButtonIndex=0
+        alertView.delegate=self;
+        alertView.show()
+    }
+    
+    
+    //通过点击判断是否退出
+    func alertView(alertView:UIAlertView, clickedButtonAtIndex buttonIndex: Int){
+        if(buttonIndex==alertView.cancelButtonIndex){
+            print("用户取消")
+        }
+        else
+        {
+            print("点击了确认")
+        }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "系统设置"
+        myswitch()
+        
+
 
         // Do any additional setup after loading the view.
     }
@@ -28,9 +55,33 @@ class JLLSystemViewController: JLLBaseViewController {
     
     override func setupTableView() {
         self.view.backgroundColor = UIColor.white
-        navigationBar.isHidden = true
+        
+
         
         
+    }
+    
+    func myswitch(){
+        // 创建UISwitch开关
+        switchBtn = UISwitch()
+        self.view.addSubview(switchBtn)
+        
+        // 设置位置（开关大小无法设置）
+        switchBtn.center = CGPoint(x: 350, y:210)
+        switchBtn.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+        
+        // 设置默认值
+        switchBtn.isOn = true
+        
+        switchBtn2 = UISwitch()
+        self.view.addSubview(switchBtn2)
+        
+        // 设置位置（开关大小无法设置）
+        switchBtn2.center = CGPoint(x: 350, y:270)
+        switchBtn2.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+        
+        // 设置默认值
+        switchBtn2.isOn = false
     }
 
     

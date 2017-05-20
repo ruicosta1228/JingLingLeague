@@ -7,14 +7,19 @@
 //
 
 import UIKit
-import PageMenu
-
+import Yashin
+private let cellId = "cellId"
 
 class JLLProfileViewController: JLLBaseViewController {
     
     
 
-    var pageMenu : CAPSPageMenu?
+    
+    @IBOutlet weak var tabview: UIView!
+    
+    let ability:[String] = ["速度","射门","身体","防守","意识","速度","加速","拦截","平衡","花式","弹跳","积极性",]
+    let abilitynum: [String] = ["91","95","85","55","90","95","95","80","95","99","70","50"]
+
     
  
     
@@ -30,49 +35,101 @@ class JLLProfileViewController: JLLBaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-       
-    func setPage(){
-        // Initialize view controllers to display and place in array
-        var controllerArray : [JLLBaseViewController] = []
+    func setupRadar(){
+        let radarChart = Yashin(frame: CGRect(x: 150.0, y: 30.0, width: 200, height: 180))
+        print(self.view.frame)
+        self.view.addSubview(radarChart)
+        radarChart.backgroundColor = UIColor.clear
+        radarChart.lineColor = UIColor.white
         
-        let controller1 : JLLSettingViewController = JLLSettingViewController()
-        controller1.title = "个人能力值"
-        controllerArray.append(controller1)
-        
-
-      
-
-        let controller2 : JLLAbilityViewController = JLLAbilityViewController()
-
-        controller2.title = "个人信息"
-        controllerArray.append(controller2)
-        
-        
-        let controller3 : JLLSystemViewController = JLLSystemViewController()
-        controller3.title = "系统设置"
-        controllerArray.append(controller3)
-
-        // Initialize scroll menu
-        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRect(x: 0.0, y: 20.0, width: self.view.frame.width, height: 650), pageMenuOptions: nil)
-        
-        print(self.view.frame.height)
-        
-        self.view.addSubview(pageMenu!.view)
+        radarChart.set(keys:
+            ["射术", "传球", "速度", "力量", "耐力"],
+                       [([8,9,8,7,6], UIColor.green.withAlphaComponent(0.40))]
+        )
         
     }
     
-    
-    
-    //重写方法
-    override func setupTableView() {
-        self.view.backgroundColor = UIColor.white
-        //隐藏导航栏
-        navigationBar.isHidden = true
+    func showRightButton(){
         
-        setPage()
+        let vc = JLLSystemViewController()
         
+        navigationController?.pushViewController(vc, animated: true)
     }
+
 
 
 }
+extension JLLProfileViewController{
+    
+    override func setupTableView() {
+        super.setupTableView()
+        tableView?.frame = CGRect(x: 0, y: 40, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        tableView?.backgroundColor = UIColor.darkGray
+        tabview.backgroundColor = UIColor.darkGray
+        setupRadar()
+        self.view.backgroundColor = UIColor.black
+        tableView?.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: tabBarController?.tabBar.bounds.height ?? 49, right: 0)
+        //注册原型cell
+        tableView?.register(UINib(nibName: "JLLSettingCell", bundle: nil), forCellReuseIdentifier: cellId)
+        
+        //设置行高
+        tableView?.rowHeight = 30
+        tableView?.estimatedRowHeight = 600
+        
+        //取消分割线
+        tableView?.separatorStyle = .none
+        
+        //创建navigationBar左侧按钮控件
+        navItem.rightBarButtonItem = UIBarButtonItem(title: "", fontSize: 14.0, target: self, action: #selector(showRightButton), Img: "setting_image")
+
+        tabview.addSubview(tableView!)
+        
+      
+        
+    }
+}
+
+//具体数据源方法实现
+extension JLLProfileViewController{
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return ability.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! JLLSettingCell
+        
+        cell.cell.text = ability[indexPath.row]
+        cell.cellnum.text = abilitynum[indexPath.row]
+        if indexPath.row % 2 == 0
+        {
+            cell.contentView.backgroundColor = UIColor.darkGray
+        }
+        else{
+            cell.contentView.backgroundColor = UIColor.darkGray
+        }
+        
+        for _ in 0..<10
+        {
+            if Int(cell.cellnum.text!)!  >= 90
+            {
+                cell.cellnum.backgroundColor = UIColor.green
+            }
+            else if Int(cell.cellnum.text!)! < 60
+            {
+                cell.cellnum.backgroundColor = UIColor.red
+            }
+            else
+            {
+                cell.cellnum.backgroundColor = UIColor.orange
+            }
+        }
+        
+        return cell
+    }
+    
+    
+    
+}
+
+
+
