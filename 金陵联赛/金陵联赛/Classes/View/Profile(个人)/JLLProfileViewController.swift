@@ -17,7 +17,7 @@ class JLLProfileViewController: JLLBaseViewController {
     
     @IBOutlet weak var tabview: UIView!
     
-    let ability:[String] = ["速度","射门","身体","防守","意识","速度","加速","拦截","平衡","花式","弹跳","积极性",]
+    let ability:[String] = ["速度","射门","身体","防守","意识","速度","加速","拦截","平衡","花式","弹跳","积极",]
     let abilitynum: [String] = ["91","95","85","55","90","95","95","80","95","99","70","50"]
 
     
@@ -63,7 +63,7 @@ extension JLLProfileViewController{
     
     override func setupTableView() {
         super.setupTableView()
-        tableView?.frame = CGRect(x: 0, y: 40, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        tableView?.frame = CGRect(x: 0, y: 40, width: tabview.bounds.width, height: UIScreen.main.bounds.height)
         tableView?.backgroundColor = UIColor.darkGray
         tabview.backgroundColor = UIColor.darkGray
         setupRadar()
@@ -84,6 +84,7 @@ extension JLLProfileViewController{
 
         tabview.addSubview(tableView!)
         
+    
       
         
     }
@@ -100,6 +101,12 @@ extension JLLProfileViewController{
         
         cell.cell.text = ability[indexPath.row]
         cell.cellnum.text = abilitynum[indexPath.row]
+        cell.progress.trackTintColor = UIColor.black
+        cell.progress.transform = CGAffineTransform(scaleX: 1.0, y: 3.0)
+        
+         cell.progress.progress = Float(Double(cell.cellnum.text!)! / Double(100))
+        
+       
         if indexPath.row % 2 == 0
         {
             cell.contentView.backgroundColor = UIColor.darkGray
@@ -107,20 +114,20 @@ extension JLLProfileViewController{
         else{
             cell.contentView.backgroundColor = UIColor.darkGray
         }
-        
+        //通过数值判断背景颜色
         for _ in 0..<10
         {
             if Int(cell.cellnum.text!)!  >= 90
             {
-                cell.cellnum.backgroundColor = UIColor.green
+                cell.progress.progressTintColor = UIColor.green
             }
             else if Int(cell.cellnum.text!)! < 60
             {
-                cell.cellnum.backgroundColor = UIColor.red
+                cell.progress.progressTintColor = UIColor.red
             }
             else
             {
-                cell.cellnum.backgroundColor = UIColor.orange
+                cell.progress.progressTintColor = UIColor.yellow
             }
         }
         

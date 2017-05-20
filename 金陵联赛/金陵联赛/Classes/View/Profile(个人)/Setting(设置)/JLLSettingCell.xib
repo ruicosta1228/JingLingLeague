@@ -12,34 +12,50 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="75" id="0oJ-2u-evP" customClass="JLLSettingCell" customModule="金陵联赛" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="267" height="30"/>
+            <rect key="frame" x="0.0" y="0.0" width="295" height="30"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0oJ-2u-evP" id="Q1R-VK-2xz">
-                <rect key="frame" x="0.0" y="0.0" width="267" height="29"/>
+                <rect key="frame" x="0.0" y="0.0" width="295" height="29"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="90" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heL-Jk-PiD">
-                        <rect key="frame" x="40" y="4" width="41" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heL-Jk-PiD">
+                        <rect key="frame" x="239" y="4" width="21" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="21" id="KTj-dJ-2Uh"/>
+                            <constraint firstAttribute="height" constant="21" id="WQS-uQ-Vnq"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJG-GC-2Np">
-                        <rect key="frame" x="112.5" y="4" width="42" height="21"/>
+                        <rect key="frame" x="25" y="4" width="42" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Bhx-V7-pyl"/>
+                            <constraint firstAttribute="width" constant="42" id="zKa-Xj-Xod"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aFx-02-xvY">
+                        <rect key="frame" x="87" y="13" width="120" height="2"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </progressView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="wJG-GC-2Np" firstAttribute="centerY" secondItem="Q1R-VK-2xz" secondAttribute="centerY" id="8vu-w8-m5V"/>
-                    <constraint firstItem="wJG-GC-2Np" firstAttribute="centerX" secondItem="Q1R-VK-2xz" secondAttribute="centerX" id="mIl-5A-Dca"/>
+                    <constraint firstItem="heL-Jk-PiD" firstAttribute="top" secondItem="Q1R-VK-2xz" secondAttribute="top" constant="4" id="FdM-zi-DWb"/>
+                    <constraint firstItem="wJG-GC-2Np" firstAttribute="leading" secondItem="Q1R-VK-2xz" secondAttribute="leading" constant="25" id="Jax-mu-zsN"/>
+                    <constraint firstAttribute="bottom" secondItem="heL-Jk-PiD" secondAttribute="bottom" constant="4" id="MCP-6o-kSO"/>
+                    <constraint firstAttribute="trailing" secondItem="heL-Jk-PiD" secondAttribute="trailing" constant="35" id="fde-LA-pMb"/>
+                    <constraint firstAttribute="bottom" secondItem="wJG-GC-2Np" secondAttribute="bottom" constant="4" id="lLE-FQ-wbL"/>
+                    <constraint firstItem="wJG-GC-2Np" firstAttribute="top" secondItem="Q1R-VK-2xz" secondAttribute="top" constant="4" id="uad-Rk-XGI"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="cell" destination="wJG-GC-2Np" id="6tD-UH-yC9"/>
                 <outlet property="cellnum" destination="heL-Jk-PiD" id="6GM-xt-58R"/>
+                <outlet property="progress" destination="aFx-02-xvY" id="1KV-fe-qa1"/>
             </connections>
             <point key="canvasLocation" x="17.5" y="15"/>
         </tableViewCell>
