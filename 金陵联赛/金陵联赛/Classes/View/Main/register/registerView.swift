@@ -8,19 +8,23 @@
 
 import UIKit
 
-class registerView: UIView {
+class RegisterView: UIView {
 
     @IBAction func registerBtn(_ sender: Any) {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: JLLPlayerRegisterSuccessNotification), object: nil)
         
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: JLLPlayerLoginSuccessNotification), object: nil)
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: VistorView2TableView), object: nil)
     }
 
     @IBAction func loginBtn(_ sender: Any) {
     }
     
-//    func register() -> registerView {
-//        let nib = UINib(nibName: "register", bundle: nil)
-//        let v = nib.instantiate(withOwner: nil, options: nil)[0] as! registerView
-//        return v
-//    }
+    func register() -> RegisterView {
+        let nib = UINib(nibName: "register", bundle: nil)
+        let v = nib.instantiate(withOwner: nil, options: nil)[0] as! RegisterView
+        return v
+    }
     
 }
