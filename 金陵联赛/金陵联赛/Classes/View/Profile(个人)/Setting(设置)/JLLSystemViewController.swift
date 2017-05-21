@@ -8,41 +8,45 @@
 
 import UIKit
 
+private let NM_accountFile = "userAccount.json"
+
 class JLLSystemViewController: JLLBaseViewController {
     var switchBtn:UISwitch!
     var switchBtn2:UISwitch!
    
     @IBAction func quitbtn(_ sender: Any) {
         //点击弹窗
-        let alertView = UIAlertView()
-        alertView.title = "系统提示"
-        alertView.message = "您确定要退出登录吗？"
-        alertView.addButton(withTitle: "取消")
-        alertView.addButton(withTitle: "确定")
-        alertView.cancelButtonIndex=0
-        alertView.delegate=self;
-        alertView.show()
+        let alert = UIAlertController(title: "系统提示",
+                                      message: "您确定要退出登录吗？",
+                                      preferredStyle: .alert)
+        let quit = UIAlertAction(title: "退出",
+                                 style: .default,
+                                 handler: {action in self.logoff()})
+        let cancel = UIAlertAction(title: "取消",
+                                   style: .cancel,
+                                   handler: nil)
+        alert.addAction(quit)
+        alert.addAction(cancel)
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
-    
-    //通过点击判断是否退出
-    func alertView(alertView:UIAlertView, clickedButtonAtIndex buttonIndex: Int){
-        if(buttonIndex==alertView.cancelButtonIndex){
-            print("用户取消")
-        }
-        else
-        {
-            print("点击了确认")
-        }
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.title = "系统设置"
-        myswitch()
+    func logoff(){
+        JLLNetworkingManager.shared.userAccount.pid = nil
+        
+        let docDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        let path = (docDir as NSString).appendingPathComponent(NM_accountFile)
+        // 删除帐户文件
+        _ = try? FileManager.default.removeItem(atPath: path)
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: TableView2VisitorView), object: nil)
         
 
-
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    
         // Do any additional setup after loading the view.
     }
 
@@ -56,7 +60,8 @@ class JLLSystemViewController: JLLBaseViewController {
     override func setupTableView() {
         self.view.backgroundColor = UIColor.white
         
-
+        self.title = "系统设置"
+        myswitch()
         
         
     }

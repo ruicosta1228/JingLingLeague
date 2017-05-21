@@ -35,7 +35,7 @@ class JLLBaseViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(loginSuccess), name: NSNotification.Name(rawValue: VistorView2TableView), object: nil)
         
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(logoff), name: NSNotification.Name(rawValue: TableView2VisitorView), object: nil)
     }
     
     deinit {
@@ -87,6 +87,18 @@ extension JLLBaseViewController {
         NotificationCenter.default.removeObserver(self)
     }
     
+    @objc func logoff(n: Notification){
+        
+        print("退出登录")
+    
+        //更新UI
+        //view getter时 如果view == nil 会重新viewDidLoad
+        self.viewDidLoad()
+        self.title = "个人"
+        
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     @objc func login() {
 
         //发送通知
@@ -94,7 +106,7 @@ extension JLLBaseViewController {
     }
     
     @objc func register() {
-        print("注册")
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: JLLPlayerShouldRegisterNotification), object: nil)
     }
 }
 

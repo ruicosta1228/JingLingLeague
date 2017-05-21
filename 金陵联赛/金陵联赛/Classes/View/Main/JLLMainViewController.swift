@@ -28,6 +28,8 @@ class JLLMainViewController: UITabBarController {
         
         //注册通知
         NotificationCenter.default.addObserver(self, selector: #selector(playerLogin), name: NSNotification.Name(rawValue: JLLPlayerShouldLoginNotification), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(playerRegister), name: NSNotification.Name(rawValue: JLLPlayerShouldRegisterNotification), object: nil)
     }
     
     deinit{
@@ -44,6 +46,13 @@ class JLLMainViewController: UITabBarController {
         present(nav, animated: true, completion: nil)
     }
     
+    @objc private func playerRegister(n: Notification){
+        print("用户注册通知\(n)")
+        
+        let nav = UINavigationController(rootViewController: JLLRegisterViewController())
+        
+        present(nav, animated: true, completion: nil)
+    }
 //    func composeStatus(){
 //        if JLLNetworkingManager.shared.userLogon {
 //            print("发布")

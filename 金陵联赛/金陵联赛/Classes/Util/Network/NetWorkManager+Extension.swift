@@ -9,6 +9,8 @@
 import Foundation
 import AFNetworking
 
+private let server = "http://39.108.9.179:8080/"
+
 extension JLLNetworkingManager{
     
     /// 封装player登录请求方法
@@ -16,7 +18,7 @@ extension JLLNetworkingManager{
     /// - Parameter completion: 回调函数 返回的是包含player属性的字典
     func playerLoginList(completion: @escaping (_ list: NSDictionary, _ isSuccess: Bool)->Void) {
         //利用网络工具 获取服务器数据 封装了闭包
-        let url = "http://120.24.80.73:8080/jinglingleague/playerBased/login.html"
+        let url = server + "jinglingleague/playerBased/login.html"
         //        let url = "https://api.weibo.com/2/statuses/public_timeline.json"
         let param = ["pName": "test", "pPassword": "test"]
         //        let param = ["access_token": "2.00WdkIoC4orJzC303599f2c40_29ge"]
@@ -43,9 +45,9 @@ extension JLLNetworkingManager{
 
     }
     
-    //微博普通登录
+    //普通登录
     func login_normal(input: String?, password: String?,  completion: @escaping (_ dict: Bool)->()){
-        let url = "http://120.24.80.73:8080/jinglingleague/user/login_normal.json?"
+        let url = server + "jinglingleague/user/login_normal.json?"
         
         let param = ["input" : input , "password" : password]
         
@@ -70,7 +72,7 @@ extension JLLNetworkingManager{
     
     //微博登录成功后与自己的服务器交互获得pid和access_key
     func loginByWeibo(name: String, selfi: String, completion: @escaping (_ dict: [String: AnyObject])->()){
-        let url = "http://120.24.80.73:8080/jinglingleague/user/login_weibo.json?"
+        let url = server + "jinglingleague/user/login_weibo.json?"
         
         let param = ["name" : name , "selfi" : selfi]
         
