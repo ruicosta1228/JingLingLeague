@@ -47,6 +47,13 @@ extension MyDiscoveryViewController {
     override func setupTableView() {
         title = "我的约球"
         setPage()
+        
+        navItem.rightBarButtonItem = UIBarButtonItem(title: "历史约球", target: self, action: #selector(showRightBtn))
+    }
+    
+    func showRightBtn() {
+        let vc = HistoryViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }
