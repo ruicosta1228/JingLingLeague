@@ -104,7 +104,7 @@ extension JLLSocietyViewController{
         sv.addSubview(UIImageView())
         sv.addSubview(UIImageView())
         sv.addSubview(UIImageView())
-        images = [UIImage(named: "page1")!, UIImage(named: "page2")!, UIImage(named: "page3")!]
+        images = [UIImage(named: "page1")!, UIImage(named: "page4")!, UIImage(named: "page5")!]
         (sv.subviews[0] as! UIImageView).image = images.last//UIImage(named: "page1")
         (sv.subviews[1] as! UIImageView).image = images[0]//UIImage(named: "page2")
         (sv.subviews[2] as! UIImageView).image = images[1]//UIImage(named: "page3")
