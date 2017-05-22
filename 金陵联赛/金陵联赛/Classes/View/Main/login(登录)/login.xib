@@ -110,6 +110,12 @@
                     </constraints>
                     <state key="normal" title="Button" image="wechat"/>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="约球帝" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhf-MV-ac7">
+                    <rect key="frame" x="148" y="240" width="79.5" height="31.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="26"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.17254901960784313" green="0.18431372549019609" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
@@ -121,6 +127,7 @@
                 <constraint firstItem="S54-pT-QuT" firstAttribute="top" secondItem="dhv-ys-YVl" secondAttribute="bottom" constant="119" id="CJA-wZ-eTN"/>
                 <constraint firstItem="kWD-iE-XeM" firstAttribute="top" secondItem="S54-pT-QuT" secondAttribute="bottom" constant="23" id="EP1-Dt-WOK"/>
                 <constraint firstItem="dhv-ys-YVl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="65" id="GXU-cu-NOw"/>
+                <constraint firstItem="Lhf-MV-ac7" firstAttribute="top" secondItem="2Vs-xL-2WN" secondAttribute="bottom" constant="20" id="HKc-Hx-g7h"/>
                 <constraint firstItem="Ulo-XB-jlu" firstAttribute="width" secondItem="dhv-ys-YVl" secondAttribute="width" id="IIT-cQ-KYD"/>
                 <constraint firstAttribute="bottom" secondItem="dhv-ys-YVl" secondAttribute="bottom" constant="300" id="IpZ-B2-L3C"/>
                 <constraint firstAttribute="trailing" secondItem="dhv-ys-YVl" secondAttribute="trailing" constant="65" id="Ohe-zt-FBP"/>
@@ -132,6 +139,7 @@
                 <constraint firstItem="Ulo-XB-jlu" firstAttribute="top" secondItem="dhv-ys-YVl" secondAttribute="bottom" constant="30" id="WdG-eK-ZsS"/>
                 <constraint firstItem="6go-bD-Qpb" firstAttribute="top" secondItem="S54-pT-QuT" secondAttribute="bottom" constant="23" id="XKd-Gc-puP"/>
                 <constraint firstItem="Ulo-XB-jlu" firstAttribute="leading" secondItem="dhv-ys-YVl" secondAttribute="leading" id="aFb-Bf-Q9S"/>
+                <constraint firstItem="Lhf-MV-ac7" firstAttribute="centerX" secondItem="dhv-ys-YVl" secondAttribute="centerX" id="iSL-cA-l2D"/>
                 <constraint firstItem="lGo-dr-pb7" firstAttribute="top" secondItem="S54-pT-QuT" secondAttribute="bottom" constant="23" id="imw-78-A1e"/>
                 <constraint firstItem="lGo-dr-pb7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="65" id="ktz-HM-Vrw"/>
                 <constraint firstItem="lGo-dr-pb7" firstAttribute="top" secondItem="S54-pT-QuT" secondAttribute="bottom" constant="23" id="nuA-0o-chs"/>
