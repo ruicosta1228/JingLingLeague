@@ -95,11 +95,11 @@
                         <action selector="weiboLogin:" destination="-1" eventType="touchUpInside" id="ph5-pw-tdw"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="football" translatesAutoresizingMaskIntoConstraints="NO" id="2Vs-xL-2WN">
-                    <rect key="frame" x="117" y="100" width="140" height="140"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yue" translatesAutoresizingMaskIntoConstraints="NO" id="2Vs-xL-2WN">
+                    <rect key="frame" x="127" y="100" width="120" height="120"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="140" id="Mg0-6V-3ja"/>
-                        <constraint firstAttribute="width" constant="140" id="REB-wt-5U7"/>
+                        <constraint firstAttribute="height" constant="120" id="Mg0-6V-3ja"/>
+                        <constraint firstAttribute="width" constant="120" id="REB-wt-5U7"/>
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ts-F9-T9r" userLabel="微信">
@@ -148,8 +148,8 @@
     </objects>
     <resources>
         <image name="QQ" width="30" height="30"/>
-        <image name="football" width="191" height="191"/>
         <image name="wechat" width="30" height="30"/>
         <image name="weibo" width="30" height="29"/>
+        <image name="yue" width="200" height="200"/>
     </resources>
 </document>
