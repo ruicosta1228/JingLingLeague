@@ -1,8 +1,8 @@
 package cn.edu.jlxy.jinglingleague.service;
 
-import cn.edu.jlxy.jinglingleague.entity.Player;
 import cn.edu.jlxy.jinglingleague.entity.user.UserBase;
 import cn.edu.jlxy.jinglingleague.entity.user.UserSecure;
+import com.sun.org.apache.xpath.internal.operations.Bool;
 
 /**
  * Created by neo on 2017/2/28.
@@ -25,4 +25,12 @@ public interface IUserService {
      * @return access_key用以更多功能
      */
     public String loginByWeibo(UserBase userBase);
+
+    /**
+     * 注册服务
+     * @param userSecure
+     * @param userBase
+     * @return
+     */
+    public boolean register(UserSecure userSecure, UserBase userBase);
 }

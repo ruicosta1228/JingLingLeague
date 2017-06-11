@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace必须指向Dao接口 -->
+<mapper namespace="cn.edu.jlxy.jinglingleague.dao.ISocietyDao">
+
+    <cache eviction="FIFO" flushInterval="60000" size="500" readOnly="true"></cache>
+
+    <insert id="insertNews" parameterType="Society" useGeneratedKeys="true" keyProperty="sId" flushCache="true">
+        insert into society(timeLabel, composeImage, userImage, nameLabel, titleLabel, statusLabel) values(#{timeLabel}, #{composeImage}, #{userImage}, #{nameLabel}, #{titleLabel}, #{statusLabel})
+    </insert>
+
+    <select id="selectNew" parameterType="int" resultType="Society" useCache="false">
+        select * from society where sId&gt;#{sId}
+    </select>
+
+    <select id="selectOld" parameterType="int" resultType="Society" useCache="false">
+        select * from society where sId &lt;#{sId}
+    </select>
+
+</mapper>

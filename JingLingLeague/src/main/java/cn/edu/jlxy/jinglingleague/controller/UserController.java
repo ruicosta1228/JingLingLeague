@@ -3,11 +3,13 @@ package cn.edu.jlxy.jinglingleague.controller;
 import cn.edu.jlxy.jinglingleague.entity.user.UserBase;
 import cn.edu.jlxy.jinglingleague.entity.user.UserSecure;
 import cn.edu.jlxy.jinglingleague.service.IUserService;
+import cn.edu.jlxy.jinglingleague.util.MD5Util;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -28,7 +30,7 @@ public class UserController {
         PrintWriter out = response.getWriter();
 
         UserSecure userSecure = new UserSecure();
-        userSecure.setPassword(password);
+        userSecure.setPassword(MD5Util.getMD5Code(password));
         UserBase userBase = new UserBase();
         //允许输入用户名或电话号码登录
         userBase.setpName(input);
@@ -58,6 +60,23 @@ public class UserController {
             out.print("{\"access_key\":" + "\"" +access_key + "\"" + ",\"pid\":"+ "\"" + pid + "\"" +"}");
         }else {
             response.sendError(403);
+        }
+    }
+
+    @RequestMapping("/register")
+    public void register(@RequestParam String name, @RequestParam String password, HttpServletResponse response) throws  IOException{
+        PrintWriter out = response.getWriter();
+
+        UserBase userBase = new UserBase();
+        userBase.setpName(name);
+
+        UserSecure userSecure = new UserSecure();
+        userSecure.setPassword(MD5Util.getMD5Code(password));
+
+        if(service.register(userSecure,userBase)){
+            out.print("{\"register_status\":" + "\"success\"}");
+        }else {
+            out.print("{\"register_status\":" + "\"failure\"}");
         }
     }
 }

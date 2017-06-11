@@ -1,22 +1,24 @@
 package cn.edu.jlxy.jinglingleague.entity;
 
+import java.util.Date;
+
 /**
  * Created by neo on 2017/3/6.
  */
 public class Society {
     private int sId;
 
-    private String sName;
+    private String timeLabel;
 
-    private String sType;
+    private String composeImage;
 
-    private String sContent;
+    private String userImage;
 
-    private int pId;
+    private String nameLabel;
 
-    private int num_of_comment = 0;
+    private String titleLabel;
 
-    private int num_of_awesome = 0;
+    private String statusLabel;
 
     public int getsId() {
         return sId;
@@ -26,51 +28,51 @@ public class Society {
         this.sId = sId;
     }
 
-    public String getsName() {
-        return sName;
+    public String getTimeLabel() {
+        return timeLabel;
     }
 
-    public void setsName(String sName) {
-        this.sName = sName;
+    public void setTimeLabel(String timeLabel) {
+        this.timeLabel = timeLabel;
     }
 
-    public String getsType() {
-        return sType;
+    public String getComposeImage() {
+        return composeImage;
     }
 
-    public void setsType(String sType) {
-        this.sType = sType;
+    public void setComposeImage(String composeImage) {
+        this.composeImage = composeImage;
     }
 
-    public String getsContent() {
-        return sContent;
+    public String getUserImage() {
+        return userImage;
     }
 
-    public void setsContent(String sContent) {
-        this.sContent = sContent;
+    public void setUserImage(String userImage) {
+        this.userImage = userImage;
     }
 
-    public int getpId() {
-        return pId;
+    public String getNameLabel() {
+        return nameLabel;
     }
 
-    public void setpId(int pId) {
-        this.pId = pId;
+    public void setNameLabel(String nameLabel) {
+        this.nameLabel = nameLabel;
     }
 
-    public int getNum_of_comment() {
-        return num_of_comment;
+    public String getTitleLabel() {
+        return titleLabel;
     }
 
-    public void setNum_of_comment(int num_of_comment) {
-        this.num_of_comment = num_of_comment;
+    public void setTitleLabel(String titleLabel) {
+        this.titleLabel = titleLabel;
     }
 
-    public int getNum_of_awesome() {
-        return num_of_awesome;
+    public String getStatusLabel() {
+        return statusLabel;
     }
 
-    public void setNum_of_awesome(int num_of_awesome) {
-        this.num_of_awesome = num_of_awesome;
+    public void setStatusLabel(String statusLabel) {
+        this.statusLabel = statusLabel;
     }
 }

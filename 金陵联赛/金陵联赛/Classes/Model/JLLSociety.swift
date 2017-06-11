@@ -9,6 +9,8 @@
 import UIKit
 
 class JLLSociety: NSObject {
+    var sId: String?
+    
     var composeImage: String?
     
     var userImage: String?
@@ -21,8 +23,10 @@ class JLLSociety: NSObject {
     
     var statusLabel: String?
     
-    convenience init(composeImage: String, userImage: String, nameLabel: String, timeLabel: String, titleLabel: String, statusLabel: String?){
+    convenience init(sId: String, composeImage: String, userImage: String, nameLabel: String, timeLabel: String, titleLabel: String, statusLabel: String?){
         self.init()
+        
+        self.sId = sId
         
         self.composeImage = composeImage
         

@@ -48,6 +48,7 @@ extension JLLNetworkingManager{
     //普通登录
     func login_normal(input: String?, password: String?,  completion: @escaping (_ dict: Bool)->()){
         let url = server + "jinglingleague/user/login_normal.json?"
+//        let url = "http://localhost:8080/" + "JingLingLeague/user/login_normal.json?"
         
         let param = ["input" : input , "password" : password]
         
@@ -147,5 +148,80 @@ extension JLLNetworkingManager{
             // 完成回调
             completion((json as? [String: AnyObject]) ?? [:])
         }
+    }
+}
+
+//社区获取新鲜事
+extension JLLNetworkingManager{
+    
+    func pullup_getnews(sId: String, count: String, completion: @escaping (_ dict: [String: AnyObject])->()){
+        let url = server + "jinglingleague/society/getnews.json?"
+        
+        let param = ["sId": sId,
+                      "isNew": "old",
+                      "count": count] as [String : Any]
+        
+        request(URLString: url, parameters: param as [String : AnyObject], completion: {(json, isSuccess) in
+            if !isSuccess {
+                completion([:])
+                
+                return
+            }
+            
+            completion(json as! [String : AnyObject] )
+        })
+    }
+    
+    func fresh_getnews(sId: String, count: String, completion: @escaping (_ dict: [String: AnyObject])->()){
+        let url = server + "jinglingleague/society/getnews.json?"
+        
+        let param = ["sId": sId,
+                     "isNew": "new",
+                     "count": count] as [String : Any]
+        
+        request(URLString: url, parameters: param as [String : AnyObject], completion: {(json, isSuccess) in
+            if !isSuccess {
+                completion([:])
+                
+                return
+            }
+            
+            completion(json as! [String : AnyObject] )
+        })
+    }
+}
+//比赛日程
+extension JLLNetworkingManager{
+    func getAllMatch(completion: @escaping (_ dict: [String: AnyObject])->()){
+        let url = server + "jinglingleague/schedule/getAllMatch.json"
+        
+        request(URLString: url, parameters: [:], completion: {(json, isSuccess) in
+            if !isSuccess {
+                completion([:])
+                
+                return
+            }
+            
+            completion(json as! [String : AnyObject] )
+        })
+    }
+}
+
+//个人数据
+extension JLLNetworkingManager{
+    func getAbilityById(pid: String, completion: @escaping (_ dict: [String: AnyObject])->()){
+        let url = server + "jinglingleague/ability/getAbility.json?"
+        
+        let param = ["pid": pid]
+        
+        request(URLString: url, parameters: param as [String : AnyObject], completion: {(json, isSuccess) in
+            if !isSuccess {
+                completion([:])
+                
+                return
+            }
+            
+            completion(json as! [String : AnyObject] )
+        })
     }
 }

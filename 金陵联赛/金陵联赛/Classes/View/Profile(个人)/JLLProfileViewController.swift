@@ -17,14 +17,34 @@ class JLLProfileViewController: JLLBaseViewController {
     
     @IBOutlet weak var tabview: UIView!
     
-    let ability:[String] = ["速度","射门","身体","防守","意识","速度","加速","拦截","平衡","花式","弹跳","积极",]
-    let abilitynum: [String] = ["91","95","85","55","90","95","95","80","95","99","70","50"]
+    let ability:[String] = ["速度","射门","身体","防守","意识","耐力","加速","拦截","平衡","花式","弹跳","积极",]
+    var abilitynum: [String] = ["91","95","85","55","90","95","95","80","95","99","70","50"]
 
     
  
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+//        self.abilitynum = ["99","95","85","55","90","95","95","80","95","99","70","50"]
+        JLLNetworkingManager.shared.getAbilityById(pid: JLLNetworkingManager.shared.userAccount.pid!, completion: { (json) in
+            let dict = json as NSDictionary
+            self.abilitynum[0] = dict.object(forKey: "speed") as! String
+            self.abilitynum[1] = dict.object(forKey: "shoot") as! String
+            self.abilitynum[2] = dict.object(forKey: "body") as! String
+            self.abilitynum[3] = dict.object(forKey: "defence") as! String
+            self.abilitynum[4] = dict.object(forKey: "aware") as! String
+            self.abilitynum[5] = dict.object(forKey: "patience") as! String
+            self.abilitynum[6] = dict.object(forKey: "accelerate") as! String
+            self.abilitynum[7] = dict.object(forKey: "intercept") as! String
+            self.abilitynum[8] = dict.object(forKey: "balance") as! String
+            self.abilitynum[9] = dict.object(forKey: "skill") as! String
+            self.abilitynum[10] = dict.object(forKey: "bounce") as! String
+            self.abilitynum[11] = dict.object(forKey: "active") as! String
+
+            super.viewDidLoad()
+
+        })
+
+//        super.viewDidLoad()
 
         
         // Do any additional setup after loading the view.
@@ -33,6 +53,11 @@ class JLLProfileViewController: JLLBaseViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+//        self.abilitynum = ["99","95","85","55","90","95","95","80","95","99","70","50"]
+        super.viewWillAppear(true)
     }
     
     func setupRadar(){

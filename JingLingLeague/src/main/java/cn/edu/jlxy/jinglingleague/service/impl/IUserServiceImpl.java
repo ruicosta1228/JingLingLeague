@@ -6,6 +6,7 @@ import cn.edu.jlxy.jinglingleague.entity.user.UserBase;
 import cn.edu.jlxy.jinglingleague.entity.user.UserSecure;
 import cn.edu.jlxy.jinglingleague.service.IUserService;
 import cn.edu.jlxy.jinglingleague.util.StringUtils;
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -58,5 +59,26 @@ public class IUserServiceImpl implements IUserService{
             return null;
         }
         return secure.getAccess_key();
+    }
+
+    //用户注册
+    public boolean register(UserSecure userSecure, UserBase userBase) {
+
+        userSecure.setAccess_key(StringUtils.getRandomString(50));
+
+        if(userSecureDao.register(userSecure) != 1){
+            return false;
+        }
+
+        if(userBaseDao.init(userSecure.getPid()) != 1){
+            return false;
+        }
+
+        userBase.setPid(userSecure.getPid());
+
+        if(userBaseDao.updateName(userBase) != 1){
+            return false;
+        }
+        return true;
     }
 }

@@ -1,6 +1,5 @@
 package cn.edu.jlxy.jinglingleague.service;
 
-import cn.edu.jlxy.jinglingleague.entity.Player;
 import cn.edu.jlxy.jinglingleague.entity.Team;
 
 import java.util.List;

@@ -3,6 +3,7 @@ package cn.edu.jlxy.jinglingleague.dao;
 import cn.edu.jlxy.jinglingleague.entity.Society;
 import cn.edu.jlxy.jinglingleague.entity.Team;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -11,8 +12,22 @@ import java.util.List;
 public interface ISocietyDao {
     /**
      *
+     * @param sId
+     * @return
+     */
+    public List<Society> selectNew(int sId);
+
+    /**
+     *
+     * @param sId
+     * @return
+     */
+    public List<Society> selectOld(int sId);
+
+    /**
+     *
      * @param society
-     * @return 操作成功数
+     * @return
      */
     public int insertNews(Society society);
 

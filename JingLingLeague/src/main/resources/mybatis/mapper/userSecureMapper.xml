@@ -6,7 +6,7 @@
     <cache eviction="FIFO" flushInterval="60000" size="500" readOnly="true"></cache>
 
     <insert id="register" parameterType="UserSecure" useGeneratedKeys="true" keyProperty="pid" flushCache="true">
-        insert into user_secure(password, access_key) values(#{pPassword}, #{access_key})
+        insert into user_secure(password, access_key) values(#{password}, #{access_key})
     </insert>
 
     <insert id="createEmpty" parameterType="UserSecure" useGeneratedKeys="true" keyProperty="pid" flushCache="true">

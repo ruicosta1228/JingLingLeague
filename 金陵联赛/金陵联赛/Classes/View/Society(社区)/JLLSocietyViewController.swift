@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 private let cellId = "cellId"
 
@@ -48,11 +49,41 @@ class JLLSocietyViewController: JLLBaseViewController {
     
     override func loadData() {
 
-//        model.login(completion: { (isSuccess) in
-//            print(isSuccess)
-//        })
-        society_model.society_init()
+//        society_model.society_init()
+//        society_model.pullup()
         print("加载数据")
+        
+        if self.isPullup{
+            JLLNetworkingManager.shared.pullup_getnews(sId: society_model.society.last?.sId ?? "1", count: "-1", completion: {(json) in
+                let dict = (json as NSDictionary)
+                let array = dict.object(forKey: "societyList")
+                print(array ?? [])
+                let list = NSArray.yy_modelArray(with: JLLSociety.self, json: array!) as! [JLLSociety]
+                for news in list.reversed(){
+                    self.society_model.society.append(news)
+                }
+                
+                self.refreshControl?.endRefreshing()
+                self.isPullup = false
+                self.tableView?.reloadData()
+
+            })
+        }else{
+            JLLNetworkingManager.shared.fresh_getnews(sId: society_model.society.first?.sId ?? "0", count: "-1", completion: {(json) in
+                let dict = (json as NSDictionary)
+                let array = dict.object(forKey: "societyList")
+                print(array ?? [])
+                let list = NSArray.yy_modelArray(with: JLLSociety.self, json: array!) as! [JLLSociety]
+                for news in list{
+                    self.society_model.society.insert(news, at: 0)
+                }
+                print(self.society_model.society.count)
+                self.refreshControl?.endRefreshing()
+                self.isPullup = false
+                self.tableView?.reloadData()
+                
+            })
+        }
         //模拟延迟加载
 //        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()){
 ////            for i in 0..<3{
@@ -149,11 +180,17 @@ extension JLLSocietyViewController{
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! JLLStatusCell
 
 //        cell.textLabel?.text = statusList[indexPath.row]
-        cell.composeImage.contentMode = UIViewContentMode.scaleAspectFit
-        cell.composeImage.image = UIImage(named: society_model.society[indexPath.row].composeImage!)
-        cell.userImage.contentMode = UIViewContentMode.scaleAspectFit
-        cell.userImage.image = UIImage(named: society_model.society[indexPath.row].userImage!)
         
+        let url = URL(string: society_model.society[indexPath.row].composeImage!)
+        let userurl = URL(string: society_model.society[indexPath.row].userImage!)
+        
+        cell.composeImage.contentMode = UIViewContentMode.scaleAspectFit
+        //cell.composeImage.image = UIImage(named: society_model.society[indexPath.row].composeImage!)
+        cell.composeImage.sd_setImage(with: url, placeholderImage: UIImage(named: "WechatIMG89"))
+        cell.userImage.contentMode = UIViewContentMode.scaleAspectFit
+//        cell.userImage.image = UIImage(named: society_model.society[indexPath.row].userImage!)
+        cell.userImage.sd_setImage(with: userurl, placeholderImage: UIImage(named: "Messi"))
+
         cell.nameLabel.text = society_model.society[indexPath.row].nameLabel
         cell.timeLabel.text = society_model.society[indexPath.row].timeLabel
         cell.titleLabel.text = society_model.society[indexPath.row].titleLabel
